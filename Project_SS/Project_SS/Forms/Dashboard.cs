@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_SS.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,9 @@ namespace Project_SS
             timerTime.Start();
             panelWidth = panel_Left.Width;
             isCollapse = false;
+
+            UC_Dashboard uC = new UC_Dashboard();
+            addControls(uC);
 
         }
 
@@ -72,6 +76,14 @@ namespace Project_SS
             this.Dispose();
             Login loginForm = new Login();
             loginForm.Show();
+        }
+
+        private void addControls(UserControl uc)
+        {
+            panelContainer.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(uc);
+            uc.BringToFront();
         }
     }
 }

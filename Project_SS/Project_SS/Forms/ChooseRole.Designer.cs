@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btn_Admin = new System.Windows.Forms.Button();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.label_Exit = new System.Windows.Forms.Label();
-            this.btn_Login = new System.Windows.Forms.Button();
-            this.label_Login = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_Exit = new System.Windows.Forms.Label();
+            this.btn_User = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_Logout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
@@ -46,27 +46,54 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.panelLeft.Controls.Add(this.btn_Logout);
             this.panelLeft.Controls.Add(this.pictureBox1);
-            this.panelLeft.Controls.Add(this.button1);
-            this.panelLeft.Controls.Add(this.label_Login);
+            this.panelLeft.Controls.Add(this.btn_Admin);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(591, 681);
+            this.panelLeft.Size = new System.Drawing.Size(600, 720);
             this.panelLeft.TabIndex = 1;
+            // 
+            // btn_Admin
+            // 
+            this.btn_Admin.BackColor = System.Drawing.Color.White;
+            this.btn_Admin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Admin.Font = new System.Drawing.Font("Malgun Gothic", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.btn_Admin.Location = new System.Drawing.Point(180, 413);
+            this.btn_Admin.Name = "btn_Admin";
+            this.btn_Admin.Size = new System.Drawing.Size(222, 71);
+            this.btn_Admin.TabIndex = 8;
+            this.btn_Admin.Text = "Aministrator";
+            this.btn_Admin.UseVisualStyleBackColor = false;
+            this.btn_Admin.Click += new System.EventHandler(this.btn_Admin_Click);
             // 
             // panelRight
             // 
-            this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
+            this.panelRight.BackColor = System.Drawing.Color.White;
             this.panelRight.Controls.Add(this.pictureBox2);
             this.panelRight.Controls.Add(this.label1);
             this.panelRight.Controls.Add(this.label_Exit);
-            this.panelRight.Controls.Add(this.btn_Login);
+            this.panelRight.Controls.Add(this.btn_User);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(588, 0);
+            this.panelRight.Location = new System.Drawing.Point(600, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(596, 681);
+            this.panelRight.Size = new System.Drawing.Size(600, 720);
             this.panelRight.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(557, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "x";
             // 
             // label_Exit
             // 
@@ -81,55 +108,18 @@
             this.label_Exit.TabIndex = 7;
             this.label_Exit.Text = "x";
             // 
-            // btn_Login
+            // btn_User
             // 
-            this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
-            this.btn_Login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Login.Font = new System.Drawing.Font("Malgun Gothic", 21.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Login.ForeColor = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(196, 413);
-            this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(222, 71);
-            this.btn_Login.TabIndex = 5;
-            this.btn_Login.Text = "User";
-            this.btn_Login.UseVisualStyleBackColor = false;
-            // 
-            // label_Login
-            // 
-            this.label_Login.AutoSize = true;
-            this.label_Login.Font = new System.Drawing.Font("Malgun Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Login.ForeColor = System.Drawing.Color.White;
-            this.label_Login.Location = new System.Drawing.Point(3, 595);
-            this.label_Login.Name = "label_Login";
-            this.label_Login.Size = new System.Drawing.Size(237, 86);
-            this.label_Login.TabIndex = 0;
-            this.label_Login.Text = "LOGIN";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
-            this.button1.Location = new System.Drawing.Point(180, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 71);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Aministrator";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(230)))), ((int)(((byte)(242)))));
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(557, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 32);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "x";
+            this.btn_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.btn_User.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_User.Font = new System.Drawing.Font("Malgun Gothic", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_User.ForeColor = System.Drawing.Color.White;
+            this.btn_User.Location = new System.Drawing.Point(196, 413);
+            this.btn_User.Name = "btn_User";
+            this.btn_User.Size = new System.Drawing.Size(222, 71);
+            this.btn_User.TabIndex = 5;
+            this.btn_User.Text = "User";
+            this.btn_User.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -141,9 +131,28 @@
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Logout.ForeColor = System.Drawing.Color.White;
+            this.btn_Logout.Image = global::Project_SS.Properties.Resources.logout__2_;
+            this.btn_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Logout.Location = new System.Drawing.Point(12, 673);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(147, 44);
+            this.btn_Logout.TabIndex = 10;
+            this.btn_Logout.Text = "       Logout";
+            this.btn_Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Project_SS.Properties.Resources.admin;
+            this.pictureBox1.Image = global::Project_SS.Properties.Resources.admin__1_;
             this.pictureBox1.Location = new System.Drawing.Point(156, 123);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 248);
@@ -155,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 681);
+            this.ClientSize = new System.Drawing.Size(1200, 720);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -163,7 +172,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseRole";
             this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -177,11 +185,11 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.Label label_Exit;
-        private System.Windows.Forms.Button btn_Login;
-        private System.Windows.Forms.Label label_Login;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_User;
+        private System.Windows.Forms.Button btn_Admin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_Logout;
     }
 }

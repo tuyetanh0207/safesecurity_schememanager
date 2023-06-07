@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_SS
+namespace Project_SS.UserControls
 {
-    public partial class ChooseRole : Form
+    public partial class UC_User : UserControl
     {
-        public ChooseRole()
+        public UC_User()
         {
             InitializeComponent();
         }

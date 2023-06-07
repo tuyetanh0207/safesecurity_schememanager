@@ -55,20 +55,20 @@ namespace Project_SS
                     con.Open();
                     con.Close();
 
-                    MessageBox.Show(username);
-                    Dashboard dashboardForm = new Dashboard();
-                    dashboardForm.Show();
-                    this.Hide();
-
-                    /*
                     if (username == "QLCONGTY")
                     {
                         MessageBox.Show(username);
-                        F_Dashboard dashboardForm = new F_Dashboard();
+                        ChooseRole f_choose = new ChooseRole();
+                        f_choose.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show(username);
+                        Dashboard dashboardForm = new Dashboard();
                         dashboardForm.Show();
                         this.Hide();
                     }
-                    */
                 }
                 catch (Exception ex)
                 {
