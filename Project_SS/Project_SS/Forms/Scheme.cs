@@ -21,7 +21,7 @@ namespace Project_SS.Forms
         {
 
         }
-                private void lblTitle_Click(object sender, EventArgs e)
+        private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }
