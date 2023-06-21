@@ -33,10 +33,17 @@
             this.cbxName = new System.Windows.Forms.ComboBox();
             this.cbxSchema = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.txbSchema = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSaveUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txbSchema = new System.Windows.Forms.TextBox();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.txbCurrSchema = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbCurrEmp = new System.Windows.Forms.TextBox();
+            this.txbCurrTime = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPHANCONG)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +62,7 @@
             // dtgvDSPHANCONG
             // 
             this.dtgvDSPHANCONG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvDSPHANCONG.Location = new System.Drawing.Point(19, 65);
+            this.dtgvDSPHANCONG.Location = new System.Drawing.Point(4, 65);
             this.dtgvDSPHANCONG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgvDSPHANCONG.Name = "dtgvDSPHANCONG";
             this.dtgvDSPHANCONG.RowHeadersWidth = 51;
@@ -66,26 +73,38 @@
             // 
             // cbxName
             // 
+            this.cbxName.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cbxName.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbxName.FormattingEnabled = true;
-            this.cbxName.Location = new System.Drawing.Point(14, 120);
+            this.cbxName.Location = new System.Drawing.Point(17, 345);
             this.cbxName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxName.Name = "cbxName";
             this.cbxName.Size = new System.Drawing.Size(267, 36);
             this.cbxName.TabIndex = 2;
+            this.cbxName.Text = "Choose employee . . .";
+            this.cbxName.SelectedIndexChanged += new System.EventHandler(this.cbxName_SelectedIndexChanged);
             // 
             // cbxSchema
             // 
+            this.cbxSchema.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cbxSchema.FormattingEnabled = true;
-            this.cbxSchema.Location = new System.Drawing.Point(14, 273);
+            this.cbxSchema.Location = new System.Drawing.Point(16, 234);
             this.cbxSchema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxSchema.Name = "cbxSchema";
             this.cbxSchema.Size = new System.Drawing.Size(267, 36);
             this.cbxSchema.TabIndex = 3;
+            this.cbxSchema.Text = "Choose schema . . .";
             this.cbxSchema.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Controls.Add(this.txbCurrTime);
+            this.panel1.Controls.Add(this.txbCurrEmp);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txbCurrSchema);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnSaveUpdate);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txbSchema);
@@ -95,49 +114,127 @@
             this.panel1.Location = new System.Drawing.Point(679, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 390);
+            this.panel1.Size = new System.Drawing.Size(294, 488);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txbName
+            // btnSaveUpdate
             // 
-            this.txbName.Location = new System.Drawing.Point(14, 78);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(267, 34);
-            this.txbName.TabIndex = 4;
+            this.btnSaveUpdate.Location = new System.Drawing.Point(173, 415);
+            this.btnSaveUpdate.Name = "btnSaveUpdate";
+            this.btnSaveUpdate.Size = new System.Drawing.Size(111, 53);
+            this.btnSaveUpdate.TabIndex = 8;
+            this.btnSaveUpdate.Text = "SAVE";
+            this.btnSaveUpdate.UseVisualStyleBackColor = true;
+            this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
             // 
-            // txbSchema
+            // label2
             // 
-            this.txbSchema.Location = new System.Drawing.Point(14, 231);
-            this.txbSchema.Name = "txbSchema";
-            this.txbSchema.Size = new System.Drawing.Size(267, 34);
-            this.txbSchema.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(64, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 28);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Search schema";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(71, 31);
+            this.label1.Location = new System.Drawing.Point(64, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Search employee";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // txbSchema
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(83, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 28);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Search schema";
+            this.txbSchema.Font = new System.Drawing.Font("Malgun Gothic Semilight", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSchema.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txbSchema.Location = new System.Drawing.Point(16, 201);
+            this.txbSchema.Name = "txbSchema";
+            this.txbSchema.Size = new System.Drawing.Size(267, 25);
+            this.txbSchema.TabIndex = 5;
+            this.txbSchema.Text = "Phát triển ứng dụng . . .";
+            this.txbSchema.TextChanged += new System.EventHandler(this.txbSchema_TextChanged);
+            // 
+            // txbName
+            // 
+            this.txbName.Font = new System.Drawing.Font("Malgun Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbName.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txbName.Location = new System.Drawing.Point(17, 312);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(267, 25);
+            this.txbName.TabIndex = 4;
+            this.txbName.Text = "Nguyễn Tuyết Anh. . .";
+            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(22, 415);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 53);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txbCurrSchema
+            // 
+            this.txbCurrSchema.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrSchema.Location = new System.Drawing.Point(7, 35);
+            this.txbCurrSchema.Name = "txbCurrSchema";
+            this.txbCurrSchema.Size = new System.Drawing.Size(277, 30);
+            this.txbCurrSchema.TabIndex = 10;
+            this.txbCurrSchema.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Assignement information: ";
+            // 
+            // txbCurrEmp
+            // 
+            this.txbCurrEmp.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrEmp.Location = new System.Drawing.Point(7, 75);
+            this.txbCurrEmp.Name = "txbCurrEmp";
+            this.txbCurrEmp.Size = new System.Drawing.Size(276, 30);
+            this.txbCurrEmp.TabIndex = 12;
+            this.txbCurrEmp.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // txbCurrTime
+            // 
+            this.txbCurrTime.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrTime.Location = new System.Drawing.Point(7, 115);
+            this.txbCurrTime.Name = "txbCurrTime";
+            this.txbCurrTime.Size = new System.Drawing.Size(276, 30);
+            this.txbCurrTime.TabIndex = 13;
+            this.txbCurrTime.TextChanged += new System.EventHandler(this.txbCurrTime_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Coral;
+            this.button1.Location = new System.Drawing.Point(796, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 51);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "+ ADD ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UC_PhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvDSPHANCONG);
             this.Controls.Add(this.Phancong);
@@ -164,5 +261,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbSchema;
         private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.Button btnSaveUpdate;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txbCurrTime;
+        private System.Windows.Forms.TextBox txbCurrEmp;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txbCurrSchema;
+        private System.Windows.Forms.Button button1;
     }
 }
