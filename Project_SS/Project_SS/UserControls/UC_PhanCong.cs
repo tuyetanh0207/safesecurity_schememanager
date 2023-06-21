@@ -54,7 +54,7 @@ namespace Project_SS.UserControls
             dtgvDSPHANCONG.Columns.Insert(dtgvDSPHANCONG.Columns.Count, doWork);
             DataGridViewButtonColumn doWork1 = new DataGridViewButtonColumn();
             doWork1.HeaderText = "";
-            doWork1.
+            doWork1.Text = "Update";
             doWork1.Width = 50;
             dtgvDSPHANCONG.Columns.Insert(dtgvDSPHANCONG.Columns.Count, doWork1);
       
