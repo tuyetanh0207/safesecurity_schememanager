@@ -34,19 +34,12 @@ namespace Project_SS.UserControls
             {
                 dtgvDSPHANCONG.Rows[i].HeaderCell.Value = (i + 1).ToString();
             }
-           /* for (int i = 0; i < dtgvDSPHANCONG.Columns.Count - 1; i++)
-            {
-                dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
-            dtgvDSPHANCONG.Columns[dtgvDSPHANCONG.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-*/
-            for (int i = 0; i < dtgvDSPHANCONG.Columns.Count; i++)
-            {
-                /*int colw = dtgvDSPHANCONG.Columns[i].Width;
-                dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dtgvDSPHANCONG.Columns[i].Width = colw;*/
-                dtgvDSPHANCONG.Columns[i].ReadOnly = true;
-            }
+            /* for (int i = 0; i < dtgvDSPHANCONG.Columns.Count - 1; i++)
+             {
+                 dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+             }
+             dtgvDSPHANCONG.Columns[dtgvDSPHANCONG.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+ */
             DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
             doWork.HeaderText = "";
             doWork.Text = "Delete";
@@ -57,6 +50,15 @@ namespace Project_SS.UserControls
             doWork1.Text = "Update";
             doWork1.Width = 50;
             dtgvDSPHANCONG.Columns.Insert(dtgvDSPHANCONG.Columns.Count, doWork1);
+            for (int i = 0; i < dtgvDSPHANCONG.Columns.Count; i++)
+            {
+                /*int colw = dtgvDSPHANCONG.Columns[i].Width;
+                dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dtgvDSPHANCONG.Columns[i].Width = colw;*/
+                dtgvDSPHANCONG.Columns[i].ReadOnly = true;
+                doWork.Columns[i].Text = "Delete";
+            }
+          
       
             //MessageBox.Show("hihi");
         }
