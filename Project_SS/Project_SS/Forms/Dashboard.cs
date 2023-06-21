@@ -26,8 +26,10 @@ namespace Project_SS
             panelWidth = panel_Left.Width;
             isCollapse = false;
 
-            UC_Dashboard uC = new UC_Dashboard();
-            addControls(uC);
+          /*  UC_Dashboard uC = new UC_Dashboard();
+            addControls(uC);*/
+            UC_PhanCong pc = new UC_PhanCong();
+            addControls(pc);
 
         }
 
