@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Newtonsoft.Json.Linq;
 
 namespace Project_SS.UserControls
 {
@@ -50,16 +51,17 @@ namespace Project_SS.UserControls
             doWork1.Text = "Update";
             doWork1.Width = 50;
             dtgvDSPHANCONG.Columns.Insert(dtgvDSPHANCONG.Columns.Count, doWork1);
+            
             for (int i = 0; i < dtgvDSPHANCONG.Columns.Count; i++)
             {
-                /*int colw = dtgvDSPHANCONG.Columns[i].Width;
+                int colw = dtgvDSPHANCONG.Columns[i].Width;
                 dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dtgvDSPHANCONG.Columns[i].Width = colw;*/
+                dtgvDSPHANCONG.Columns[i].Width = colw;
                 dtgvDSPHANCONG.Columns[i].ReadOnly = true;
-                doWork.Columns[i].Text = "Delete";
+         
             }
-          
-      
+
+
             //MessageBox.Show("hihi");
         }
 
