@@ -72,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContainer.BackColor = System.Drawing.Color.White;
             this.panelContainer.Location = new System.Drawing.Point(297, 155);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1303, 731);
             this.panelContainer.TabIndex = 6;
@@ -92,7 +92,7 @@
             this.panel_Left.Controls.Add(this.panel_Logo);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
-            this.panel_Left.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Left.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Left.Name = "panel_Left";
             this.panel_Left.Size = new System.Drawing.Size(297, 886);
             this.panel_Left.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 194);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(11, 54);
             this.panel1.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.btnAboutUs.Image = global::Project_SS.Properties.Resources.logout__2_;
             this.btnAboutUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAboutUs.Location = new System.Drawing.Point(16, 827);
-            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(4);
             this.btnAboutUs.Name = "btnAboutUs";
             this.btnAboutUs.Size = new System.Drawing.Size(275, 54);
             this.btnAboutUs.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.Location = new System.Drawing.Point(12, 564);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(4);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(279, 54);
             this.btnReports.TabIndex = 1;
@@ -154,7 +154,7 @@
             this.btnWorks.Image = ((System.Drawing.Image)(resources.GetObject("btnWorks.Image")));
             this.btnWorks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWorks.Location = new System.Drawing.Point(16, 416);
-            this.btnWorks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnWorks.Margin = new System.Windows.Forms.Padding(4);
             this.btnWorks.Name = "btnWorks";
             this.btnWorks.Size = new System.Drawing.Size(279, 54);
             this.btnWorks.TabIndex = 1;
@@ -172,7 +172,7 @@
             this.btnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("btnAnalytics.Image")));
             this.btnAnalytics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnalytics.Location = new System.Drawing.Point(16, 490);
-            this.btnAnalytics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnalytics.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnalytics.Name = "btnAnalytics";
             this.btnAnalytics.Size = new System.Drawing.Size(279, 54);
             this.btnAnalytics.TabIndex = 1;
@@ -190,7 +190,7 @@
             this.btnContractors.Image = ((System.Drawing.Image)(resources.GetObject("btnContractors.Image")));
             this.btnContractors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContractors.Location = new System.Drawing.Point(16, 342);
-            this.btnContractors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContractors.Margin = new System.Windows.Forms.Padding(4);
             this.btnContractors.Name = "btnContractors";
             this.btnContractors.Size = new System.Drawing.Size(279, 54);
             this.btnContractors.TabIndex = 1;
@@ -208,7 +208,7 @@
             this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
             this.btnJobs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnJobs.Location = new System.Drawing.Point(16, 268);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(4);
             this.btnJobs.Name = "btnJobs";
             this.btnJobs.Size = new System.Drawing.Size(279, 54);
             this.btnJobs.TabIndex = 1;
@@ -226,7 +226,7 @@
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(16, 194);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(279, 54);
             this.btnDashboard.TabIndex = 1;
@@ -242,14 +242,14 @@
             this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo.Location = new System.Drawing.Point(0, 0);
             this.panel_Logo.Name = "panel_Logo";
-            this.panel_Logo.Size = new System.Drawing.Size(221, 149);
+            this.panel_Logo.Size = new System.Drawing.Size(295, 149);
             this.panel_Logo.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project_SS.Properties.Resources.LogoText_white__4x;
             this.pictureBox1.Location = new System.Drawing.Point(52, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -264,8 +264,8 @@
             this.btn_Roll_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Roll_Dashboard.ForeColor = System.Drawing.Color.White;
             this.btn_Roll_Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("btn_Roll_Dashboard.Image")));
-            this.btn_Roll_Dashboard.Location = new System.Drawing.Point(233, 2);
-            this.btn_Roll_Dashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Roll_Dashboard.Location = new System.Drawing.Point(307, 2);
+            this.btn_Roll_Dashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Roll_Dashboard.Name = "btn_Roll_Dashboard";
             this.btn_Roll_Dashboard.Size = new System.Drawing.Size(61, 54);
             this.btn_Roll_Dashboard.TabIndex = 1;
@@ -282,9 +282,9 @@
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.labelTime.Location = new System.Drawing.Point(146, 11);
+            this.labelTime.Location = new System.Drawing.Point(309, 11);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(90, 21);
+            this.labelTime.Size = new System.Drawing.Size(112, 28);
             this.labelTime.TabIndex = 8;
             this.labelTime.Text = "HH:MM:SS";
             // 
@@ -296,9 +296,9 @@
             this.label_Exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.label_Exit.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
-            this.label_Exit.Location = new System.Drawing.Point(950, 0);
+            this.label_Exit.Location = new System.Drawing.Point(1269, 0);
             this.label_Exit.Name = "label_Exit";
-            this.label_Exit.Size = new System.Drawing.Size(27, 32);
+            this.label_Exit.Size = new System.Drawing.Size(34, 41);
             this.label_Exit.TabIndex = 8;
             this.label_Exit.Text = "x";
             this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
@@ -309,9 +309,9 @@
             this.panel_Time.Controls.Add(this.label_Exit);
             this.panel_Time.Controls.Add(this.labelTime);
             this.panel_Time.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Time.Location = new System.Drawing.Point(223, 0);
+            this.panel_Time.Location = new System.Drawing.Point(297, 0);
             this.panel_Time.Name = "panel_Time";
-            this.panel_Time.Size = new System.Drawing.Size(977, 49);
+            this.panel_Time.Size = new System.Drawing.Size(1303, 49);
             this.panel_Time.TabIndex = 3;
             // 
             // label_User
@@ -321,7 +321,7 @@
             this.label_User.ForeColor = System.Drawing.Color.White;
             this.label_User.Location = new System.Drawing.Point(57, 12);
             this.label_User.Name = "label_User";
-            this.label_User.Size = new System.Drawing.Size(87, 21);
+            this.label_User.Size = new System.Drawing.Size(108, 28);
             this.label_User.TabIndex = 14;
             this.label_User.Text = "Username:";
             // 
@@ -332,7 +332,7 @@
             this.tb_User.ForeColor = System.Drawing.Color.White;
             this.tb_User.Location = new System.Drawing.Point(146, 12);
             this.tb_User.Name = "tb_User";
-            this.tb_User.Size = new System.Drawing.Size(129, 20);
+            this.tb_User.Size = new System.Drawing.Size(156, 25);
             this.tb_User.TabIndex = 14;
             this.tb_User.Text = "____________";
             // 
@@ -343,7 +343,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(546, 18);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(185, 45);
+            this.lblTitle.Size = new System.Drawing.Size(230, 54);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Dashboard";
             // 
@@ -354,7 +354,7 @@
             this.tb_Role.ForeColor = System.Drawing.Color.White;
             this.tb_Role.Location = new System.Drawing.Point(146, 47);
             this.tb_Role.Name = "tb_Role";
-            this.tb_Role.Size = new System.Drawing.Size(129, 20);
+            this.tb_Role.Size = new System.Drawing.Size(156, 25);
             this.tb_Role.TabIndex = 14;
             this.tb_Role.Text = "____________";
             // 
@@ -365,7 +365,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(98, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 21);
+            this.label4.Size = new System.Drawing.Size(56, 28);
             this.label4.TabIndex = 14;
             this.label4.Text = "Role:";
             // 
@@ -393,7 +393,7 @@
             this.Controls.Add(this.panel_Left);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
