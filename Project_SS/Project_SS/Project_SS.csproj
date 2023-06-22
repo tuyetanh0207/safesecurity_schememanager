@@ -279,6 +279,12 @@
     <Compile Include="UserControls\UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_DeAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_DeAn.Designer.cs">
+      <DependentUpon>UC_DeAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Role.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_DeAn.resx">
+      <DependentUpon>UC_DeAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Role.resx">
       <DependentUpon>UC_Role.cs</DependentUpon>
