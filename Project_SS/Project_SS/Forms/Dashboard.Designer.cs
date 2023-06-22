@@ -71,9 +71,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContainer.BackColor = System.Drawing.Color.White;
-            this.panelContainer.Location = new System.Drawing.Point(223, 126);
+            this.panelContainer.Location = new System.Drawing.Point(297, 155);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(977, 594);
+            this.panelContainer.Size = new System.Drawing.Size(1303, 731);
             this.panelContainer.TabIndex = 6;
             // 
             // panel_Left
@@ -91,8 +92,9 @@
             this.panel_Left.Controls.Add(this.panel_Logo);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
+            this.panel_Left.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(223, 720);
+            this.panel_Left.Size = new System.Drawing.Size(297, 886);
             this.panel_Left.TabIndex = 4;
             // 
             // panel_Logo
@@ -220,9 +222,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 158);
+            this.panel1.Location = new System.Drawing.Point(0, 194);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(8, 44);
+            this.panel1.Size = new System.Drawing.Size(11, 54);
             this.panel1.TabIndex = 3;
             // 
             // btnAboutUs
@@ -235,9 +238,10 @@
             this.btnAboutUs.ForeColor = System.Drawing.Color.White;
             this.btnAboutUs.Image = global::Project_SS.Properties.Resources.logout__2_;
             this.btnAboutUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAboutUs.Location = new System.Drawing.Point(12, 672);
+            this.btnAboutUs.Location = new System.Drawing.Point(16, 827);
+            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(206, 44);
+            this.btnAboutUs.Size = new System.Drawing.Size(275, 54);
             this.btnAboutUs.TabIndex = 1;
             this.btnAboutUs.Text = "       Logout";
             this.btnAboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,9 +257,10 @@
             this.btnReports.ForeColor = System.Drawing.Color.White;
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(9, 458);
+            this.btnReports.Location = new System.Drawing.Point(12, 564);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(209, 44);
+            this.btnReports.Size = new System.Drawing.Size(279, 54);
             this.btnReports.TabIndex = 1;
             this.btnReports.Text = "   Reports";
             this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -270,9 +275,10 @@
             this.btnWorks.ForeColor = System.Drawing.Color.White;
             this.btnWorks.Image = ((System.Drawing.Image)(resources.GetObject("btnWorks.Image")));
             this.btnWorks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorks.Location = new System.Drawing.Point(12, 338);
+            this.btnWorks.Location = new System.Drawing.Point(16, 416);
+            this.btnWorks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnWorks.Name = "btnWorks";
-            this.btnWorks.Size = new System.Drawing.Size(209, 44);
+            this.btnWorks.Size = new System.Drawing.Size(279, 54);
             this.btnWorks.TabIndex = 1;
             this.btnWorks.Text = "   Manage Works";
             this.btnWorks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -287,9 +293,10 @@
             this.btnAnalytics.ForeColor = System.Drawing.Color.White;
             this.btnAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("btnAnalytics.Image")));
             this.btnAnalytics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalytics.Location = new System.Drawing.Point(12, 398);
+            this.btnAnalytics.Location = new System.Drawing.Point(16, 490);
+            this.btnAnalytics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnalytics.Name = "btnAnalytics";
-            this.btnAnalytics.Size = new System.Drawing.Size(209, 44);
+            this.btnAnalytics.Size = new System.Drawing.Size(279, 54);
             this.btnAnalytics.TabIndex = 1;
             this.btnAnalytics.Text = "   Analytics";
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -304,9 +311,10 @@
             this.btnContractors.ForeColor = System.Drawing.Color.White;
             this.btnContractors.Image = ((System.Drawing.Image)(resources.GetObject("btnContractors.Image")));
             this.btnContractors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContractors.Location = new System.Drawing.Point(12, 278);
+            this.btnContractors.Location = new System.Drawing.Point(16, 342);
+            this.btnContractors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnContractors.Name = "btnContractors";
-            this.btnContractors.Size = new System.Drawing.Size(209, 44);
+            this.btnContractors.Size = new System.Drawing.Size(279, 54);
             this.btnContractors.TabIndex = 1;
             this.btnContractors.Text = "   Contractors";
             this.btnContractors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -321,9 +329,10 @@
             this.btnJobs.ForeColor = System.Drawing.Color.White;
             this.btnJobs.Image = ((System.Drawing.Image)(resources.GetObject("btnJobs.Image")));
             this.btnJobs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJobs.Location = new System.Drawing.Point(12, 218);
+            this.btnJobs.Location = new System.Drawing.Point(16, 268);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(209, 44);
+            this.btnJobs.Size = new System.Drawing.Size(279, 54);
             this.btnJobs.TabIndex = 1;
             this.btnJobs.Text = "   Assigned Jobs";
             this.btnJobs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -338,20 +347,34 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(12, 158);
+            this.btnDashboard.Location = new System.Drawing.Point(16, 194);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(209, 44);
+            this.btnDashboard.Size = new System.Drawing.Size(279, 54);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "   Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
             // 
+            // panel_Logo
+            // 
+            this.panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.panel_Logo.Controls.Add(this.pictureBox1);
+            this.panel_Logo.Controls.Add(this.btn_Roll_Dashboard);
+            this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Logo.Name = "panel_Logo";
+            this.panel_Logo.Size = new System.Drawing.Size(295, 183);
+            this.panel_Logo.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project_SS.Properties.Resources.LogoText_white__4x;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(180, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -364,23 +387,145 @@
             this.btn_Roll_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Roll_Dashboard.ForeColor = System.Drawing.Color.White;
             this.btn_Roll_Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("btn_Roll_Dashboard.Image")));
-            this.btn_Roll_Dashboard.Location = new System.Drawing.Point(175, 2);
+            this.btn_Roll_Dashboard.Location = new System.Drawing.Point(233, 2);
+            this.btn_Roll_Dashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Roll_Dashboard.Name = "btn_Roll_Dashboard";
-            this.btn_Roll_Dashboard.Size = new System.Drawing.Size(46, 44);
+            this.btn_Roll_Dashboard.Size = new System.Drawing.Size(61, 54);
             this.btn_Roll_Dashboard.TabIndex = 1;
             this.btn_Roll_Dashboard.UseVisualStyleBackColor = true;
             this.btn_Roll_Dashboard.Click += new System.EventHandler(this.btn_Roll_Dashboard_Click);
             // 
+            // timerTime
+            // 
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
+            // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.labelTime.Location = new System.Drawing.Point(195, 14);
+            this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(112, 28);
+            this.labelTime.TabIndex = 8;
+            this.labelTime.Text = "HH:MM:SS";
+            // 
+            // label_Exit
+            // 
+            this.label_Exit.AutoSize = true;
+            this.label_Exit.BackColor = System.Drawing.Color.White;
+            this.label_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_Exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label_Exit.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
+            this.label_Exit.Location = new System.Drawing.Point(1269, 0);
+            this.label_Exit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_Exit.Name = "label_Exit";
+            this.label_Exit.Size = new System.Drawing.Size(34, 41);
+            this.label_Exit.TabIndex = 8;
+            this.label_Exit.Text = "x";
+            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
+            // 
+            // panel_Time
+            // 
+            this.panel_Time.BackColor = System.Drawing.Color.White;
+            this.panel_Time.Controls.Add(this.label_Exit);
+            this.panel_Time.Controls.Add(this.labelTime);
+            this.panel_Time.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Time.Location = new System.Drawing.Point(297, 0);
+            this.panel_Time.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Time.Name = "panel_Time";
+            this.panel_Time.Size = new System.Drawing.Size(1303, 60);
+            this.panel_Time.TabIndex = 3;
+            // 
+            // label_User
+            // 
+            this.label_User.AutoSize = true;
+            this.label_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.label_User.ForeColor = System.Drawing.Color.White;
+            this.label_User.Location = new System.Drawing.Point(76, 15);
+            this.label_User.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_User.Name = "label_User";
+            this.label_User.Size = new System.Drawing.Size(108, 28);
+            this.label_User.TabIndex = 14;
+            this.label_User.Text = "Username:";
+            // 
+            // tb_User
+            // 
+            this.tb_User.AutoSize = true;
+            this.tb_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_User.ForeColor = System.Drawing.Color.White;
+            this.tb_User.Location = new System.Drawing.Point(195, 15);
+            this.tb_User.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_User.Name = "tb_User";
+            this.tb_User.Size = new System.Drawing.Size(156, 25);
+            this.tb_User.TabIndex = 14;
+            this.tb_User.Text = "____________";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(728, 22);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(230, 54);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "Dashboard";
+            // 
+            // tb_Role
+            // 
+            this.tb_Role.AutoSize = true;
+            this.tb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Role.ForeColor = System.Drawing.Color.White;
+            this.tb_Role.Location = new System.Drawing.Point(195, 58);
+            this.tb_Role.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tb_Role.Name = "tb_Role";
+            this.tb_Role.Size = new System.Drawing.Size(156, 25);
+            this.tb_Role.TabIndex = 14;
+            this.tb_Role.Text = "____________";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(131, 58);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 28);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Role:";
+            // 
+            // panel_Role
+            // 
+            this.panel_Role.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.panel_Role.Controls.Add(this.label4);
+            this.panel_Role.Controls.Add(this.tb_Role);
+            this.panel_Role.Controls.Add(this.lblTitle);
+            this.panel_Role.Controls.Add(this.tb_User);
+            this.panel_Role.Controls.Add(this.label_User);
+            this.panel_Role.Location = new System.Drawing.Point(297, 50);
+            this.panel_Role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Role.Name = "panel_Role";
+            this.panel_Role.Size = new System.Drawing.Size(1303, 105);
+            this.panel_Role.TabIndex = 5;
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.ClientSize = new System.Drawing.Size(1600, 886);
             this.Controls.Add(this.panel_Role);
             this.Controls.Add(this.panel_Time);
             this.Controls.Add(this.panel_Left);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
