@@ -28,50 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Role = new System.Windows.Forms.Button();
             this.btn_User = new System.Windows.Forms.Button();
+            this.btn_Role = new System.Windows.Forms.Button();
             this.panel_Container = new System.Windows.Forms.Panel();
             this.label_Exit = new System.Windows.Forms.Label();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_Role
-            // 
-            this.btn_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
-            this.btn_Role.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Role.FlatAppearance.BorderSize = 0;
-            this.btn_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Role.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btn_Role.ForeColor = System.Drawing.Color.White;
-            this.btn_Role.Location = new System.Drawing.Point(0, 35);
-            this.btn_Role.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Role.Name = "btn_Role";
-            this.btn_Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Role.Size = new System.Drawing.Size(600, 85);
-            this.btn_Role.TabIndex = 2;
-            this.btn_Role.Text = " ROLE";
-            this.btn_Role.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Role.UseVisualStyleBackColor = false;
-            // 
             // btn_User
             // 
             this.btn_User.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.btn_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
             this.btn_User.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_User.FlatAppearance.BorderSize = 0;
             this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_User.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btn_User.ForeColor = System.Drawing.Color.White;
-            this.btn_User.Location = new System.Drawing.Point(600, 35);
+            this.btn_User.Location = new System.Drawing.Point(0, 35);
             this.btn_User.Margin = new System.Windows.Forms.Padding(0);
             this.btn_User.Name = "btn_User";
             this.btn_User.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_User.Size = new System.Drawing.Size(600, 85);
-            this.btn_User.TabIndex = 3;
+            this.btn_User.TabIndex = 2;
             this.btn_User.Text = "USER";
             this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_User.UseVisualStyleBackColor = false;
+            this.btn_User.Click += new System.EventHandler(this.btn_User_Click);
+            // 
+            // btn_Role
+            // 
+            this.btn_Role.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.btn_Role.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Role.FlatAppearance.BorderSize = 0;
+            this.btn_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Role.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.btn_Role.ForeColor = System.Drawing.Color.White;
+            this.btn_Role.Location = new System.Drawing.Point(600, 35);
+            this.btn_Role.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Role.Name = "btn_Role";
+            this.btn_Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_Role.Size = new System.Drawing.Size(600, 85);
+            this.btn_Role.TabIndex = 3;
+            this.btn_Role.Text = "ROLE";
+            this.btn_Role.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Role.UseVisualStyleBackColor = false;
+            this.btn_Role.Click += new System.EventHandler(this.btn_Role_Click);
             // 
             // panel_Container
             // 
@@ -124,11 +126,11 @@
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.panel_Container);
-            this.Controls.Add(this.btn_User);
             this.Controls.Add(this.btn_Role);
+            this.Controls.Add(this.btn_User);
             this.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -138,8 +140,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_Role;
         private System.Windows.Forms.Button btn_User;
+        private System.Windows.Forms.Button btn_Role;
         private System.Windows.Forms.Panel panel_Container;
         private System.Windows.Forms.Label label_Exit;
         private System.Windows.Forms.Button btnAboutUs;

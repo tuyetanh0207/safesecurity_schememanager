@@ -32,5 +32,12 @@ namespace Project_SS
             f_admin.Show();
             this.Hide();
         }
+
+        private void btn_User_Click(object sender, EventArgs e)
+        {
+            Dashboard f_dashboard = new Dashboard();
+            f_dashboard.Show();
+            this.Hide();
+        }
     }
 }

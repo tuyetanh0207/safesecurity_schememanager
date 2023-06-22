@@ -19,17 +19,17 @@ namespace Project_SS.UserControls
         public UC_PhanCong()
         {
             InitializeComponent();
-            getAssignment();
-            dtgvDSPHANCONG.RowHeadersWidth = 50;
+            //getAssignment();
+            //dtgvDSPHANCONG.RowHeadersWidth = 50;
 
 
         }
         private void getAssignment()
         {
-
+            
             DataTable dataTable = new DataTable();
-            string query = "select pc.MAda as \"Schema ID\", da.TENDA as Schema, nv.manv as EmpID, nv.tennv as Emp, pc.thoigian as Time from QLCONGTY.phancong pc join QLCONGTY.dean da on pc.mada = da.mada join QLCONGTY.nhanvien nv on pc.manv=nv.manv";
-            //string query = "SELECT * FROM QLCONGTY.NHANVIEN";
+            //string query = "select pc.MAda as \"Schema ID\", da.TENDA as Schema, nv.manv as EmpID, nv.tennv as Emp, pc.thoigian as Time from QLCONGTY.phancong pc join QLCONGTY.dean da on pc.mada = da.mada join QLCONGTY.nhanvien nv on pc.manv=nv.manv";
+            string query = "SELECT * FROM QLCONGTY.NHANVIEN";
             dtgvDSPHANCONG.DataSource = DataProvider.Instance.ExecuteQuery(query);
             for (int i = 0; i < dtgvDSPHANCONG.Rows.Count; i++)
             {

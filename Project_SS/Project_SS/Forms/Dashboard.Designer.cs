@@ -33,7 +33,17 @@
             this.timerRoll = new System.Windows.Forms.Timer(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panel_Left = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAboutUs = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnWorks = new System.Windows.Forms.Button();
+            this.btnAnalytics = new System.Windows.Forms.Button();
+            this.btnContractors = new System.Windows.Forms.Button();
+            this.btnJobs = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Roll_Dashboard = new System.Windows.Forms.Button();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.labelTime = new System.Windows.Forms.Label();
             this.label_Exit = new System.Windows.Forms.Label();
@@ -44,21 +54,11 @@
             this.tb_Role = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel_Role = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAboutUs = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnWorks = new System.Windows.Forms.Button();
-            this.btnAnalytics = new System.Windows.Forms.Button();
-            this.btnContractors = new System.Windows.Forms.Button();
-            this.btnJobs = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_Roll_Dashboard = new System.Windows.Forms.Button();
             this.panel_Left.SuspendLayout();
             this.panel_Logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Time.SuspendLayout();
             this.panel_Role.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timerRoll
@@ -94,128 +94,6 @@
             this.panel_Left.Name = "panel_Left";
             this.panel_Left.Size = new System.Drawing.Size(223, 720);
             this.panel_Left.TabIndex = 4;
-            // 
-            // panel_Logo
-            // 
-            this.panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
-            this.panel_Logo.Controls.Add(this.pictureBox1);
-            this.panel_Logo.Controls.Add(this.btn_Roll_Dashboard);
-            this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_Logo.Name = "panel_Logo";
-            this.panel_Logo.Size = new System.Drawing.Size(221, 149);
-            this.panel_Logo.TabIndex = 0;
-            // 
-            // timerTime
-            // 
-            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
-            // 
-            // labelTime
-            // 
-            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.labelTime.Location = new System.Drawing.Point(146, 11);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(90, 21);
-            this.labelTime.TabIndex = 8;
-            this.labelTime.Text = "HH:MM:SS";
-            // 
-            // label_Exit
-            // 
-            this.label_Exit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label_Exit.AutoSize = true;
-            this.label_Exit.BackColor = System.Drawing.Color.White;
-            this.label_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_Exit.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
-            this.label_Exit.Location = new System.Drawing.Point(943, 2);
-            this.label_Exit.Name = "label_Exit";
-            this.label_Exit.Size = new System.Drawing.Size(27, 32);
-            this.label_Exit.TabIndex = 8;
-            this.label_Exit.Text = "x";
-            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
-            // 
-            // panel_Time
-            // 
-            this.panel_Time.BackColor = System.Drawing.Color.White;
-            this.panel_Time.Controls.Add(this.label_Exit);
-            this.panel_Time.Controls.Add(this.labelTime);
-            this.panel_Time.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Time.Location = new System.Drawing.Point(223, 0);
-            this.panel_Time.Name = "panel_Time";
-            this.panel_Time.Size = new System.Drawing.Size(977, 49);
-            this.panel_Time.TabIndex = 3;
-            // 
-            // label_User
-            // 
-            this.label_User.AutoSize = true;
-            this.label_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.label_User.ForeColor = System.Drawing.Color.White;
-            this.label_User.Location = new System.Drawing.Point(57, 12);
-            this.label_User.Name = "label_User";
-            this.label_User.Size = new System.Drawing.Size(87, 21);
-            this.label_User.TabIndex = 14;
-            this.label_User.Text = "Username:";
-            // 
-            // tb_User
-            // 
-            this.tb_User.AutoSize = true;
-            this.tb_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_User.ForeColor = System.Drawing.Color.White;
-            this.tb_User.Location = new System.Drawing.Point(146, 12);
-            this.tb_User.Name = "tb_User";
-            this.tb_User.Size = new System.Drawing.Size(129, 20);
-            this.tb_User.TabIndex = 14;
-            this.tb_User.Text = "____________";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(546, 18);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(185, 45);
-            this.lblTitle.TabIndex = 14;
-            this.lblTitle.Text = "Dashboard";
-            // 
-            // tb_Role
-            // 
-            this.tb_Role.AutoSize = true;
-            this.tb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Role.ForeColor = System.Drawing.Color.White;
-            this.tb_Role.Location = new System.Drawing.Point(146, 47);
-            this.tb_Role.Name = "tb_Role";
-            this.tb_Role.Size = new System.Drawing.Size(129, 20);
-            this.tb_Role.TabIndex = 14;
-            this.tb_Role.Text = "____________";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(98, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 21);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Role:";
-            // 
-            // panel_Role
-            // 
-            this.panel_Role.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
-            this.panel_Role.Controls.Add(this.label4);
-            this.panel_Role.Controls.Add(this.tb_Role);
-            this.panel_Role.Controls.Add(this.lblTitle);
-            this.panel_Role.Controls.Add(this.tb_User);
-            this.panel_Role.Controls.Add(this.label_User);
-            this.panel_Role.Location = new System.Drawing.Point(223, 41);
-            this.panel_Role.Name = "panel_Role";
-            this.panel_Role.Size = new System.Drawing.Size(977, 85);
-            this.panel_Role.TabIndex = 5;
             // 
             // panel1
             // 
@@ -346,6 +224,17 @@
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
             // 
+            // panel_Logo
+            // 
+            this.panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.panel_Logo.Controls.Add(this.pictureBox1);
+            this.panel_Logo.Controls.Add(this.btn_Roll_Dashboard);
+            this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_Logo.Name = "panel_Logo";
+            this.panel_Logo.Size = new System.Drawing.Size(221, 149);
+            this.panel_Logo.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project_SS.Properties.Resources.LogoText_white__4x;
@@ -371,6 +260,117 @@
             this.btn_Roll_Dashboard.UseVisualStyleBackColor = true;
             this.btn_Roll_Dashboard.Click += new System.EventHandler(this.btn_Roll_Dashboard_Click);
             // 
+            // timerTime
+            // 
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
+            // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.labelTime.Location = new System.Drawing.Point(146, 11);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(90, 21);
+            this.labelTime.TabIndex = 8;
+            this.labelTime.Text = "HH:MM:SS";
+            // 
+            // label_Exit
+            // 
+            this.label_Exit.AutoSize = true;
+            this.label_Exit.BackColor = System.Drawing.Color.White;
+            this.label_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label_Exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label_Exit.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
+            this.label_Exit.Location = new System.Drawing.Point(950, 0);
+            this.label_Exit.Name = "label_Exit";
+            this.label_Exit.Size = new System.Drawing.Size(27, 32);
+            this.label_Exit.TabIndex = 8;
+            this.label_Exit.Text = "x";
+            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
+            // 
+            // panel_Time
+            // 
+            this.panel_Time.BackColor = System.Drawing.Color.White;
+            this.panel_Time.Controls.Add(this.label_Exit);
+            this.panel_Time.Controls.Add(this.labelTime);
+            this.panel_Time.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Time.Location = new System.Drawing.Point(223, 0);
+            this.panel_Time.Name = "panel_Time";
+            this.panel_Time.Size = new System.Drawing.Size(977, 49);
+            this.panel_Time.TabIndex = 3;
+            // 
+            // label_User
+            // 
+            this.label_User.AutoSize = true;
+            this.label_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.label_User.ForeColor = System.Drawing.Color.White;
+            this.label_User.Location = new System.Drawing.Point(57, 12);
+            this.label_User.Name = "label_User";
+            this.label_User.Size = new System.Drawing.Size(87, 21);
+            this.label_User.TabIndex = 14;
+            this.label_User.Text = "Username:";
+            // 
+            // tb_User
+            // 
+            this.tb_User.AutoSize = true;
+            this.tb_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_User.ForeColor = System.Drawing.Color.White;
+            this.tb_User.Location = new System.Drawing.Point(146, 12);
+            this.tb_User.Name = "tb_User";
+            this.tb_User.Size = new System.Drawing.Size(129, 20);
+            this.tb_User.TabIndex = 14;
+            this.tb_User.Text = "____________";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(546, 18);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(185, 45);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "Dashboard";
+            // 
+            // tb_Role
+            // 
+            this.tb_Role.AutoSize = true;
+            this.tb_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Role.ForeColor = System.Drawing.Color.White;
+            this.tb_Role.Location = new System.Drawing.Point(146, 47);
+            this.tb_Role.Name = "tb_Role";
+            this.tb_Role.Size = new System.Drawing.Size(129, 20);
+            this.tb_Role.TabIndex = 14;
+            this.tb_Role.Text = "____________";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(98, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 21);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Role:";
+            // 
+            // panel_Role
+            // 
+            this.panel_Role.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel_Role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
+            this.panel_Role.Controls.Add(this.label4);
+            this.panel_Role.Controls.Add(this.tb_Role);
+            this.panel_Role.Controls.Add(this.lblTitle);
+            this.panel_Role.Controls.Add(this.tb_User);
+            this.panel_Role.Controls.Add(this.label_User);
+            this.panel_Role.Location = new System.Drawing.Point(223, 41);
+            this.panel_Role.Name = "panel_Role";
+            this.panel_Role.Size = new System.Drawing.Size(977, 85);
+            this.panel_Role.TabIndex = 5;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,11 +386,11 @@
             this.Text = "Dashboard";
             this.panel_Left.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Time.ResumeLayout(false);
             this.panel_Time.PerformLayout();
             this.panel_Role.ResumeLayout(false);
             this.panel_Role.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

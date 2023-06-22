@@ -40,5 +40,17 @@ namespace Project_SS.Forms
         {
             Application.Exit();
         }
+
+        private void btn_User_Click(object sender, EventArgs e)
+        {
+            UC_User uc = new UC_User();
+            addControls(uc);
+        }
+
+        private void btn_Role_Click(object sender, EventArgs e)
+        {
+            UC_Role uc = new UC_Role();
+            addControls(uc);
+        }
     }
 }
