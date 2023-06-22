@@ -73,7 +73,7 @@ namespace Project_SS.UserControls
             dtgvDSPHANCONG.Columns[0].Width = 70;
             dtgvDSPHANCONG.Columns[2].Width = 70;
             dtgvDSPHANCONG.Columns[1].Width = 150;
-            dtgvDSPHANCONG.Columns[4].Width = 80;
+            dtgvDSPHANCONG.Columns[4].Width = 100;
 
 
             doWork.HeaderText = "Delete";
