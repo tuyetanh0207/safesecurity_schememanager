@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_SS.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace Project_SS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChooseRole());
-        }
+			//Application.Run(new ChooseRole());
+			Application.Run(new Dashboard());
+		}
     }
 }
