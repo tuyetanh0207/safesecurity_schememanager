@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-
 namespace DAO_HotelManagement
 {
     public class DataProvider
