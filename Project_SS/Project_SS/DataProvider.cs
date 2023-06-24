@@ -14,8 +14,8 @@ namespace DAO_HotelManagement
 {
     public class DataProvider
     {
-        public string username;
-        public string password;
+        public string username = "QLCONGTY";
+        public string password="DOAN";
         private static DataProvider instance;
         public static DataProvider Instance
         {
@@ -54,6 +54,60 @@ namespace DAO_HotelManagement
                 connection.Close();
             }
             return dataset;
+        }
+        public DataTable ExecuteProc(string query)
+        {
+            connectStr = connectStr + this.username + ";Password =" + this.password;
+            DataTable dataTable = new DataTable();
+            using (OracleConnection connection = new OracleConnection(connectStr))
+            {
+                connection.Open();
+                OracleCommand command = new OracleCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                adapter.Fill(dataTable);
+                connection.Close();
+            }
+            return dataTable;
+        }
+        public DataTable ExecuteProcWithStringParameter(string query, int numOfParameter, string[] parameterNames, string[] parameterValues )
+        {
+            connectStr = connectStr + this.username + ";Password =" + this.password;
+            DataTable dataTable = new DataTable();
+            using (OracleConnection connection = new OracleConnection(connectStr))
+            {
+                connection.Open();
+                OracleCommand command = new OracleCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                for(int i=0; i<parameterNames.Length; i++)
+                {
+                    command.Parameters.Add(parameterNames[i], OracleDbType.Varchar2).Value = parameterValues[i];
+                }
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                adapter.Fill(dataTable);
+                connection.Close();
+            }
+            return dataTable;
+        }
+        public int ExecuteProcWithStringParameter_NonQuery(string query, int numOfParameter, string[] parameterNames, string[] parameterValues)
+        {
+            connectStr = connectStr + this.username + ";Password =" + this.password;
+
+            int res;
+            using (OracleConnection connection = new OracleConnection(connectStr))
+            {
+                connection.Open();
+                OracleCommand command = new OracleCommand(query, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                for (int i = 0; i < parameterNames.Length; i++)
+                {
+                    command.Parameters.Add(parameterNames[i], OracleDbType.Varchar2).Value = parameterValues[i];
+                }
+                OracleDataAdapter adapter = new OracleDataAdapter(command);
+                res = command.ExecuteNonQuery();
+                connection.Close();
+            }
+            return res;
         }
         public DataTable ExecuteQuery(string query)
         {
@@ -96,5 +150,7 @@ namespace DAO_HotelManagement
             }
             return result;
         }
+        
     } 
+
 }
