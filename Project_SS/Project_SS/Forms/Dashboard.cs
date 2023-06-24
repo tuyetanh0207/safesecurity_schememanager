@@ -26,9 +26,11 @@ namespace Project_SS
             panelWidth = panel_Left.Width;
             isCollapse = false;
 
-          /*  UC_Dashboard uC = new UC_Dashboard();
-            addControls(uC);*/
-            UC_PhanCong pc = new UC_PhanCong();
+            /*  UC_Dashboard uC = new UC_Dashboard();
+              addControls(uC);*/
+            /* UC_PhanCong pc = new UC_PhanCong();
+             addControls(pc);*/
+            UC_DeAn pc = new UC_DeAn();
             addControls(pc);
 
         }
@@ -86,6 +88,11 @@ namespace Project_SS
             uc.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(uc);
             uc.BringToFront();
+        }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

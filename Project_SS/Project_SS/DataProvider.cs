@@ -38,7 +38,7 @@ namespace DAO_HotelManagement
         public string PATH = "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVICE_NAME = XE)))";
         // connect string for the rest
         private string connectStr = "Data Source=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST = LocalHost)(Port=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl1))); User ID=";
-       
+
         // connect string tuyetanh for docker
         //private string connectStr = "Data Source = " + "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 15212)))(CONNECT_DATA = (SERVICE_NAME = XE)))" + ";User Id = ";
         public DataSet ExecuteQuery1(string query)
@@ -96,5 +96,5 @@ namespace DAO_HotelManagement
             }
             return result;
         }
-    } 
+    }
 }
