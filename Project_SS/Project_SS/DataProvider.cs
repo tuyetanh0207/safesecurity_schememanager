@@ -37,13 +37,11 @@ namespace DAO_HotelManagement
         }
         public string getUsername() { return this.username; }
         public string PATH = "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVICE_NAME = XE)))";
-		//public string PATH = "Server=DESKTOP-3F9FAFD;Database=QLCONGTY;User Id = SYS; Password = Thuyduong1622@;Trusted_Connection=True;MultipleActiveResultSets=true;trustservercertificate=true";
-        //connect string for The rest
-        private string connectStr = "Data Source=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST = LocalHost)(Port=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl1))); User ID=";
-        //private string connectStr = "Data Source=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST = 10.0.220.70)(Port=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe))); User ID=";
+        //connect string for the rest
+        private string connectStr = "Data Source=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST = LocalHost)(Port=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe))); User ID=";
 
-        //connect string tuyetanh for docker
-        //private string connectStr = "Data Source = " + "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 15212)))(CONNECT_DATA = (SERVICE_NAME = XE)))" + ";User Id = ";
+        // connect string tuyetanh for docker
+        //private string connectStr = "Data Source = " + "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVICE_NAME = XE)))" + ";User Id = ";
         public DataSet ExecuteQuery1(string query)
         {
             connectStr = connectStr + this.username + ";Password =" + this.password;
