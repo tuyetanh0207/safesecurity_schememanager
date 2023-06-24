@@ -89,5 +89,10 @@ namespace Project_SS
             panelContainer.Controls.Add(uc);
             uc.BringToFront();
         }
-	}
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

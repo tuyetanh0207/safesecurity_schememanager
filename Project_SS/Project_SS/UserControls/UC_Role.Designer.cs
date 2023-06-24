@@ -142,7 +142,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label7.Location = new System.Drawing.Point(618, 106);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 21);
+            this.label7.Size = new System.Drawing.Size(191, 28);
             this.label7.TabIndex = 135;
             this.label7.Text = "Table of Database:";
             // 
@@ -154,8 +154,10 @@
             this.dataGridView3.Location = new System.Drawing.Point(622, 135);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.Size = new System.Drawing.Size(229, 335);
             this.dataGridView3.TabIndex = 134;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // textBox3
             // 
@@ -168,7 +170,7 @@
             this.textBox3.Location = new System.Drawing.Point(742, 31);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(404, 26);
+            this.textBox3.Size = new System.Drawing.Size(404, 32);
             this.textBox3.TabIndex = 132;
             // 
             // label5
@@ -179,7 +181,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label5.Location = new System.Drawing.Point(617, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 21);
+            this.label5.Size = new System.Drawing.Size(140, 28);
             this.label5.TabIndex = 131;
             this.label5.Text = "Selected Role:";
             // 
@@ -227,7 +229,7 @@
             this.textBox4.Location = new System.Drawing.Point(153, 469);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(387, 26);
+            this.textBox4.Size = new System.Drawing.Size(387, 32);
             this.textBox4.TabIndex = 126;
             // 
             // label6
@@ -238,7 +240,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label6.Location = new System.Drawing.Point(30, 475);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 21);
+            this.label6.Size = new System.Drawing.Size(140, 28);
             this.label6.TabIndex = 125;
             this.label6.Text = "Selected Role:";
             // 
@@ -249,7 +251,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label2.Location = new System.Drawing.Point(292, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 21);
+            this.label2.Size = new System.Drawing.Size(181, 28);
             this.label2.TabIndex = 124;
             this.label2.Text = "Privileges of Role:";
             // 
@@ -260,7 +262,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(30, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 21);
+            this.label1.Size = new System.Drawing.Size(132, 28);
             this.label1.TabIndex = 123;
             this.label1.Text = "List of Roles:";
             // 
@@ -272,6 +274,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(296, 234);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(244, 208);
             this.dataGridView2.TabIndex = 122;
             // 
@@ -283,8 +286,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(34, 234);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(226, 208);
             this.dataGridView1.TabIndex = 121;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
@@ -309,7 +314,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label3.Location = new System.Drawing.Point(21, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 21);
+            this.label3.Size = new System.Drawing.Size(101, 28);
             this.label3.TabIndex = 97;
             this.label3.Text = "Password:";
             // 
@@ -322,7 +327,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label4.Location = new System.Drawing.Point(21, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.Size = new System.Drawing.Size(108, 28);
             this.label4.TabIndex = 95;
             this.label4.Text = "Username:";
             // 
@@ -335,7 +340,7 @@
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.lblTime.Location = new System.Drawing.Point(189, 10);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(114, 25);
+            this.lblTime.Size = new System.Drawing.Size(145, 32);
             this.lblTime.TabIndex = 93;
             this.lblTime.Text = "Create Role";
             // 
@@ -366,7 +371,7 @@
             this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.textBox1.Location = new System.Drawing.Point(122, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 29);
+            this.textBox1.Size = new System.Drawing.Size(246, 34);
             this.textBox1.TabIndex = 96;
             // 
             // textBox2
@@ -377,7 +382,7 @@
             this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.textBox2.Location = new System.Drawing.Point(122, 88);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 29);
+            this.textBox2.Size = new System.Drawing.Size(246, 34);
             this.textBox2.TabIndex = 98;
             // 
             // panel5
@@ -404,7 +409,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label9.Location = new System.Drawing.Point(71, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 25);
+            this.label9.Size = new System.Drawing.Size(165, 32);
             this.label9.TabIndex = 101;
             this.label9.Text = "Edit Privilege";
             // 
@@ -419,7 +424,7 @@
             "Phan cong"});
             this.checkedListBox2.Location = new System.Drawing.Point(143, 146);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(108, 102);
+            this.checkedListBox2.Size = new System.Drawing.Size(108, 100);
             this.checkedListBox2.TabIndex = 120;
             // 
             // checkedListBox1
@@ -433,7 +438,7 @@
             "Phan cong"});
             this.checkedListBox1.Location = new System.Drawing.Point(23, 145);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(106, 102);
+            this.checkedListBox1.Size = new System.Drawing.Size(106, 100);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 119;
             // 
@@ -443,7 +448,7 @@
             this.checkBox2.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.checkBox2.Location = new System.Drawing.Point(23, 69);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(70, 25);
+            this.checkBox2.Size = new System.Drawing.Size(85, 32);
             this.checkBox2.TabIndex = 115;
             this.checkBox2.Text = "Insert";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -454,7 +459,7 @@
             this.checkBox4.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.checkBox4.Location = new System.Drawing.Point(23, 114);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(74, 25);
+            this.checkBox4.Size = new System.Drawing.Size(88, 32);
             this.checkBox4.TabIndex = 117;
             this.checkBox4.Text = "Select";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -465,7 +470,7 @@
             this.checkBox5.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.checkBox5.Location = new System.Drawing.Point(143, 114);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(83, 25);
+            this.checkBox5.Size = new System.Drawing.Size(100, 32);
             this.checkBox5.TabIndex = 118;
             this.checkBox5.Text = "Update";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -476,14 +481,14 @@
             this.checkBox3.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.checkBox3.Location = new System.Drawing.Point(143, 69);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(77, 25);
+            this.checkBox3.Size = new System.Drawing.Size(93, 32);
             this.checkBox3.TabIndex = 116;
             this.checkBox3.Text = "Delete";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // UC_Role
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
             this.Controls.Add(this.panel1);
