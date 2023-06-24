@@ -16,13 +16,19 @@ namespace Project_SS.UserControls
 		public UC_DeAn()
 		{
 			InitializeComponent();
-			//dgv_ListDeAn.DataSource();
-		}
+            //dgv_ListDeAn.DataSource();
+            list_Scheme();
 
-		private void dgv_ListScheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
+        }
+        private void list_Scheme()
+        {
             string query = "SELECT * FROM QLCONGTY.DEAN";
             int res = DataProvider.Instance.ExecuteNonQuery(query);
+        }
+		private void dgv_ListScheme_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+            //string query = "SELECT * FROM QLCONGTY.DEAN";
+            //int res = DataProvider.Instance.ExecuteNonQuery(query);
             //        string query = "SELECT * FROM QLCONGTY.DEAN";
             //DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             //string query = "SELECT * FROM QLCONGTY.DEAN";
