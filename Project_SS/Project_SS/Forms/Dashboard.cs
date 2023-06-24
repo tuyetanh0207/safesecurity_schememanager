@@ -26,14 +26,14 @@ namespace Project_SS
             panelWidth = panel_Left.Width;
             isCollapse = false;
 
-			/*  UC_Dashboard uC = new UC_Dashboard();
+            /*  UC_Dashboard uC = new UC_Dashboard();
 			  addControls(uC);*/
-			/*UC_PhanCong pc = new UC_PhanCong();
+            /*UC_PhanCong pc = new UC_PhanCong();
             addControls(pc);*/
             UC_DeAn da = new UC_DeAn();
             addControls(da);
 
-		}
+        }
 
 		private void label_Exit_Click(object sender, EventArgs e)
         {

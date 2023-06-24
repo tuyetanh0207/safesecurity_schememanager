@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAO_HotelManagement;
+using Project_SS;
 using Oracle.ManagedDataAccess.Client;
 using Project_SS.UserControls;
 

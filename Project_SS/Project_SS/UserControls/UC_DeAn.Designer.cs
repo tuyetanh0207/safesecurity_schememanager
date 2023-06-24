@@ -104,7 +104,7 @@
             this.button_UpScheme.Name = "button_UpScheme";
             this.button_UpScheme.Size = new System.Drawing.Size(166, 51);
             this.button_UpScheme.TabIndex = 11;
-            this.button_UpScheme.Text = "+ UPDATE";
+            this.button_UpScheme.Text = "UPDATE";
             this.button_UpScheme.UseVisualStyleBackColor = false;
             // 
             // button_DelScheme
@@ -114,7 +114,7 @@
             this.button_DelScheme.Name = "button_DelScheme";
             this.button_DelScheme.Size = new System.Drawing.Size(166, 51);
             this.button_DelScheme.TabIndex = 10;
-            this.button_DelScheme.Text = "- DELETE";
+            this.button_DelScheme.Text = "DELETE";
             this.button_DelScheme.UseVisualStyleBackColor = false;
             // 
             // Button_Exit
@@ -133,7 +133,7 @@
             this.button_AddScheme.Name = "button_AddScheme";
             this.button_AddScheme.Size = new System.Drawing.Size(166, 51);
             this.button_AddScheme.TabIndex = 9;
-            this.button_AddScheme.Text = "+ ADD ";
+            this.button_AddScheme.Text = "ADD ";
             this.button_AddScheme.UseVisualStyleBackColor = false;
             // 
             // UC_DeAn

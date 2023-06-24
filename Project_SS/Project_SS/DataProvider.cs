@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using Project_SS;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-
-namespace DAO_HotelManagement
+namespace Project_SS
 {
+    //OracleConnection con = new OracleConnection(new ConnectionString().getString());
     public class DataProvider
     {
         public string username;

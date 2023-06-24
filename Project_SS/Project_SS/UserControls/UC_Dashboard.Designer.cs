@@ -65,10 +65,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(957, 439);
             this.dataGridView1.TabIndex = 86;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblQty
             // 
@@ -78,7 +80,7 @@
             this.lblQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.lblQty.Location = new System.Drawing.Point(765, 9);
             this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(26, 18);
+            this.lblQty.Size = new System.Drawing.Size(32, 24);
             this.lblQty.TabIndex = 24;
             this.lblQty.Text = "00";
             // 
@@ -90,7 +92,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label2.Location = new System.Drawing.Point(607, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 18);
+            this.label2.Size = new System.Drawing.Size(205, 24);
             this.label2.TabIndex = 24;
             this.label2.Text = "Total Assinged Jobs:";
             // 
@@ -156,7 +158,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(772, 49);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(179, 26);
+            this.txtSearch.Size = new System.Drawing.Size(179, 30);
             this.txtSearch.TabIndex = 73;
             // 
             // cmbSearchType
@@ -176,7 +178,7 @@
             "Work to be Done"});
             this.cmbSearchType.Location = new System.Drawing.Point(641, 51);
             this.cmbSearchType.Name = "cmbSearchType";
-            this.cmbSearchType.Size = new System.Drawing.Size(125, 24);
+            this.cmbSearchType.Size = new System.Drawing.Size(125, 28);
             this.cmbSearchType.TabIndex = 72;
             // 
             // label5
@@ -187,7 +189,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(549, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 18);
+            this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 20;
             this.label5.Text = "Search By:";
             // 
