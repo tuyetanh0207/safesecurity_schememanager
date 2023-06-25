@@ -58,7 +58,7 @@ namespace Project_SS.UserControls
             //dtgvRoleList.ReadOnly = false;
             Load_Roles_List();
             Load_schemas_List();
-            Load_Tables_List(selectedSchema);
+            //Load_Tables_List(selectedSchema);
             dt_cols.Columns.Add("COLUMN_NAME", typeof(string));
             dt_userOfRole.Columns.Add("GRANTEE");
 
@@ -685,6 +685,11 @@ namespace Project_SS.UserControls
             cbxDelete.Enabled = false;
             clbColumnSelect.SelectionMode = SelectionMode.None;
             clbColumnUpdate.SelectionMode = SelectionMode.None;
+
+        }
+
+        private void cbxGrantable1_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

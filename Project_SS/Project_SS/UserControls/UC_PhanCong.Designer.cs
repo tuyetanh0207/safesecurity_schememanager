@@ -33,16 +33,16 @@
             this.cbxName = new System.Windows.Forms.ComboBox();
             this.cbxSchema = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txbCurrTime = new System.Windows.Forms.TextBox();
+            this.txbCurrEmp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbCurrSchema = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSaveUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txbSchema = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txbCurrSchema = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbCurrEmp = new System.Windows.Forms.TextBox();
-            this.txbCurrTime = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPHANCONG)).BeginInit();
             this.panel1.SuspendLayout();
@@ -118,6 +118,53 @@
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txbCurrTime
+            // 
+            this.txbCurrTime.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrTime.Location = new System.Drawing.Point(7, 115);
+            this.txbCurrTime.Name = "txbCurrTime";
+            this.txbCurrTime.Size = new System.Drawing.Size(276, 30);
+            this.txbCurrTime.TabIndex = 13;
+            this.txbCurrTime.TextChanged += new System.EventHandler(this.txbCurrTime_TextChanged);
+            // 
+            // txbCurrEmp
+            // 
+            this.txbCurrEmp.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrEmp.Location = new System.Drawing.Point(7, 75);
+            this.txbCurrEmp.Name = "txbCurrEmp";
+            this.txbCurrEmp.Size = new System.Drawing.Size(276, 30);
+            this.txbCurrEmp.TabIndex = 12;
+            this.txbCurrEmp.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Assignement information: ";
+            // 
+            // txbCurrSchema
+            // 
+            this.txbCurrSchema.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCurrSchema.Location = new System.Drawing.Point(7, 35);
+            this.txbCurrSchema.Name = "txbCurrSchema";
+            this.txbCurrSchema.Size = new System.Drawing.Size(277, 30);
+            this.txbCurrSchema.TabIndex = 10;
+            this.txbCurrSchema.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(22, 415);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 53);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnSaveUpdate
             // 
             this.btnSaveUpdate.Location = new System.Drawing.Point(173, 415);
@@ -172,53 +219,6 @@
             this.txbName.Text = "Nguyễn Tuyết Anh. . .";
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(22, 415);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 53);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txbCurrSchema
-            // 
-            this.txbCurrSchema.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCurrSchema.Location = new System.Drawing.Point(7, 35);
-            this.txbCurrSchema.Name = "txbCurrSchema";
-            this.txbCurrSchema.Size = new System.Drawing.Size(277, 30);
-            this.txbCurrSchema.TabIndex = 10;
-            this.txbCurrSchema.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Assignement information: ";
-            // 
-            // txbCurrEmp
-            // 
-            this.txbCurrEmp.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCurrEmp.Location = new System.Drawing.Point(7, 75);
-            this.txbCurrEmp.Name = "txbCurrEmp";
-            this.txbCurrEmp.Size = new System.Drawing.Size(276, 30);
-            this.txbCurrEmp.TabIndex = 12;
-            this.txbCurrEmp.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // txbCurrTime
-            // 
-            this.txbCurrTime.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCurrTime.Location = new System.Drawing.Point(7, 115);
-            this.txbCurrTime.Name = "txbCurrTime";
-            this.txbCurrTime.Size = new System.Drawing.Size(276, 30);
-            this.txbCurrTime.TabIndex = 13;
-            this.txbCurrTime.TextChanged += new System.EventHandler(this.txbCurrTime_TextChanged);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Coral;
@@ -242,6 +242,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_PhanCong";
             this.Size = new System.Drawing.Size(977, 571);
+            this.Load += new System.EventHandler(this.UC_PhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPHANCONG)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

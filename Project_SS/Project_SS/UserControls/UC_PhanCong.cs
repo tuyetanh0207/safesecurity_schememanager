@@ -195,7 +195,8 @@ namespace Project_SS.UserControls
                         MessageBox.Show("Delete fail, please try again!");
                         return;
                     }
-                }else { return; }
+                }
+             else { return; }
                 
             }
             
@@ -382,6 +383,11 @@ namespace Project_SS.UserControls
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_PhanCong_Load(object sender, EventArgs e)
         {
 
         }

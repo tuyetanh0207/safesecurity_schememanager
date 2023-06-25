@@ -414,7 +414,7 @@
             // 
             this.cbxGrantable4.AutoSize = true;
             this.cbxGrantable4.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable4.Location = new System.Drawing.Point(167, 143);
+            this.cbxGrantable4.Location = new System.Drawing.Point(173, 104);
             this.cbxGrantable4.Name = "cbxGrantable4";
             this.cbxGrantable4.Size = new System.Drawing.Size(60, 17);
             this.cbxGrantable4.TabIndex = 126;
@@ -425,7 +425,7 @@
             // 
             this.cbxGrantable3.AutoSize = true;
             this.cbxGrantable3.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable3.Location = new System.Drawing.Point(48, 143);
+            this.cbxGrantable3.Location = new System.Drawing.Point(54, 104);
             this.cbxGrantable3.Name = "cbxGrantable3";
             this.cbxGrantable3.Size = new System.Drawing.Size(60, 17);
             this.cbxGrantable3.TabIndex = 125;
@@ -436,7 +436,7 @@
             // 
             this.cbxGrantable2.AutoSize = true;
             this.cbxGrantable2.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable2.Location = new System.Drawing.Point(167, 99);
+            this.cbxGrantable2.Location = new System.Drawing.Point(173, 60);
             this.cbxGrantable2.Name = "cbxGrantable2";
             this.cbxGrantable2.Size = new System.Drawing.Size(60, 17);
             this.cbxGrantable2.TabIndex = 124;
@@ -447,12 +447,13 @@
             // 
             this.cbxGrantable1.AutoSize = true;
             this.cbxGrantable1.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable1.Location = new System.Drawing.Point(48, 99);
+            this.cbxGrantable1.Location = new System.Drawing.Point(54, 60);
             this.cbxGrantable1.Name = "cbxGrantable1";
             this.cbxGrantable1.Size = new System.Drawing.Size(60, 17);
             this.cbxGrantable1.TabIndex = 123;
             this.cbxGrantable1.Text = "grantable";
             this.cbxGrantable1.UseVisualStyleBackColor = true;
+            this.cbxGrantable1.CheckedChanged += new System.EventHandler(this.cbxGrantable1_CheckedChanged);
             // 
             // btnCancelEdit
             // 
@@ -481,11 +482,11 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
-            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(28, 18);
+            this.label9.Location = new System.Drawing.Point(43, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(223, 32);
+            this.label9.Size = new System.Drawing.Size(186, 28);
             this.label9.TabIndex = 101;
             this.label9.Text = "Granted Privileges";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -499,9 +500,9 @@
             "Nhan vien",
             "De an",
             "Phan cong"});
-            this.clbColumnUpdate.Location = new System.Drawing.Point(146, 166);
+            this.clbColumnUpdate.Location = new System.Drawing.Point(152, 127);
             this.clbColumnUpdate.Name = "clbColumnUpdate";
-            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 140);
+            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 180);
             this.clbColumnUpdate.TabIndex = 120;
             this.clbColumnUpdate.SelectedIndexChanged += new System.EventHandler(this.clbColumnUpdate_SelectedIndexChanged);
             // 
@@ -514,9 +515,9 @@
             "De an",
             "Nhan vien",
             "Phan cong"});
-            this.clbColumnSelect.Location = new System.Drawing.Point(23, 166);
+            this.clbColumnSelect.Location = new System.Drawing.Point(29, 127);
             this.clbColumnSelect.Name = "clbColumnSelect";
-            this.clbColumnSelect.Size = new System.Drawing.Size(106, 140);
+            this.clbColumnSelect.Size = new System.Drawing.Size(106, 180);
             this.clbColumnSelect.Sorted = true;
             this.clbColumnSelect.TabIndex = 119;
             this.clbColumnSelect.SelectedIndexChanged += new System.EventHandler(this.clbColumnSelect_SelectedIndexChanged);
@@ -525,7 +526,7 @@
             // 
             this.cbxInsert.AutoSize = true;
             this.cbxInsert.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxInsert.Location = new System.Drawing.Point(23, 69);
+            this.cbxInsert.Location = new System.Drawing.Point(29, 30);
             this.cbxInsert.Name = "cbxInsert";
             this.cbxInsert.Size = new System.Drawing.Size(85, 32);
             this.cbxInsert.TabIndex = 115;
@@ -537,7 +538,7 @@
             // 
             this.cbxSelect.AutoSize = true;
             this.cbxSelect.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxSelect.Location = new System.Drawing.Point(23, 114);
+            this.cbxSelect.Location = new System.Drawing.Point(29, 75);
             this.cbxSelect.Name = "cbxSelect";
             this.cbxSelect.Size = new System.Drawing.Size(88, 32);
             this.cbxSelect.TabIndex = 117;
@@ -549,7 +550,7 @@
             // 
             this.cbxUpdate.AutoSize = true;
             this.cbxUpdate.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxUpdate.Location = new System.Drawing.Point(143, 114);
+            this.cbxUpdate.Location = new System.Drawing.Point(149, 75);
             this.cbxUpdate.Name = "cbxUpdate";
             this.cbxUpdate.Size = new System.Drawing.Size(100, 32);
             this.cbxUpdate.TabIndex = 118;
@@ -561,7 +562,7 @@
             // 
             this.cbxDelete.AutoSize = true;
             this.cbxDelete.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxDelete.Location = new System.Drawing.Point(143, 69);
+            this.cbxDelete.Location = new System.Drawing.Point(149, 30);
             this.cbxDelete.Name = "cbxDelete";
             this.cbxDelete.Size = new System.Drawing.Size(93, 32);
             this.cbxDelete.TabIndex = 116;
