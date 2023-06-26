@@ -277,6 +277,12 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Encrypt_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Encrypt_Form.Designer.cs">
+      <DependentUpon>Encrypt_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,18 @@
     </Compile>
     <Compile Include="UserControls\UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_DEAN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_DEAN.Designer.cs">
+      <DependentUpon>UC_DEAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Employee.Designer.cs">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_PhanCong.cs">
       <SubType>UserControl</SubType>
@@ -324,6 +342,9 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Encrypt_Form.resx">
+      <DependentUpon>Encrypt_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +363,12 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_DEAN.resx">
+      <DependentUpon>UC_DEAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Employee.resx">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_PhanCong.resx">
       <DependentUpon>UC_PhanCong.cs</DependentUpon>
