@@ -35,6 +35,7 @@ namespace DAO_HotelManagement
             this.password = password;
         }
         public string getUsername() { return this.username; }
+        public string getconnecStr() { return this.connectStr; }
         public string PATH = "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVICE_NAME = XE)))";
         // connect string for the rest
         //private string connectStr = "Data Source=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST = LocalHost)(Port=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl1))); User ID=";
