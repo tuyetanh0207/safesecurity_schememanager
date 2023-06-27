@@ -46,12 +46,12 @@ namespace Project_SS
             // 2 dòng này lấy username pass nè
             //username = tb_User.Text;
             //password = tb_Pass.Text;
-            username = "QLCONGTY";
+            username = "TC008";
             password = "DOAN";
             //MessageBox.Show(username, password);
             try
             {
-                if (username.IndexOf("QL") >= 0 ||
+                if (
                                   username.IndexOf("NS") >= 0 ||
                                   username.IndexOf("TP") >= 0 ||
                                   username.IndexOf("TDA") >= 0 ||
@@ -75,8 +75,8 @@ namespace Project_SS
                 else if (username == "QLCONGTY") { 
                     DataProvider.Instance.setUserPass(username, password);
 
-                    Dashboard Dashboard = new Dashboard();
-                    Dashboard.Show();
+                    ChooseRole chooseRole = new ChooseRole();
+                    chooseRole.Show();
 
                     this.Hide();
 

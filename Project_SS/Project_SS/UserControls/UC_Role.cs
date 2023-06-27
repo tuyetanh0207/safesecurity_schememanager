@@ -687,10 +687,5 @@ namespace Project_SS.UserControls
             clbColumnUpdate.SelectionMode = SelectionMode.None;
 
         }
-
-        private void cbxGrantable1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

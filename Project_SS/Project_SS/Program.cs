@@ -16,7 +16,7 @@ namespace Project_SS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChooseRole());
+            Application.Run(new Login());
         }
     }
 }

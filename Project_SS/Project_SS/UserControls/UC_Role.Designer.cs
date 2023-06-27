@@ -95,6 +95,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Malgun Gothic", 10F);
             this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
@@ -103,10 +104,11 @@
             // 
             // cbxSchemaList
             // 
+            this.cbxSchemaList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxSchemaList.FormattingEnabled = true;
-            this.cbxSchemaList.Location = new System.Drawing.Point(787, 26);
+            this.cbxSchemaList.Location = new System.Drawing.Point(754, 37);
             this.cbxSchemaList.Name = "cbxSchemaList";
-            this.cbxSchemaList.Size = new System.Drawing.Size(317, 40);
+            this.cbxSchemaList.Size = new System.Drawing.Size(392, 25);
             this.cbxSchemaList.TabIndex = 140;
             this.cbxSchemaList.SelectedIndexChanged += new System.EventHandler(this.cbxSchemaList_SelectedIndexChanged);
             // 
@@ -122,6 +124,7 @@
             // 
             this.btnUpdatePriv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdatePriv.BackColor = System.Drawing.Color.White;
+            this.btnUpdatePriv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdatePriv.FlatAppearance.BorderSize = 2;
             this.btnUpdatePriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdatePriv.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
@@ -139,6 +142,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
@@ -158,7 +162,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label7.Location = new System.Drawing.Point(618, 106);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(191, 28);
+            this.label7.Size = new System.Drawing.Size(154, 21);
             this.label7.TabIndex = 135;
             this.label7.Text = "Table of Database:";
             // 
@@ -181,9 +185,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(617, 32);
+            this.label5.Location = new System.Drawing.Point(617, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 28);
+            this.label5.Size = new System.Drawing.Size(122, 21);
             this.label5.TabIndex = 131;
             this.label5.Text = "Select Schema:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -192,6 +196,7 @@
             // 
             this.btn_UpdateUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_UpdateUser.BackColor = System.Drawing.Color.White;
+            this.btn_UpdateUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_UpdateUser.FlatAppearance.BorderSize = 2;
             this.btn_UpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UpdateUser.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
@@ -208,13 +213,14 @@
             // 
             this.btn_DeleteUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_DeleteUser.BackColor = System.Drawing.Color.White;
+            this.btn_DeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_DeleteUser.FlatAppearance.BorderSize = 2;
             this.btn_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteUser.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btn_DeleteUser.ForeColor = System.Drawing.Color.Red;
             this.btn_DeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteUser.Image")));
             this.btn_DeleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DeleteUser.Location = new System.Drawing.Point(152, 511);
+            this.btn_DeleteUser.Location = new System.Drawing.Point(176, 511);
             this.btn_DeleteUser.Name = "btn_DeleteUser";
             this.btn_DeleteUser.Size = new System.Drawing.Size(135, 34);
             this.btn_DeleteUser.TabIndex = 128;
@@ -232,7 +238,7 @@
             this.txbSelectedRoleLeft.Location = new System.Drawing.Point(176, 469);
             this.txbSelectedRoleLeft.Name = "txbSelectedRoleLeft";
             this.txbSelectedRoleLeft.ReadOnly = true;
-            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(364, 32);
+            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(364, 26);
             this.txbSelectedRoleLeft.TabIndex = 126;
             // 
             // label6
@@ -243,7 +249,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label6.Location = new System.Drawing.Point(30, 475);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 28);
+            this.label6.Size = new System.Drawing.Size(117, 21);
             this.label6.TabIndex = 125;
             this.label6.Text = "Selected Role:";
             // 
@@ -254,7 +260,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label2.Location = new System.Drawing.Point(291, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 28);
+            this.label2.Size = new System.Drawing.Size(116, 21);
             this.label2.TabIndex = 124;
             this.label2.Text = "Users of Role:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -266,7 +272,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(30, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 28);
+            this.label1.Size = new System.Drawing.Size(107, 21);
             this.label1.TabIndex = 123;
             this.label1.Text = "List of Roles:";
             // 
@@ -318,7 +324,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label3.Location = new System.Drawing.Point(21, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 28);
+            this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 97;
             this.label3.Text = "Password:";
             // 
@@ -331,7 +337,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label4.Location = new System.Drawing.Point(21, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 28);
+            this.label4.Size = new System.Drawing.Size(87, 21);
             this.label4.TabIndex = 95;
             this.label4.Text = "Username:";
             // 
@@ -344,7 +350,7 @@
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.lblTime.Location = new System.Drawing.Point(189, 10);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(145, 32);
+            this.lblTime.Size = new System.Drawing.Size(114, 25);
             this.lblTime.TabIndex = 93;
             this.lblTime.Text = "Create Role";
             // 
@@ -375,7 +381,7 @@
             this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.textBox1.Location = new System.Drawing.Point(122, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 34);
+            this.textBox1.Size = new System.Drawing.Size(246, 29);
             this.textBox1.TabIndex = 96;
             // 
             // textBox2
@@ -386,7 +392,7 @@
             this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.textBox2.Location = new System.Drawing.Point(122, 88);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 34);
+            this.textBox2.Size = new System.Drawing.Size(246, 29);
             this.textBox2.TabIndex = 98;
             // 
             // panel5
@@ -413,10 +419,11 @@
             // cbxGrantable4
             // 
             this.cbxGrantable4.AutoSize = true;
-            this.cbxGrantable4.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable4.Location = new System.Drawing.Point(173, 104);
+            this.cbxGrantable4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxGrantable4.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGrantable4.Location = new System.Drawing.Point(174, 104);
             this.cbxGrantable4.Name = "cbxGrantable4";
-            this.cbxGrantable4.Size = new System.Drawing.Size(60, 17);
+            this.cbxGrantable4.Size = new System.Drawing.Size(66, 20);
             this.cbxGrantable4.TabIndex = 126;
             this.cbxGrantable4.Text = "grantable";
             this.cbxGrantable4.UseVisualStyleBackColor = true;
@@ -424,10 +431,11 @@
             // cbxGrantable3
             // 
             this.cbxGrantable3.AutoSize = true;
-            this.cbxGrantable3.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable3.Location = new System.Drawing.Point(54, 104);
+            this.cbxGrantable3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxGrantable3.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGrantable3.Location = new System.Drawing.Point(43, 104);
             this.cbxGrantable3.Name = "cbxGrantable3";
-            this.cbxGrantable3.Size = new System.Drawing.Size(60, 17);
+            this.cbxGrantable3.Size = new System.Drawing.Size(66, 20);
             this.cbxGrantable3.TabIndex = 125;
             this.cbxGrantable3.Text = "grantable";
             this.cbxGrantable3.UseVisualStyleBackColor = true;
@@ -435,10 +443,11 @@
             // cbxGrantable2
             // 
             this.cbxGrantable2.AutoSize = true;
-            this.cbxGrantable2.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable2.Location = new System.Drawing.Point(173, 60);
+            this.cbxGrantable2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxGrantable2.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGrantable2.Location = new System.Drawing.Point(174, 60);
             this.cbxGrantable2.Name = "cbxGrantable2";
-            this.cbxGrantable2.Size = new System.Drawing.Size(60, 17);
+            this.cbxGrantable2.Size = new System.Drawing.Size(66, 20);
             this.cbxGrantable2.TabIndex = 124;
             this.cbxGrantable2.Text = "grantable";
             this.cbxGrantable2.UseVisualStyleBackColor = true;
@@ -446,35 +455,45 @@
             // cbxGrantable1
             // 
             this.cbxGrantable1.AutoSize = true;
-            this.cbxGrantable1.Font = new System.Drawing.Font("Microsoft Himalaya", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxGrantable1.Location = new System.Drawing.Point(54, 60);
+            this.cbxGrantable1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxGrantable1.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGrantable1.Location = new System.Drawing.Point(43, 60);
             this.cbxGrantable1.Name = "cbxGrantable1";
-            this.cbxGrantable1.Size = new System.Drawing.Size(60, 17);
+            this.cbxGrantable1.Size = new System.Drawing.Size(66, 20);
             this.cbxGrantable1.TabIndex = 123;
             this.cbxGrantable1.Text = "grantable";
             this.cbxGrantable1.UseVisualStyleBackColor = true;
-            this.cbxGrantable1.CheckedChanged += new System.EventHandler(this.cbxGrantable1_CheckedChanged);
             // 
             // btnCancelEdit
             // 
+            this.btnCancelEdit.BackColor = System.Drawing.Color.White;
+            this.btnCancelEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelEdit.FlatAppearance.BorderSize = 2;
+            this.btnCancelEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelEdit.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelEdit.Location = new System.Drawing.Point(8, 321);
+            this.btnCancelEdit.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelEdit.Location = new System.Drawing.Point(18, 312);
             this.btnCancelEdit.Name = "btnCancelEdit";
-            this.btnCancelEdit.Size = new System.Drawing.Size(132, 38);
+            this.btnCancelEdit.Size = new System.Drawing.Size(106, 38);
             this.btnCancelEdit.TabIndex = 122;
             this.btnCancelEdit.Text = "Cancel";
-            this.btnCancelEdit.UseVisualStyleBackColor = true;
+            this.btnCancelEdit.UseVisualStyleBackColor = false;
             this.btnCancelEdit.Click += new System.EventHandler(this.btnCancelEdit_Click);
             // 
             // btnEditPriv
             // 
+            this.btnEditPriv.BackColor = System.Drawing.Color.White;
+            this.btnEditPriv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditPriv.FlatAppearance.BorderSize = 2;
+            this.btnEditPriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditPriv.Font = new System.Drawing.Font("Malgun Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPriv.Location = new System.Drawing.Point(146, 320);
+            this.btnEditPriv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.btnEditPriv.Location = new System.Drawing.Point(146, 312);
             this.btnEditPriv.Name = "btnEditPriv";
-            this.btnEditPriv.Size = new System.Drawing.Size(105, 41);
+            this.btnEditPriv.Size = new System.Drawing.Size(108, 38);
             this.btnEditPriv.TabIndex = 121;
             this.btnEditPriv.Text = "Edit";
-            this.btnEditPriv.UseVisualStyleBackColor = true;
+            this.btnEditPriv.UseVisualStyleBackColor = false;
             this.btnEditPriv.Click += new System.EventHandler(this.btnEditPriv_Click);
             // 
             // label9
@@ -484,9 +503,9 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label9.Location = new System.Drawing.Point(43, 0);
+            this.label9.Location = new System.Drawing.Point(60, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(186, 28);
+            this.label9.Size = new System.Drawing.Size(150, 21);
             this.label9.TabIndex = 101;
             this.label9.Text = "Granted Privileges";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -500,9 +519,9 @@
             "Nhan vien",
             "De an",
             "Phan cong"});
-            this.clbColumnUpdate.Location = new System.Drawing.Point(152, 127);
+            this.clbColumnUpdate.Location = new System.Drawing.Point(146, 127);
             this.clbColumnUpdate.Name = "clbColumnUpdate";
-            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 180);
+            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 170);
             this.clbColumnUpdate.TabIndex = 120;
             this.clbColumnUpdate.SelectedIndexChanged += new System.EventHandler(this.clbColumnUpdate_SelectedIndexChanged);
             // 
@@ -515,9 +534,9 @@
             "De an",
             "Nhan vien",
             "Phan cong"});
-            this.clbColumnSelect.Location = new System.Drawing.Point(29, 127);
+            this.clbColumnSelect.Location = new System.Drawing.Point(18, 125);
             this.clbColumnSelect.Name = "clbColumnSelect";
-            this.clbColumnSelect.Size = new System.Drawing.Size(106, 180);
+            this.clbColumnSelect.Size = new System.Drawing.Size(106, 170);
             this.clbColumnSelect.Sorted = true;
             this.clbColumnSelect.TabIndex = 119;
             this.clbColumnSelect.SelectedIndexChanged += new System.EventHandler(this.clbColumnSelect_SelectedIndexChanged);
@@ -525,10 +544,11 @@
             // cbxInsert
             // 
             this.cbxInsert.AutoSize = true;
+            this.cbxInsert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxInsert.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxInsert.Location = new System.Drawing.Point(29, 30);
+            this.cbxInsert.Location = new System.Drawing.Point(18, 30);
             this.cbxInsert.Name = "cbxInsert";
-            this.cbxInsert.Size = new System.Drawing.Size(85, 32);
+            this.cbxInsert.Size = new System.Drawing.Size(70, 25);
             this.cbxInsert.TabIndex = 115;
             this.cbxInsert.Text = "Insert";
             this.cbxInsert.UseVisualStyleBackColor = true;
@@ -537,10 +557,11 @@
             // cbxSelect
             // 
             this.cbxSelect.AutoSize = true;
+            this.cbxSelect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxSelect.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxSelect.Location = new System.Drawing.Point(29, 75);
+            this.cbxSelect.Location = new System.Drawing.Point(18, 75);
             this.cbxSelect.Name = "cbxSelect";
-            this.cbxSelect.Size = new System.Drawing.Size(88, 32);
+            this.cbxSelect.Size = new System.Drawing.Size(74, 25);
             this.cbxSelect.TabIndex = 117;
             this.cbxSelect.Text = "Select";
             this.cbxSelect.UseVisualStyleBackColor = true;
@@ -549,10 +570,11 @@
             // cbxUpdate
             // 
             this.cbxUpdate.AutoSize = true;
+            this.cbxUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxUpdate.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxUpdate.Location = new System.Drawing.Point(149, 75);
+            this.cbxUpdate.Location = new System.Drawing.Point(150, 75);
             this.cbxUpdate.Name = "cbxUpdate";
-            this.cbxUpdate.Size = new System.Drawing.Size(100, 32);
+            this.cbxUpdate.Size = new System.Drawing.Size(83, 25);
             this.cbxUpdate.TabIndex = 118;
             this.cbxUpdate.Text = "Update";
             this.cbxUpdate.UseVisualStyleBackColor = true;
@@ -561,10 +583,11 @@
             // cbxDelete
             // 
             this.cbxDelete.AutoSize = true;
+            this.cbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxDelete.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cbxDelete.Location = new System.Drawing.Point(149, 30);
+            this.cbxDelete.Location = new System.Drawing.Point(150, 30);
             this.cbxDelete.Name = "cbxDelete";
-            this.cbxDelete.Size = new System.Drawing.Size(93, 32);
+            this.cbxDelete.Size = new System.Drawing.Size(77, 25);
             this.cbxDelete.TabIndex = 116;
             this.cbxDelete.Text = "Delete";
             this.cbxDelete.UseVisualStyleBackColor = true;
@@ -572,7 +595,7 @@
             // 
             // UC_Role
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
             this.Controls.Add(this.panel1);

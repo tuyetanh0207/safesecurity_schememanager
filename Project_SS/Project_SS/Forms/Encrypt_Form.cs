@@ -79,5 +79,10 @@ namespace Project_SS
             Encrypt_Text.Text = "";
             Decrypt_Text.Text = "";
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

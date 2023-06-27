@@ -26,12 +26,8 @@ namespace Project_SS
             panelWidth = panel_Left.Width;
             isCollapse = false;
 
-            /*  UC_Dashboard uC = new UC_Dashboard();
-              addControls(uC);*/
-            /* UC_PhanCong pc = new UC_PhanCong();
-             addControls(pc);*/
-            UC_Role ucRole = new UC_Role();
-            addControls(ucRole);
+            UC_Dashboard uC = new UC_Dashboard();
+            addControls(uC);
         }
 
         private void label_Exit_Click(object sender, EventArgs e)
@@ -87,6 +83,42 @@ namespace Project_SS
             uc.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(uc);
             uc.BringToFront();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            text_Title.Text = "DASHBOARD";
+            slidePanel(btnDashboard);
+            UC_Dashboard uC = new UC_Dashboard();
+            addControls(uC);
+        }
+        private void slidePanel(Button btn)
+        {
+            panelSide.Height = btn.Height;
+            panelSide.Top = btn.Top;
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            text_Title.Text = "EMPLOYEE";
+            slidePanel(btnEmployee);
+            UC_Employee uC = new UC_Employee();
+            addControls(uC);
+        }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            text_Title.Text = "ASSIGNED JOBS";
+            slidePanel(btnJobs);
+            UC_Job uC = new UC_Job();
+            addControls(uC);
+        }
+
+        private void btnProject_Click(object sender, EventArgs e)
+        {
+            text_Title.Text = "PROJECT";
+            slidePanel(btnProject);
+            
         }
     }
 }

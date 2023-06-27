@@ -303,11 +303,11 @@
     <Compile Include="UserControls\UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_DEAN.cs">
+    <Compile Include="UserControls\UC_Project.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_DEAN.Designer.cs">
-      <DependentUpon>UC_DEAN.cs</DependentUpon>
+    <Compile Include="UserControls\UC_Project.Designer.cs">
+      <DependentUpon>UC_Project.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Employee.cs">
       <SubType>UserControl</SubType>
@@ -315,11 +315,11 @@
     <Compile Include="UserControls\UC_Employee.Designer.cs">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_PhanCong.cs">
+    <Compile Include="UserControls\UC_Job.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_PhanCong.Designer.cs">
-      <DependentUpon>UC_PhanCong.cs</DependentUpon>
+    <Compile Include="UserControls\UC_Job.Designer.cs">
+      <DependentUpon>UC_Job.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Role.cs">
       <SubType>UserControl</SubType>
@@ -364,14 +364,14 @@
     <EmbeddedResource Include="UserControls\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_DEAN.resx">
-      <DependentUpon>UC_DEAN.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UC_Project.resx">
+      <DependentUpon>UC_Project.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Employee.resx">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_PhanCong.resx">
-      <DependentUpon>UC_PhanCong.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UC_Job.resx">
+      <DependentUpon>UC_Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Role.resx">
       <DependentUpon>UC_Role.cs</DependentUpon>

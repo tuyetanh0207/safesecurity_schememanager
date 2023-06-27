@@ -1,4 +1,5 @@
 ﻿using DAO_HotelManagement;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,13 @@ namespace Project_SS.UserControls
         string[] newColsOfUpdate;
 
         string[] paraTitles, paraValues;
+
+        OracleConnection con = new OracleConnection(new ConnectionString().getString());
+        DataTable dt;
+        OracleDataAdapter adpt;
+        OracleCommand cmd;
+        OracleDataReader dr;
+
         public UC_User()
         {
             InitializeComponent();
@@ -84,12 +92,6 @@ namespace Project_SS.UserControls
 
             dt_colOfSelect.Columns.Add("COLUMN_NAME");
             dt_colOfUpdate.Columns.Add("COLUMN_NAME");
-
-
-         
-
-
-
 
         }
         // data loading function
@@ -845,6 +847,57 @@ namespace Project_SS.UserControls
         private void NotRoleDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectRoleToGrant = NotRoleDropdown.Text;
+        }
+
+        private void cbxWithGrantOptionRole_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //int res1 = 0;
+            //string new_User = text_User.Text;
+            //string new_pass = text_Pass.Text;
+
+            //paraTitles = new string[2] { "USER_NAME", "PASS" };
+            //paraValues = new string[2] { new_User, new_pass };
+
+            //res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("CREATE_USER", 2, paraTitles, paraValues);
+            //if (res1 == -1)
+            //{
+            //    MessageBox.Show("Create user successfully!");
+            //    Load_RoleOfUser();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Create user failed. Please try again!");
+            //}
+
+            dt = new DataTable();
+            con.Open();
+            cmd = new OracleCommand("CREATE_USER", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
+            cmd.Parameters.Add("PASS", OracleDbType.Varchar2).Value = text_Pass.Text;
+
+            adpt = new OracleDataAdapter(cmd);
+
+            ////adpt.Fill(dt);
+            //dgv_User_Grant_Revoke.DataSource = dt;
+            //con.Close();
+            MessageBox.Show("Revoke Success!");
+            //display_Users();
+        }
+
+        private void btn_UpdateUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteUser_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnGrantRole_Click(object sender, EventArgs e)

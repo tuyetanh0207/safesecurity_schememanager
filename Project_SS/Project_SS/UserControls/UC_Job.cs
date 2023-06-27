@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Project_SS.UserControls
 {
-    public partial class UC_PhanCong : UserControl
+    public partial class UC_Job : UserControl
     {
         public int idx_updateChoosed = 0;
         int countChangeName = -1;
@@ -34,7 +34,7 @@ namespace Project_SS.UserControls
         int currRowIdx = 0;
         DataGridViewButtonColumn doWork = new DataGridViewButtonColumn();
         DataGridViewButtonColumn doWork1 = new DataGridViewButtonColumn();
-        public UC_PhanCong()
+        public UC_Job()
         {
             InitializeComponent();
             getAssignment();
@@ -137,7 +137,7 @@ namespace Project_SS.UserControls
         private void loadEmpListCombobox()
         {
             string nameemp = txbName.Text;
-            string query = "select manv, tennv , concat(manv, concat(' - ', tennv)) as combineName from nhanvien where upper(tennv) like concat('%', concat(upper('" + nameemp + "'), '%'))";
+            string query = "select manv, tennv , concat(manv, concat(' - ', tennv)) as combineName from QLCONGTY.nhanvien where upper(tennv) like concat('%', concat(upper('" + nameemp + "'), '%'))";
             cbxName.DataSource = DataProvider.Instance.ExecuteQuery(query);
             cbxName.SelectedIndex = -1;
             cbxSchema.SelectedIndex = -1;
@@ -149,7 +149,7 @@ namespace Project_SS.UserControls
         {
 
             string schemaId = txbSchema.Text;
-            string query = "select mada, tenda , concat(mada, concat('- ', tenda)) as combineName from dean where upper(tenda) like concat('%', concat(upper('" + schemaId + "'), '%'))";
+            string query = "select mada, tenda , concat(mada, concat('- ', tenda)) as combineName from QLCONGTY.dean where upper(tenda) like concat('%', concat(upper('" + schemaId + "'), '%'))";
             cbxSchema.DataSource = DataProvider.Instance.ExecuteQuery(query);
             cbxSchema.ValueMember = "mada";
             cbxSchema.DisplayMember = "combineName";
@@ -182,7 +182,7 @@ namespace Project_SS.UserControls
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes))
                 {
-                    string query = "delete from PHANCONG where manv= '" + empid + "' and mada = '" + schemaid+ "'";
+                    string query = "delete from QLCONGTY.PHANCONG where manv= '" + empid + "' and mada = '" + schemaid+ "'";
                     int res = DataProvider.Instance.ExecuteNonQuery(query);
                     if (res > 0)
                     {
