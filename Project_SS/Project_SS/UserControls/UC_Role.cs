@@ -716,5 +716,61 @@ namespace Project_SS.UserControls
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.CREATE_ROLE";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.Add("ROLENAME", OracleDbType.Varchar2).Value = name_Text.Text;
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show(index.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't add");
+                // Handle or display the exception message
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_DeleteUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.DROP_ROLE";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.Add("ROLENAME", OracleDbType.Varchar2).Value = name_Text.Text;
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show(index.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't drop");
+                // Handle or display the exception message
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

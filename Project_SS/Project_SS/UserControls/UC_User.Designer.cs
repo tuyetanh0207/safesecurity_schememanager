@@ -30,6 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(selectedUser_ComboBox));
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
+=======
+            this.cbxSchemaList = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbxWithGrantOptionRole = new System.Windows.Forms.CheckBox();
+            this.NotRoleDropdown = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnGrantRole = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnUpdatePriv = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtgvTableList = new System.Windows.Forms.DataGridView();
+            this.txbSelectedRoleRight = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_UpdateUser = new System.Windows.Forms.Button();
+            this.btn_DeleteUser = new System.Windows.Forms.Button();
+            this.selectedUser_ComboBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -65,7 +87,12 @@
             this.panel1.Controls.Add(this.txbSelectedRoleRight);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btn_UpdateUser);
+<<<<<<< Updated upstream
             this.panel1.Controls.Add(this.txbSelectedRoleLeft);
+>>>>>>> Stashed changes
+=======
+            this.panel1.Controls.Add(this.btn_DeleteUser);
+            this.panel1.Controls.Add(this.selectedUser_ComboBox);
 >>>>>>> Stashed changes
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
@@ -319,10 +346,11 @@
             this.btn_DeleteUser.UseVisualStyleBackColor = false;
             this.btn_DeleteUser.Click += new System.EventHandler(this.btn_DeleteUser_Click);
             // 
-            // txbSelectedRoleLeft
+            // selectedUser_ComboBox
             // 
-            this.txbSelectedRoleLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.selectedUser_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+<<<<<<< Updated upstream
             this.txbSelectedRoleLeft.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txbSelectedRoleLeft.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSelectedRoleLeft.Cursor = System.Windows.Forms.Cursors.No;
@@ -332,6 +360,17 @@
             this.txbSelectedRoleLeft.ReadOnly = true;
             this.txbSelectedRoleLeft.Size = new System.Drawing.Size(228, 32);
             this.txbSelectedRoleLeft.TabIndex = 102;
+=======
+            this.selectedUser_ComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.selectedUser_ComboBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.selectedUser_ComboBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.selectedUser_ComboBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedUser_ComboBox.Location = new System.Drawing.Point(153, 469);
+            this.selectedUser_ComboBox.Name = "selectedUser_ComboBox";
+            this.selectedUser_ComboBox.ReadOnly = true;
+            this.selectedUser_ComboBox.Size = new System.Drawing.Size(387, 32);
+            this.selectedUser_ComboBox.TabIndex = 102;
+>>>>>>> Stashed changes
             // 
             // label6
             // 
@@ -354,7 +393,11 @@
             this.label2.Location = new System.Drawing.Point(602, 277);
             this.label2.Name = "label2";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.label2.Size = new System.Drawing.Size(144, 21);
+=======
+            this.label2.Size = new System.Drawing.Size(143, 28);
+>>>>>>> Stashed changes
 =======
             this.label2.Size = new System.Drawing.Size(143, 28);
 >>>>>>> Stashed changes
@@ -369,7 +412,11 @@
             this.label1.Location = new System.Drawing.Point(12, 277);
             this.label1.Name = "label1";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.label1.Size = new System.Drawing.Size(104, 21);
+=======
+            this.label1.Size = new System.Drawing.Size(134, 28);
+>>>>>>> Stashed changes
 =======
             this.label1.Size = new System.Drawing.Size(134, 28);
 >>>>>>> Stashed changes
@@ -448,7 +495,11 @@
             this.label4.Location = new System.Drawing.Point(88, 82);
             this.label4.Name = "label4";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.label4.Size = new System.Drawing.Size(91, 21);
+=======
+            this.label4.Size = new System.Drawing.Size(108, 28);
+>>>>>>> Stashed changes
 =======
             this.label4.Size = new System.Drawing.Size(108, 28);
 >>>>>>> Stashed changes
@@ -464,7 +515,11 @@
             this.lblTime.Location = new System.Drawing.Point(178, 38);
             this.lblTime.Name = "lblTime";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             this.lblTime.Size = new System.Drawing.Size(143, 25);
+=======
+            this.lblTime.Size = new System.Drawing.Size(145, 32);
+>>>>>>> Stashed changes
 =======
             this.lblTime.Size = new System.Drawing.Size(145, 32);
 >>>>>>> Stashed changes
@@ -830,7 +885,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
+<<<<<<< Updated upstream
         private System.Windows.Forms.TextBox textBox4;
+=======
+        private System.Windows.Forms.TextBox selectedUser_ComboBox;
+>>>>>>> Stashed changes
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
     }

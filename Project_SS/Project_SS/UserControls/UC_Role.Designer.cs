@@ -240,6 +240,7 @@
             // 
             this.selectedRole_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+<<<<<<< Updated upstream
             this.selectedRole_ComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.selectedRole_ComboBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.selectedRole_ComboBox.Cursor = System.Windows.Forms.Cursors.No;
@@ -249,6 +250,17 @@
             this.selectedRole_ComboBox.ReadOnly = true;
             this.selectedRole_ComboBox.Size = new System.Drawing.Size(364, 32);
             this.selectedRole_ComboBox.TabIndex = 126;
+=======
+            this.txbSelectedRoleLeft.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txbSelectedRoleLeft.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSelectedRoleLeft.Cursor = System.Windows.Forms.Cursors.No;
+            this.txbSelectedRoleLeft.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSelectedRoleLeft.Location = new System.Drawing.Point(176, 469);
+            this.txbSelectedRoleLeft.Name = "txbSelectedRoleLeft";
+            this.txbSelectedRoleLeft.ReadOnly = true;
+            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(364, 32);
+            this.txbSelectedRoleLeft.TabIndex = 126;
+>>>>>>> Stashed changes
             // 
             // label6
             // 
@@ -606,6 +618,9 @@
             // UC_Role
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));

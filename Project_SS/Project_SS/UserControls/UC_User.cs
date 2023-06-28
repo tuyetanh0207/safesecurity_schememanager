@@ -757,7 +757,7 @@ namespace Project_SS.UserControls
         {
             dtgvUsersOfRole.Columns.Remove("Revoke");
             selectedRole = dtgvRoleList.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txbSelectedRoleLeft.Text = selectedRole;
+            selectedUser_ComboBox.Text = selectedRole;
             txbSelectedRoleRight.Text = selectedRole;
 
 

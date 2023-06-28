@@ -272,19 +272,25 @@
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     <Compile Include="UserControls\UC_Department.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_Department.designer.cs">
       <DependentUpon>UC_Department.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="UserControls\UC_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_Employee.designer.cs">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> Stashed changes
     <Compile Include="UserControls\UC_Project.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -336,9 +342,17 @@
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     <EmbeddedResource Include="UserControls\UC_Department.resx">
       <DependentUpon>UC_Department.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="UserControls\UC_Department.resx">
+      <DependentUpon>UC_Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Project.resx">
+      <DependentUpon>UC_Project.cs</DependentUpon>
+>>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Employee.resx">
       <DependentUpon>UC_Employee.cs</DependentUpon>
