@@ -93,17 +93,19 @@ namespace Project_SS.UserControls
             dt_colOfSelect.Columns.Add("COLUMN_NAME");
             dt_colOfUpdate.Columns.Add("COLUMN_NAME");
 
+            dtgvUsersOfRole.Columns.Insert(dtgvUsersOfRole.Columns.Count, doWork);
         }
         // data loading function
         private void Load_Roles_List()
         {
-            dt_role.Columns.Add("username", typeof(string));
+
+            dt_role.Columns.Add("USERNAME", typeof(string));
             dt_role = DataProvider.Instance.ExecuteProc("LIST_USER");
 
             dtgvRoleList.DataSource = dt_role;
             //dtgvUsersOfRole.Columns.Remove("Revoke");
             //setRowNumber(dtgvRoleList);
-            dtgvUsersOfRole.Columns.Insert(dtgvUsersOfRole.Columns.Count, doWork);
+       
 
 
 
@@ -794,10 +796,10 @@ namespace Project_SS.UserControls
                     //GRANTROLE4USER( USERID IN VARCHAR2, ROLE_NAME IN VARCHAR2
                     tableTitle = new string[2] { "USERID", "ROLE_NAME" };
                     tableValue = new string[2] { selectedRole, role};
-                    DataProvider.Instance.ExecuteProcWithStringParameter("revokerolefromuser", 2, tableTitle, tableValue);
+                    res = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("REVOKEROLEFROMUSER", 2, tableTitle, tableValue);
                     /* string query = "delete from PHANCONG where manv= '" + empid + "' and mada = '" + schemaid + "'";
                       int res = DataProvider.Instance.ExecuteNonQuery(query);*/
-                    if (res == 0)
+                    if (res != 0)
                     {
                         MessageBox.Show("Revoke successfully!");
                         // getAssignment();
@@ -868,11 +870,16 @@ namespace Project_SS.UserControls
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
-                        cmd.Parameters.Add("PASS", OracleDbType.Varchar2).Value = text_Pass.Text;
+                        command.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
+                        command.Parameters.Add("PASS", OracleDbType.Varchar2).Value = text_Pass.Text;
                         index = command.ExecuteNonQuery();
                     }
                 }
+               dtgvRoleList.AutoGenerateColumns = false;
+                dt_role.Columns.Remove("USERNAME");
+                //dtgvRoleList.Columns.Remove("USERNAME");
+                //dtgvRoleList.Columns.Clear();
+                Load_Roles_List();
                 MessageBox.Show(index.ToString());
             }
             catch (Exception ex)
@@ -946,7 +953,7 @@ namespace Project_SS.UserControls
             paraTitles = new string[2] { "USERID", "ROLE_NAME" };
             paraValues = new string[2] { selectedRole, selectRoleToGrant};
             res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("GRANTROLE4USER", 2, paraTitles, paraValues);
-            if (res1 == -1)
+            if (res1 !=0 )
             {
                 MessageBox.Show("Grant role successfully!");
                 Load_RoleOfUser();
