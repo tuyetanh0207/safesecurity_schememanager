@@ -1,3 +1,4 @@
+﻿namespace Project_SS
 {
     partial class UC_Employee
     {
@@ -33,9 +34,6 @@
             this.gender_ComboBox = new System.Windows.Forms.ComboBox();
             this.Demo = new System.Windows.Forms.Button();
             this.birthday_Datetime = new System.Windows.Forms.DateTimePicker();
-            this.department_Text = new System.Windows.Forms.TextBox();
-            this.manager_Text = new System.Windows.Forms.TextBox();
-            this.role_Text = new System.Windows.Forms.TextBox();
             this.allowance_Text = new System.Windows.Forms.TextBox();
             this.salary_Text = new System.Windows.Forms.TextBox();
             this.address_Text = new System.Windows.Forms.TextBox();
@@ -83,17 +81,19 @@
             this.Phancong.Location = new System.Drawing.Point(16, 19);
             this.Phancong.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Phancong.Name = "Phancong";
+            this.Phancong.Size = new System.Drawing.Size(209, 28);
             this.Phancong.TabIndex = 5;
             this.Phancong.Text = "LIST OF EMPLOYEES:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.room_ComboBox);
+            this.panel1.Controls.Add(this.manager_ComboBox);
+            this.panel1.Controls.Add(this.role_ComboBox);
+            this.panel1.Controls.Add(this.gender_ComboBox);
             this.panel1.Controls.Add(this.Demo);
             this.panel1.Controls.Add(this.birthday_Datetime);
-            this.panel1.Controls.Add(this.department_Text);
-            this.panel1.Controls.Add(this.manager_Text);
-            this.panel1.Controls.Add(this.role_Text);
             this.panel1.Controls.Add(this.allowance_Text);
             this.panel1.Controls.Add(this.salary_Text);
             this.panel1.Controls.Add(this.address_Text);
@@ -148,38 +148,15 @@
             // 
             this.birthday_Datetime.Location = new System.Drawing.Point(125, 134);
             this.birthday_Datetime.Name = "birthday_Datetime";
+            this.birthday_Datetime.Size = new System.Drawing.Size(365, 34);
             this.birthday_Datetime.TabIndex = 37;
-            // 
-            // department_Text
-            // 
-            this.department_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.department_Text.Location = new System.Drawing.Point(631, 136);
-            this.department_Text.Name = "department_Text";
-            this.department_Text.Size = new System.Drawing.Size(92, 29);
-            this.department_Text.TabIndex = 34;
-            // 
-            // manager_Text
-            // 
-            this.manager_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.manager_Text.Location = new System.Drawing.Point(632, 97);
-            this.manager_Text.Name = "manager_Text";
-            this.manager_Text.Size = new System.Drawing.Size(91, 29);
-            this.manager_Text.TabIndex = 33;
-            // 
-            // role_Text
-            // 
-            this.role_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.role_Text.Location = new System.Drawing.Point(576, 50);
-            this.role_Text.Name = "role_Text";
-            this.role_Text.Size = new System.Drawing.Size(147, 29);
-            this.role_Text.TabIndex = 32;
-            this.role_Text.TextChanged += new System.EventHandler(this.role_Text_TextChanged);
             // 
             // allowance_Text
             // 
             this.allowance_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allowance_Text.Location = new System.Drawing.Point(125, 224);
             this.allowance_Text.Name = "allowance_Text";
+            this.allowance_Text.Size = new System.Drawing.Size(108, 34);
             this.allowance_Text.TabIndex = 31;
             // 
             // salary_Text
@@ -187,6 +164,7 @@
             this.salary_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.salary_Text.Location = new System.Drawing.Point(125, 180);
             this.salary_Text.Name = "salary_Text";
+            this.salary_Text.Size = new System.Drawing.Size(108, 34);
             this.salary_Text.TabIndex = 30;
             // 
             // address_Text
@@ -203,6 +181,7 @@
             this.phone_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phone_Text.Location = new System.Drawing.Point(352, 94);
             this.phone_Text.Name = "phone_Text";
+            this.phone_Text.Size = new System.Drawing.Size(138, 34);
             this.phone_Text.TabIndex = 28;
             // 
             // Name_Text
@@ -210,6 +189,7 @@
             this.Name_Text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name_Text.Location = new System.Drawing.Point(125, 50);
             this.Name_Text.Name = "Name_Text";
+            this.Name_Text.Size = new System.Drawing.Size(365, 34);
             this.Name_Text.TabIndex = 25;
             // 
             // label13
@@ -217,6 +197,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(523, 141);
             this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 28);
             this.label13.TabIndex = 24;
             this.label13.Text = "Department:";
             // 
@@ -225,6 +206,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(523, 101);
             this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 28);
             this.label12.TabIndex = 23;
             this.label12.Text = "ID Manager:";
             // 
@@ -233,6 +215,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(523, 57);
             this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 28);
             this.label11.TabIndex = 22;
             this.label11.Text = "Role:";
             // 
@@ -241,6 +224,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(33, 228);
             this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 28);
             this.label10.TabIndex = 21;
             this.label10.Text = "Allowance:";
             // 
@@ -249,6 +233,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(33, 184);
             this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 28);
             this.label9.TabIndex = 20;
             this.label9.Text = "Salary:";
             // 
@@ -257,6 +242,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(263, 99);
             this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 28);
             this.label8.TabIndex = 19;
             this.label8.Text = "No.Phone:";
             // 
@@ -265,6 +251,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(275, 180);
             this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 28);
             this.label7.TabIndex = 18;
             this.label7.Text = "Address:";
             // 
@@ -273,6 +260,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(31, 138);
             this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 28);
             this.label6.TabIndex = 17;
             this.label6.Text = "Birthday:";
             // 
@@ -281,6 +269,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(32, 98);
             this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 28);
             this.label5.TabIndex = 16;
             this.label5.Text = "Gender:";
             // 
@@ -289,6 +278,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 56);
             this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 28);
             this.label4.TabIndex = 11;
             this.label4.Text = "Name:";
             // 
@@ -332,19 +322,9 @@
             this.label1.Location = new System.Drawing.Point(241, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add/Update Employee";
-            // 
-            // gender_ComboBox
-            // 
-            this.gender_ComboBox.FormattingEnabled = true;
-            this.gender_ComboBox.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.gender_ComboBox.Location = new System.Drawing.Point(124, 89);
-            this.gender_ComboBox.Name = "gender_ComboBox";
-            this.gender_ComboBox.Size = new System.Drawing.Size(108, 36);
-            this.gender_ComboBox.TabIndex = 39;
             // 
             // role_ComboBox
             // 
@@ -353,10 +333,10 @@
             "Nhân viên",
             "QL trực tiếp",
             "Trưởng phòng",
-            "Nhân sự",
             "Tài chính",
             "Nhân sự",
             "Trưởng đề án"});
+            this.role_ComboBox.Location = new System.Drawing.Point(585, 53);
             this.role_ComboBox.Name = "role_ComboBox";
             this.role_ComboBox.Size = new System.Drawing.Size(121, 36);
             this.role_ComboBox.TabIndex = 40;
@@ -364,13 +344,17 @@
             // manager_ComboBox
             // 
             this.manager_ComboBox.FormattingEnabled = true;
+            this.manager_ComboBox.Location = new System.Drawing.Point(651, 98);
             this.manager_ComboBox.Name = "manager_ComboBox";
+            this.manager_ComboBox.Size = new System.Drawing.Size(96, 36);
             this.manager_ComboBox.TabIndex = 41;
             // 
             // room_ComboBox
             // 
             this.room_ComboBox.FormattingEnabled = true;
+            this.room_ComboBox.Location = new System.Drawing.Point(651, 138);
             this.room_ComboBox.Name = "room_ComboBox";
+            this.room_ComboBox.Size = new System.Drawing.Size(96, 36);
             this.room_ComboBox.TabIndex = 42;
             // 
             // UC_Employee
@@ -421,8 +405,5 @@
         private System.Windows.Forms.ComboBox room_ComboBox;
         private System.Windows.Forms.ComboBox manager_ComboBox;
         private System.Windows.Forms.ComboBox role_ComboBox;
-        private System.Windows.Forms.ComboBox gender_ComboBox;
     }
 }
->>>>>>> Stashed changes:Project_SS/Project_SS/UserControls/UC_Employee.Designer.cs
->>>>>>>> origin/PhucNgo:safesecurity_schememanager/Project_SS/Project_SS/UC_Employee.Designer.cs

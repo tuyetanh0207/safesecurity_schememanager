@@ -1,6 +1,6 @@
 ﻿namespace Project_SS.UserControls
 {
-    partial class selectedUser_ComboBox
+    partial class UC_User
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(selectedUser_ComboBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_User));
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< Updated upstream
-=======
             this.cbxSchemaList = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,7 +49,6 @@
             this.btn_DeleteUser = new System.Windows.Forms.Button();
             this.selectedUser_ComboBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
->>>>>>> Stashed changes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvUsersOfRole = new System.Windows.Forms.DataGridView();
@@ -89,9 +86,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
-            this.panel1.Controls.Add(this.textBox4);
-=======
             this.panel1.Controls.Add(this.cbxSchemaList);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.panel4);
@@ -102,21 +96,8 @@
             this.panel1.Controls.Add(this.txbSelectedRoleRight);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btn_UpdateUser);
-<<<<<<< Updated upstream
-            this.panel1.Controls.Add(this.txbSelectedRoleLeft);
->>>>>>> Stashed changes
-=======
             this.panel1.Controls.Add(this.btn_DeleteUser);
             this.panel1.Controls.Add(this.selectedUser_ComboBox);
->>>>>>> Stashed changes
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dtgvTableList);
-            this.panel1.Controls.Add(this.txbSelectedRoleRight);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btn_UpdateUser);
-            this.panel1.Controls.Add(this.btn_DeleteUser);
-            this.panel1.Controls.Add(this.txbSelectedRoleLeft);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -131,8 +112,6 @@
             this.panel1.Size = new System.Drawing.Size(1170, 570);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< Updated upstream
-=======
             // cbxSchemaList
             // 
             this.cbxSchemaList.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,7 +316,7 @@
             this.btn_UpdateUser.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btn_UpdateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
             this.btn_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateUser.Location = new System.Drawing.Point(405, 493);
+            this.btn_UpdateUser.Location = new System.Drawing.Point(394, 512);
             this.btn_UpdateUser.Name = "btn_UpdateUser";
             this.btn_UpdateUser.Size = new System.Drawing.Size(146, 34);
             this.btn_UpdateUser.TabIndex = 105;
@@ -355,7 +334,7 @@
             this.btn_DeleteUser.ForeColor = System.Drawing.Color.Red;
             this.btn_DeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteUser.Image")));
             this.btn_DeleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DeleteUser.Location = new System.Drawing.Point(375, 96);
+            this.btn_DeleteUser.Location = new System.Drawing.Point(152, 512);
             this.btn_DeleteUser.Name = "btn_DeleteUser";
             this.btn_DeleteUser.Size = new System.Drawing.Size(135, 34);
             this.btn_DeleteUser.TabIndex = 104;
@@ -367,17 +346,6 @@
             // 
             this.selectedUser_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-<<<<<<< Updated upstream
-            this.txbSelectedRoleLeft.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txbSelectedRoleLeft.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSelectedRoleLeft.Cursor = System.Windows.Forms.Cursors.No;
-            this.txbSelectedRoleLeft.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSelectedRoleLeft.Location = new System.Drawing.Point(160, 493);
-            this.txbSelectedRoleLeft.Name = "txbSelectedRoleLeft";
-            this.txbSelectedRoleLeft.ReadOnly = true;
-            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(228, 32);
-            this.txbSelectedRoleLeft.TabIndex = 102;
-=======
             this.selectedUser_ComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.selectedUser_ComboBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.selectedUser_ComboBox.Cursor = System.Windows.Forms.Cursors.No;
@@ -387,7 +355,6 @@
             this.selectedUser_ComboBox.ReadOnly = true;
             this.selectedUser_ComboBox.Size = new System.Drawing.Size(387, 32);
             this.selectedUser_ComboBox.TabIndex = 102;
->>>>>>> Stashed changes
             // 
             // label6
             // 
@@ -395,13 +362,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(3, 493);
+            this.label6.Location = new System.Drawing.Point(30, 474);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 28);
             this.label6.TabIndex = 101;
             this.label6.Text = "Selected User:";
             // 
->>>>>>> Stashed changes
             // label2
             // 
             this.label2.AutoSize = true;
@@ -409,15 +375,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label2.Location = new System.Drawing.Point(292, 205);
             this.label2.Name = "label2";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            this.label2.Size = new System.Drawing.Size(144, 21);
-=======
             this.label2.Size = new System.Drawing.Size(143, 28);
->>>>>>> Stashed changes
-=======
-            this.label2.Size = new System.Drawing.Size(143, 28);
->>>>>>> Stashed changes
             this.label2.TabIndex = 18;
             this.label2.Text = "Roles of User:";
             // 
@@ -428,15 +386,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(30, 205);
             this.label1.Name = "label1";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            this.label1.Size = new System.Drawing.Size(104, 21);
-=======
             this.label1.Size = new System.Drawing.Size(134, 28);
->>>>>>> Stashed changes
-=======
-            this.label1.Size = new System.Drawing.Size(134, 28);
->>>>>>> Stashed changes
             this.label1.TabIndex = 17;
             this.label1.Text = "List of Users:";
             // 
@@ -482,44 +432,6 @@
             // 
             // label3
             // 
-<<<<<<< Updated upstream
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 306);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 255);
-            this.dataGridView1.TabIndex = 15;
-=======
-            this.dtgvRoleList.AllowUserToAddRows = false;
-            this.dtgvRoleList.AllowUserToDeleteRows = false;
-            this.dtgvRoleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvRoleList.Location = new System.Drawing.Point(34, 234);
-            this.dtgvRoleList.Name = "dtgvRoleList";
-            this.dtgvRoleList.ReadOnly = true;
-            this.dtgvRoleList.RowHeadersWidth = 51;
-            this.dtgvRoleList.Size = new System.Drawing.Size(226, 208);
-            this.dtgvRoleList.TabIndex = 15;
-            this.dtgvRoleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRoleList_CellContentClick);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.text_User);
-            this.panel2.Controls.Add(this.text_Pass);
-            this.panel2.Controls.Add(this.btn_DeleteUser);
-            this.panel2.Location = new System.Drawing.Point(30, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(510, 145);
-            this.panel2.TabIndex = 103;
-            // 
-            // label3
-            // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
@@ -530,7 +442,6 @@
             this.label3.Size = new System.Drawing.Size(101, 28);
             this.label3.TabIndex = 97;
             this.label3.Text = "Password:";
->>>>>>> Stashed changes
             // 
             // label4
             // 
@@ -541,15 +452,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label4.Location = new System.Drawing.Point(21, 54);
             this.label4.Name = "label4";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            this.label4.Size = new System.Drawing.Size(91, 21);
-=======
             this.label4.Size = new System.Drawing.Size(108, 28);
->>>>>>> Stashed changes
-=======
-            this.label4.Size = new System.Drawing.Size(108, 28);
->>>>>>> Stashed changes
             this.label4.TabIndex = 95;
             this.label4.Text = "Username:";
             // 
@@ -562,15 +465,7 @@
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.lblTime.Location = new System.Drawing.Point(189, 10);
             this.lblTime.Name = "lblTime";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            this.lblTime.Size = new System.Drawing.Size(143, 25);
-=======
             this.lblTime.Size = new System.Drawing.Size(145, 32);
->>>>>>> Stashed changes
-=======
-            this.lblTime.Size = new System.Drawing.Size(145, 32);
->>>>>>> Stashed changes
             this.lblTime.TabIndex = 93;
             this.lblTime.Text = "Create User";
             // 
@@ -585,11 +480,7 @@
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
             this.button5.Image = global::Project_SS.Properties.Resources.plus__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< Updated upstream
-            this.button5.Location = new System.Drawing.Point(259, 174);
-=======
-            this.button5.Location = new System.Drawing.Point(399, 21);
->>>>>>> Stashed changes
+            this.button5.Location = new System.Drawing.Point(395, 59);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(89, 46);
@@ -606,44 +497,11 @@
             this.text_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.text_User.Location = new System.Drawing.Point(122, 48);
             this.text_User.Name = "text_User";
-            this.text_User.Size = new System.Drawing.Size(246, 29);
+            this.text_User.Size = new System.Drawing.Size(246, 34);
             this.text_User.TabIndex = 96;
             // 
             // text_Pass
             // 
-            this.text_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-<<<<<<< Updated upstream
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
-            this.textBox4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(812, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(189, 32);
-            this.textBox4.TabIndex = 102;
-=======
-            this.text_User.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.text_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.text_User.Location = new System.Drawing.Point(122, 48);
-            this.text_User.Name = "text_User";
-            this.text_User.Size = new System.Drawing.Size(246, 34);
-            this.text_User.TabIndex = 96;
->>>>>>> Stashed changes
-            // 
-            // clbColumnUpdate
-            // 
-<<<<<<< Updated upstream
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(717, 84);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 21);
-            this.label6.TabIndex = 101;
-            this.label6.Text = "Username:";
-=======
             this.text_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.text_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -652,21 +510,9 @@
             this.text_Pass.Name = "text_Pass";
             this.text_Pass.Size = new System.Drawing.Size(246, 34);
             this.text_Pass.TabIndex = 98;
->>>>>>> Stashed changes
             // 
-            // clbColumnSelect
+            // panel5
             // 
-<<<<<<< Updated upstream
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label7.Location = new System.Drawing.Point(807, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 25);
-            this.label7.TabIndex = 100;
-            this.label7.Text = "Selected User";
-=======
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
             this.panel5.Controls.Add(this.btnCancelEdit);
             this.panel5.Controls.Add(this.btnEditPriv);
@@ -856,24 +702,17 @@
             this.clbColumnSelect.Sorted = true;
             this.clbColumnSelect.TabIndex = 119;
             this.clbColumnSelect.SelectedIndexChanged += new System.EventHandler(this.clbColumnSelect_SelectedIndexChanged);
->>>>>>> Stashed changes
             // 
-            // selectedUser_ComboBox
+            // UC_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-<<<<<<< Updated upstream
-            this.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.Name = "UC_User";
-            this.Padding = new System.Windows.Forms.Padding(10);
-=======
             this.Margin = new System.Windows.Forms.Padding(15);
-            this.Name = "selectedUser_ComboBox";
+            this.Name = "UC_User";
             this.Padding = new System.Windows.Forms.Padding(15);
->>>>>>> Stashed changes
             this.Size = new System.Drawing.Size(1200, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -903,11 +742,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox text_Pass;
         private System.Windows.Forms.Label label3;
-<<<<<<< Updated upstream
-        private System.Windows.Forms.TextBox textBox4;
-=======
         private System.Windows.Forms.TextBox selectedUser_ComboBox;
->>>>>>> Stashed changes
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_DeleteUser;

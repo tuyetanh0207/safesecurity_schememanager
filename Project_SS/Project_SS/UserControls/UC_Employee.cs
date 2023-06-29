@@ -1,4 +1,4 @@
-using DAO_HotelManagement;
+﻿using DAO_HotelManagement;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
@@ -22,35 +22,6 @@ namespace Project_SS
         {
             InitializeComponent();
             setData();
-            try
-            {
-                if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0)
-                {
-                    for (int i = 0; i < NHANVIEN_DataGrid.Rows.Count; i++)
-                    {
-                        if (NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length != 0)
-                        {
-                            //MessageBox.Show(i + "Luong " + NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length.ToString());
-                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString()));
-                            NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["Luong"].Value.ToString());
-        }
-
-                        if (NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length != 0)
-                        {
-                            //MessageBox.Show(i + "Phu cap " + NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length.ToString());
-                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()));
-
-                            NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()); ;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't get data.");
-                MessageBox.Show(ex.ToString());
-            }
-
         }
         void setData()
         {
@@ -83,17 +54,6 @@ namespace Project_SS
                 }
                 room_ComboBox.DataSource = idPHG;
 
-namespace Project_SS
-{
-    public partial class UC_Employee : UserControl
-    {
-        string selectedID;
-        public UC_Employee()
-        {
-            InitializeComponent();
-            setData();
-            try
-            {
                 if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0)
                 {
                     for (int i = 0; i < NHANVIEN_DataGrid.Rows.Count; i++)
@@ -113,52 +73,11 @@ namespace Project_SS
                             NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()); ;
                         }
                     }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't get data.");
-                MessageBox.Show(ex.ToString());
-            }
-
-        }
-        void setData()
-        {
-            try
-            {
-                string procName = "QLCONGTY.SELECT_NHANVIEN";
-                NHANVIEN_DataGrid.DataSource = DataProvider.Instance.ExecuteProc(procName);
-                //get QL trực tiếp ID
-                string queryID = "SELECT MANV FROM QLCONGTY.NHANVIEN WHERE VAITRO = N'QL trực tiếp'";
-                DataTable dtID = DataProvider.Instance.ExecuteQuery(queryID);
-
-                List<string> idList = new List<string>();
-                idList.Add("<None>");
-                foreach (DataRow row in dtID.Rows)
-                {
-                    string idQL = row["MANV"].ToString();
-                    idList.Add(idQL);
-                    }
-                manager_ComboBox.DataSource = idList;
-
-                //get PHONGBAN
-                string queryPHG = "SELECT MAPB FROM QLCONGTY.PHONGBAN";
-                DataTable dtPHG = DataProvider.Instance.ExecuteQuery(queryPHG);
-
-                List<string> idPHG = new List<string>();
-                idPHG.Add("<None>");
-                foreach (DataRow row in dtPHG.Rows)
-                {
-                    string idPHGBAN = row["MAPB"].ToString();
-                    idPHG.Add(idPHGBAN);
                 }           
-                room_ComboBox.DataSource = idPHG;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Can't get data.");
-                MessageBox.Show(ex.ToString());
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -196,12 +115,9 @@ namespace Project_SS
                 }
                 setData();
             }
-                setData();            }
             catch (Exception ex)
             {
                 MessageBox.Show("Can't insert");
-                MessageBox.Show(ex.ToString());
-
             }
         }
 
@@ -317,14 +233,6 @@ namespace Project_SS
         string hash = "f0xle@rn";
         string encrypt(string value)
         {
-            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            string hash = "";
-            foreach (DataRow dr in dt.Rows)
-            {
-                hash = dr["KEY"].ToString();
-                break;
-            }
             string newValue = "";
             byte[] data = UTF8Encoding.UTF8.GetBytes(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
@@ -344,14 +252,6 @@ namespace Project_SS
         }
         string decrypt(string value)
         {
-            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            string hash = "";
-            foreach (DataRow dr in dt.Rows)
-            {
-                hash = dr["KEY"].ToString();
-                break;
-            }
             string newValue = "";
             byte[] data = Convert.FromBase64String(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
@@ -386,5 +286,3 @@ namespace Project_SS
         }
     }
 }
->>>>>>> Stashed changes:Project_SS/Project_SS/UserControls/UC_Employee.cs
->>>>>>>> origin/PhucNgo:safesecurity_schememanager/Project_SS/Project_SS/UC_Employee.cs

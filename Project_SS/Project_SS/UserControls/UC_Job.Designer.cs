@@ -33,16 +33,16 @@
             this.cbxName = new System.Windows.Forms.ComboBox();
             this.cbxSchema = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSaveUpdate = new System.Windows.Forms.Button();
+            this.txbSchema = new System.Windows.Forms.TextBox();
+            this.txbName = new System.Windows.Forms.TextBox();
             this.txbCurrTime = new System.Windows.Forms.TextBox();
             this.txbCurrEmp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txbCurrSchema = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSaveUpdate = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbSchema = new System.Windows.Forms.TextBox();
-            this.txbName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,12 +55,12 @@
             // 
             this.Phancong.AutoSize = true;
             this.Phancong.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Phancong.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phancong.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.Phancong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.Phancong.Location = new System.Drawing.Point(18, 39);
+            this.Phancong.Location = new System.Drawing.Point(19, 36);
             this.Phancong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Phancong.Name = "Phancong";
-            this.Phancong.Size = new System.Drawing.Size(191, 21);
+            this.Phancong.Size = new System.Drawing.Size(229, 25);
             this.Phancong.TabIndex = 0;
             this.Phancong.Text = "LIST OF ASSIGNMENTS:";
             // 
@@ -121,6 +121,82 @@
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderSize = 2;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(341, 163);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(111, 53);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(34, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Search schema";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(34, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Search employee";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnSaveUpdate
+            // 
+            this.btnSaveUpdate.BackColor = System.Drawing.Color.White;
+            this.btnSaveUpdate.FlatAppearance.BorderSize = 2;
+            this.btnSaveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveUpdate.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
+            this.btnSaveUpdate.Location = new System.Drawing.Point(341, 60);
+            this.btnSaveUpdate.Name = "btnSaveUpdate";
+            this.btnSaveUpdate.Size = new System.Drawing.Size(111, 53);
+            this.btnSaveUpdate.TabIndex = 8;
+            this.btnSaveUpdate.Text = "SAVE";
+            this.btnSaveUpdate.UseVisualStyleBackColor = false;
+            this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
+            // 
+            // txbSchema
+            // 
+            this.txbSchema.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbSchema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSchema.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txbSchema.Location = new System.Drawing.Point(37, 52);
+            this.txbSchema.Name = "txbSchema";
+            this.txbSchema.Size = new System.Drawing.Size(267, 24);
+            this.txbSchema.TabIndex = 5;
+            this.txbSchema.Text = "Phát triển ứng dụng . . .";
+            this.txbSchema.TextChanged += new System.EventHandler(this.txbSchema_TextChanged);
+            // 
+            // txbName
+            // 
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txbName.Location = new System.Drawing.Point(38, 163);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(267, 24);
+            this.txbName.TabIndex = 4;
+            this.txbName.Text = "Nguyễn Tuyết Anh. . .";
+            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
+            // 
             // txbCurrTime
             // 
             this.txbCurrTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -164,82 +240,6 @@
             this.txbCurrSchema.Size = new System.Drawing.Size(359, 26);
             this.txbCurrSchema.TabIndex = 10;
             this.txbCurrSchema.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.FlatAppearance.BorderSize = 2;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(341, 163);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(111, 53);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSaveUpdate
-            // 
-            this.btnSaveUpdate.BackColor = System.Drawing.Color.White;
-            this.btnSaveUpdate.FlatAppearance.BorderSize = 2;
-            this.btnSaveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUpdate.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.btnSaveUpdate.Location = new System.Drawing.Point(341, 60);
-            this.btnSaveUpdate.Name = "btnSaveUpdate";
-            this.btnSaveUpdate.Size = new System.Drawing.Size(111, 53);
-            this.btnSaveUpdate.TabIndex = 8;
-            this.btnSaveUpdate.Text = "SAVE";
-            this.btnSaveUpdate.UseVisualStyleBackColor = false;
-            this.btnSaveUpdate.Click += new System.EventHandler(this.btnSaveUpdate_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(34, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Search schema";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(34, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Search employee";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txbSchema
-            // 
-            this.txbSchema.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbSchema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSchema.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txbSchema.Location = new System.Drawing.Point(37, 52);
-            this.txbSchema.Name = "txbSchema";
-            this.txbSchema.Size = new System.Drawing.Size(267, 24);
-            this.txbSchema.TabIndex = 5;
-            this.txbSchema.Text = "Phát triển ứng dụng . . .";
-            this.txbSchema.TextChanged += new System.EventHandler(this.txbSchema_TextChanged);
-            // 
-            // txbName
-            // 
-            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txbName.Location = new System.Drawing.Point(38, 163);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(267, 24);
-            this.txbName.TabIndex = 4;
-            this.txbName.Text = "Nguyễn Tuyết Anh. . .";
-            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // button1
             // 

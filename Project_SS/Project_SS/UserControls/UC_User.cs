@@ -13,13 +13,8 @@ using System.Xml.Linq;
 
 namespace Project_SS.UserControls
 {
-    public partial class selectedUser_ComboBox : UserControl
+    public partial class UC_User : UserControl
     {
-<<<<<<< Updated upstream
-        public UC_User()
-        {
-            InitializeComponent();
-=======
         // NOTE: USER = ROLE, ROLE = USER
         DataTable dt_role = new DataTable();
         DataTable dt_notRole;
@@ -70,7 +65,7 @@ namespace Project_SS.UserControls
         OracleCommand cmd;
         OracleDataReader dr;
 
-        public selectedUser_ComboBox()
+        public UC_User()
         {
             InitializeComponent();
 
@@ -960,7 +955,6 @@ namespace Project_SS.UserControls
             {
                 MessageBox.Show("Grant role failed. Please try again!");
             }
->>>>>>> Stashed changes
         }
     }
 }

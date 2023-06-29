@@ -1,5 +1,7 @@
+﻿using Bunifu.UI.WinForms.Helpers.Transitions;
+using DAO_HotelManagement;
+using Oracle.ManagedDataAccess.Client;
 using System;
->>>>>>> Stashed changes
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,8 +53,6 @@ namespace Project_SS.UserControls
         public UC_Role()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
-=======
 
             dtgvRoleList.RowHeadersWidth = 50;
             dtgvTableList.RowHeadersWidth = 50;
@@ -290,7 +290,7 @@ namespace Project_SS.UserControls
         private void dtgvRoleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRole= dtgvRoleList.Rows[e.RowIndex].Cells[0].Value.ToString();
-            selectedRole_ComboBox.Text= selectedRole;
+            txbSelectedRoleLeft.Text= selectedRole;
           
            
             string[] tableTille, tableValue;
@@ -687,63 +687,6 @@ namespace Project_SS.UserControls
             clbColumnSelect.SelectionMode = SelectionMode.None;
             clbColumnUpdate.SelectionMode = SelectionMode.None;
 
->>>>>>> Stashed changes
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int index;
-                string procName = "QLCONGTY.CREATE_ROLE";
-                string connectionString = DataProvider.Instance.getconnecStr();
-                using (OracleConnection connection = new OracleConnection(connectionString))
-                {
-                    connection.Open();
-                    using (OracleCommand command = new OracleCommand(procName, connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("ROLENAME", OracleDbType.Varchar2).Value = name_Text.Text;
-                        index = command.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show(index.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't add");
-                // Handle or display the exception message
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void btn_DeleteUser_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int index;
-                string procName = "QLCONGTY.DROP_ROLE";
-                string connectionString = DataProvider.Instance.getconnecStr();
-                using (OracleConnection connection = new OracleConnection(connectionString))
-                {
-                    connection.Open();
-                    using (OracleCommand command = new OracleCommand(procName, connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-
-                        cmd.Parameters.Add("ROLENAME", OracleDbType.Varchar2).Value = name_Text.Text;
-                        index = command.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show(index.ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't drop");
-                // Handle or display the exception message
-                MessageBox.Show(ex.ToString());
-            }
         }
 
         private void button5_Click(object sender, EventArgs e)
