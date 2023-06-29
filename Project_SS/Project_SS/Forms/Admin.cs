@@ -52,5 +52,11 @@ namespace Project_SS.Forms
             UC_Role uc = new UC_Role();
             addControls(uc);
         }
+
+        private void Audit_Click(object sender, EventArgs e)
+        {
+            F_Audit auditform = new F_Audit();
+            auditform.ShowDialog();
+        }
     }
 }

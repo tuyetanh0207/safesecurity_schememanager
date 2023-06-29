@@ -44,10 +44,10 @@ namespace Project_SS
         {
 
             // 2 dòng này lấy username pass nè
-            //username = tb_User.Text;
-            //password = tb_Pass.Text;
-            username = "TC008";
-            password = "DOAN";
+            username = tb_User.Text;
+            password = tb_Pass.Text;
+            //username = "TC008";
+            //password = "DOAN";
             //MessageBox.Show(username, password);
             try
             {

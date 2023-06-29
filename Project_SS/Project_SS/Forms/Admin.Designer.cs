@@ -33,6 +33,7 @@
             this.panel_Container = new System.Windows.Forms.Panel();
             this.label_Exit = new System.Windows.Forms.Label();
             this.btnAboutUs = new System.Windows.Forms.Button();
+            this.Audit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_User
@@ -44,11 +45,11 @@
             this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_User.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btn_User.ForeColor = System.Drawing.Color.White;
-            this.btn_User.Location = new System.Drawing.Point(0, 35);
+            this.btn_User.Location = new System.Drawing.Point(0, 41);
             this.btn_User.Margin = new System.Windows.Forms.Padding(0);
             this.btn_User.Name = "btn_User";
             this.btn_User.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_User.Size = new System.Drawing.Size(600, 85);
+            this.btn_User.Size = new System.Drawing.Size(600, 79);
             this.btn_User.TabIndex = 2;
             this.btn_User.Text = "USER";
             this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -64,11 +65,11 @@
             this.btn_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Role.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btn_Role.ForeColor = System.Drawing.Color.White;
-            this.btn_Role.Location = new System.Drawing.Point(600, 35);
+            this.btn_Role.Location = new System.Drawing.Point(600, 38);
             this.btn_Role.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Role.Name = "btn_Role";
             this.btn_Role.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Role.Size = new System.Drawing.Size(600, 85);
+            this.btn_Role.Size = new System.Drawing.Size(600, 82);
             this.btn_Role.TabIndex = 3;
             this.btn_Role.Text = "ROLE";
             this.btn_Role.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,7 +94,7 @@
             this.label_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(19)))), ((int)(((byte)(117)))));
             this.label_Exit.Location = new System.Drawing.Point(1171, -3);
             this.label_Exit.Name = "label_Exit";
-            this.label_Exit.Size = new System.Drawing.Size(27, 32);
+            this.label_Exit.Size = new System.Drawing.Size(34, 41);
             this.label_Exit.TabIndex = 9;
             this.label_Exit.Text = "x";
             this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
@@ -117,12 +118,24 @@
             this.btnAboutUs.UseVisualStyleBackColor = true;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
+            // Audit
+            // 
+            this.Audit.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Audit.Location = new System.Drawing.Point(1126, 38);
+            this.Audit.Name = "Audit";
+            this.Audit.Size = new System.Drawing.Size(74, 31);
+            this.Audit.TabIndex = 0;
+            this.Audit.Text = "Audit";
+            this.Audit.UseVisualStyleBackColor = true;
+            this.Audit.Click += new System.EventHandler(this.Audit_Click);
+            // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.Audit);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.panel_Container);
@@ -145,5 +158,6 @@
         private System.Windows.Forms.Panel panel_Container;
         private System.Windows.Forms.Label label_Exit;
         private System.Windows.Forms.Button btnAboutUs;
+        private System.Windows.Forms.Button Audit;
     }
 }
