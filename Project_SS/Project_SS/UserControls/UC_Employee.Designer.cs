@@ -31,6 +31,9 @@
             this.NHANVIEN_DataGrid = new System.Windows.Forms.DataGridView();
             this.Phancong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.room_ComboBox = new System.Windows.Forms.ComboBox();
+            this.manager_ComboBox = new System.Windows.Forms.ComboBox();
+            this.role_ComboBox = new System.Windows.Forms.ComboBox();
             this.gender_ComboBox = new System.Windows.Forms.ComboBox();
             this.Demo = new System.Windows.Forms.Button();
             this.birthday_Datetime = new System.Windows.Forms.DateTimePicker();
@@ -52,9 +55,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.role_ComboBox = new System.Windows.Forms.ComboBox();
-            this.manager_ComboBox = new System.Windows.Forms.ComboBox();
-            this.room_ComboBox = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NHANVIEN_DataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +89,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.room_ComboBox);
             this.panel1.Controls.Add(this.manager_ComboBox);
             this.panel1.Controls.Add(this.role_ComboBox);
@@ -117,6 +119,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(939, 271);
             this.panel1.TabIndex = 7;
+            // 
+            // room_ComboBox
+            // 
+            this.room_ComboBox.FormattingEnabled = true;
+            this.room_ComboBox.Location = new System.Drawing.Point(651, 138);
+            this.room_ComboBox.Name = "room_ComboBox";
+            this.room_ComboBox.Size = new System.Drawing.Size(96, 36);
+            this.room_ComboBox.TabIndex = 42;
+            // 
+            // manager_ComboBox
+            // 
+            this.manager_ComboBox.FormattingEnabled = true;
+            this.manager_ComboBox.Location = new System.Drawing.Point(651, 98);
+            this.manager_ComboBox.Name = "manager_ComboBox";
+            this.manager_ComboBox.Size = new System.Drawing.Size(96, 36);
+            this.manager_ComboBox.TabIndex = 41;
+            // 
+            // role_ComboBox
+            // 
+            this.role_ComboBox.FormattingEnabled = true;
+            this.role_ComboBox.Items.AddRange(new object[] {
+            "Nhân viên",
+            "Quản lý trực tiếp",
+            "Trưởng phòng",
+            "Tài chính",
+            "Nhân sự",
+            "Trưởng đề án"});
+            this.role_ComboBox.Location = new System.Drawing.Point(585, 53);
+            this.role_ComboBox.Name = "role_ComboBox";
+            this.role_ComboBox.Size = new System.Drawing.Size(121, 36);
+            this.role_ComboBox.TabIndex = 40;
             // 
             // gender_ComboBox
             // 
@@ -290,7 +323,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button2.Location = new System.Drawing.Point(775, 114);
+            this.button2.Location = new System.Drawing.Point(775, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 49);
             this.button2.TabIndex = 8;
@@ -306,7 +339,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
-            this.button1.Location = new System.Drawing.Point(775, 50);
+            this.button1.Location = new System.Drawing.Point(775, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 49);
             this.button1.TabIndex = 7;
@@ -326,36 +359,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Add/Update Employee";
             // 
-            // role_ComboBox
+            // button3
             // 
-            this.role_ComboBox.FormattingEnabled = true;
-            this.role_ComboBox.Items.AddRange(new object[] {
-            "Nhân viên",
-            "QL trực tiếp",
-            "Trưởng phòng",
-            "Tài chính",
-            "Nhân sự",
-            "Trưởng đề án"});
-            this.role_ComboBox.Location = new System.Drawing.Point(585, 53);
-            this.role_ComboBox.Name = "role_ComboBox";
-            this.role_ComboBox.Size = new System.Drawing.Size(121, 36);
-            this.role_ComboBox.TabIndex = 40;
-            // 
-            // manager_ComboBox
-            // 
-            this.manager_ComboBox.FormattingEnabled = true;
-            this.manager_ComboBox.Location = new System.Drawing.Point(651, 98);
-            this.manager_ComboBox.Name = "manager_ComboBox";
-            this.manager_ComboBox.Size = new System.Drawing.Size(96, 36);
-            this.manager_ComboBox.TabIndex = 41;
-            // 
-            // room_ComboBox
-            // 
-            this.room_ComboBox.FormattingEnabled = true;
-            this.room_ComboBox.Location = new System.Drawing.Point(651, 138);
-            this.room_ComboBox.Name = "room_ComboBox";
-            this.room_ComboBox.Size = new System.Drawing.Size(96, 36);
-            this.room_ComboBox.TabIndex = 42;
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.button3.Location = new System.Drawing.Point(754, 141);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 49);
+            this.button3.TabIndex = 43;
+            this.button3.Text = "Update Yourself";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // UC_Employee
             // 
@@ -405,5 +423,6 @@
         private System.Windows.Forms.ComboBox room_ComboBox;
         private System.Windows.Forms.ComboBox manager_ComboBox;
         private System.Windows.Forms.ComboBox role_ComboBox;
+        private System.Windows.Forms.Button button3;
     }
 }

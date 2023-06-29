@@ -54,7 +54,7 @@ namespace Project_SS
                 if (
                                   username.IndexOf("NS") >= 0 ||
                                   username.IndexOf("TP") >= 0 ||
-                                  username.IndexOf("TDA") >= 0 ||
+                                  username.IndexOf("TA") >= 0 ||
                                   username.IndexOf("TC") >= 0 ||
                                   username.IndexOf("GD") >= 0)
                 {

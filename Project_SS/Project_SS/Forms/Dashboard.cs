@@ -118,7 +118,16 @@ namespace Project_SS
         {
             text_Title.Text = "PROJECT";
             slidePanel(btnProject);
-            
+            UC_Project uC = new UC_Project();
+            addControls(uC);
+        }
+
+        private void btnWorks_Click(object sender, EventArgs e)
+        {
+            text_Title.Text = "DEPARTMENT";
+            slidePanel(btnJobs);
+            UC_Department uC = new UC_Department();
+            addControls(uC);
         }
     }
 }

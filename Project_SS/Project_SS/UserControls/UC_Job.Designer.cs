@@ -60,7 +60,7 @@
             this.Phancong.Location = new System.Drawing.Point(19, 36);
             this.Phancong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Phancong.Name = "Phancong";
-            this.Phancong.Size = new System.Drawing.Size(229, 25);
+            this.Phancong.Size = new System.Drawing.Size(286, 32);
             this.Phancong.TabIndex = 0;
             this.Phancong.Text = "LIST OF ASSIGNMENTS:";
             // 
@@ -85,7 +85,7 @@
             this.cbxName.Location = new System.Drawing.Point(38, 196);
             this.cbxName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxName.Name = "cbxName";
-            this.cbxName.Size = new System.Drawing.Size(267, 28);
+            this.cbxName.Size = new System.Drawing.Size(267, 33);
             this.cbxName.TabIndex = 2;
             this.cbxName.Text = "Choose employee . . .";
             this.cbxName.SelectedIndexChanged += new System.EventHandler(this.cbxName_SelectedIndexChanged);
@@ -98,7 +98,7 @@
             this.cbxSchema.Location = new System.Drawing.Point(37, 85);
             this.cbxSchema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxSchema.Name = "cbxSchema";
-            this.cbxSchema.Size = new System.Drawing.Size(267, 28);
+            this.cbxSchema.Size = new System.Drawing.Size(267, 33);
             this.cbxSchema.TabIndex = 3;
             this.cbxSchema.Text = "Choose schema . . .";
             this.cbxSchema.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -142,7 +142,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(34, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 21);
+            this.label2.Size = new System.Drawing.Size(148, 28);
             this.label2.TabIndex = 7;
             this.label2.Text = "Search schema";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -153,7 +153,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(34, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
+            this.label1.Size = new System.Drawing.Size(169, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Search employee";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -180,7 +180,7 @@
             this.txbSchema.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txbSchema.Location = new System.Drawing.Point(37, 52);
             this.txbSchema.Name = "txbSchema";
-            this.txbSchema.Size = new System.Drawing.Size(267, 24);
+            this.txbSchema.Size = new System.Drawing.Size(267, 29);
             this.txbSchema.TabIndex = 5;
             this.txbSchema.Text = "Phát triển ứng dụng . . .";
             this.txbSchema.TextChanged += new System.EventHandler(this.txbSchema_TextChanged);
@@ -192,7 +192,7 @@
             this.txbName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txbName.Location = new System.Drawing.Point(38, 163);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(267, 24);
+            this.txbName.Size = new System.Drawing.Size(267, 29);
             this.txbName.TabIndex = 4;
             this.txbName.Text = "Nguyễn Tuyết Anh. . .";
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
@@ -201,10 +201,9 @@
             // 
             this.txbCurrTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbCurrTime.Font = new System.Drawing.Font("Malgun Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCurrTime.Location = new System.Drawing.Point(59, 495);
+            this.txbCurrTime.Location = new System.Drawing.Point(60, 508);
             this.txbCurrTime.Name = "txbCurrTime";
-            this.txbCurrTime.ReadOnly = true;
-            this.txbCurrTime.Size = new System.Drawing.Size(358, 26);
+            this.txbCurrTime.Size = new System.Drawing.Size(358, 30);
             this.txbCurrTime.TabIndex = 13;
             this.txbCurrTime.TextChanged += new System.EventHandler(this.txbCurrTime_TextChanged);
             // 
@@ -215,7 +214,7 @@
             this.txbCurrEmp.Location = new System.Drawing.Point(60, 433);
             this.txbCurrEmp.Name = "txbCurrEmp";
             this.txbCurrEmp.ReadOnly = true;
-            this.txbCurrEmp.Size = new System.Drawing.Size(358, 26);
+            this.txbCurrEmp.Size = new System.Drawing.Size(358, 30);
             this.txbCurrEmp.TabIndex = 12;
             this.txbCurrEmp.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -226,7 +225,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
             this.label3.Location = new System.Drawing.Point(132, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 21);
+            this.label3.Size = new System.Drawing.Size(259, 28);
             this.label3.TabIndex = 11;
             this.label3.Text = "Assignement Information ";
             // 
@@ -237,7 +236,7 @@
             this.txbCurrSchema.Location = new System.Drawing.Point(59, 371);
             this.txbCurrSchema.Name = "txbCurrSchema";
             this.txbCurrSchema.ReadOnly = true;
-            this.txbCurrSchema.Size = new System.Drawing.Size(359, 26);
+            this.txbCurrSchema.Size = new System.Drawing.Size(359, 30);
             this.txbCurrSchema.TabIndex = 10;
             this.txbCurrSchema.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -264,7 +263,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(56, 346);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 19);
+            this.label4.Size = new System.Drawing.Size(137, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "Schema\'s Name:";
             // 
@@ -275,7 +274,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(56, 409);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 19);
+            this.label5.Size = new System.Drawing.Size(88, 23);
             this.label5.TabIndex = 15;
             this.label5.Text = "Employee:";
             // 
@@ -286,13 +285,13 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(56, 472);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 19);
+            this.label6.Size = new System.Drawing.Size(50, 23);
             this.label6.TabIndex = 16;
             this.label6.Text = "Date:";
             // 
             // UC_Job
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label6);

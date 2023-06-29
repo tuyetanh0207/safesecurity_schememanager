@@ -85,7 +85,7 @@ namespace Project_SS.UserControls
                 int index;
                 MessageBox.Show(null);
 
-                string procName = "QLCONGTY.USP_UPDATEPROJECT";
+                string procName = "QLCONGTY.USP_UPDATEDEPART";
                 string connectionString = DataProvider.Instance.getconnecStr();
                 using (OracleConnection connection = new OracleConnection(connectionString))
                 {

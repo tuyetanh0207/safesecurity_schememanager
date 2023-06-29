@@ -73,11 +73,31 @@ namespace Project_SS
                             NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()); ;
                         }
                     }
-                }           
+                }
+                else
+                {
+                    for (int i = 0; i < NHANVIEN_DataGrid.Rows.Count; i++)
+                    {
+                        if (NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length != 0 && NHANVIEN_DataGrid.Rows[i].Cells["MANV"].Value.ToString() == DataProvider.Instance.getUsername())
+                        {
+                            //MessageBox.Show(i + "Luong " + NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length.ToString());
+                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString()));
+                            NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString());
+                        }
+
+                        if (NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length != 0 && NHANVIEN_DataGrid.Rows[i].Cells["MANV"].Value.ToString() == DataProvider.Instance.getUsername())
+                        {
+                            //MessageBox.Show(i + "Phu cap " + NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length.ToString());
+                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()));
+
+                            NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()); ;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can't get data.");
+                MessageBox.Show("Can't get some data.");
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -100,8 +120,8 @@ namespace Project_SS
                         command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
                         command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
                         command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
-                        command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : encrypt(salary_Text.Text);
-                        command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : encrypt(allowance_Text.Text);
+                        command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : (salary_Text.Text);
+                        command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : (allowance_Text.Text);
                         command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
 
                         if (manager_ComboBox.Text == "<None>") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = null;
@@ -118,6 +138,7 @@ namespace Project_SS
             catch (Exception ex)
             {
                 MessageBox.Show("Can't insert");
+                //MessageBox.Show(ex.ToString());
             }
         }
 
@@ -133,8 +154,6 @@ namespace Project_SS
                 try
                 {
                     int index;
-                    MessageBox.Show(null);
-
                     string procName = "QLCONGTY.USP_UPDATEEMPLOYEE";
                     string connectionString = DataProvider.Instance.getconnecStr();
                     using (OracleConnection connection = new OracleConnection(connectionString))
@@ -174,26 +193,16 @@ namespace Project_SS
             }
             else if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0)
             {
-                string salary = string.IsNullOrEmpty(salary_Text.Text) ? null : (salary_Text.Text);
-                string allowance = string.IsNullOrEmpty(allowance_Text.Text) ? null : (allowance_Text.Text);
+                string salary = string.IsNullOrEmpty(salary_Text.Text) ? null : encrypt(salary_Text.Text);
+                string allowance = string.IsNullOrEmpty(allowance_Text.Text) ? null : encrypt(allowance_Text.Text);
                 string procName = "UPDATE QLCONGTY.NHANVIEN \n" +
-                                  "SET LUONG = N'" + encrypt(salary) + "', PHUCAP = N'" + encrypt(allowance) + "' \n" +
+                                  "SET LUONG = N'" + salary + "', PHUCAP = N'" + allowance + "' \n" +
                                   "WHERE MANV = N'" + selectedID + "'";
                 int index = DataProvider.Instance.ExecuteNonQuery(procName);
                 if (index > 0) MessageBox.Show("Update complete!");
                 else MessageBox.Show("Can't update!");
                 setData();
-            }
-            else
-            {
-                string procName = "UPDATE QLCONGTY.NHANVIEN \n" +
-                                  "SET NGAYSINH = N'" + birthday_Datetime.Value + "', DIACHI = N'" + address_Text + "', SODT = '"+ phone_Text +"' \n" +
-                                  "WHERE MANV = N'" + selectedID + "'";
-                int index = DataProvider.Instance.ExecuteNonQuery(procName);
-                if (index > 0) MessageBox.Show("Update complete!");
-                else MessageBox.Show("Can't update!");
-                setData();
-            }
+            }          
         }
         void showDataEmp(string selectedID)
         {
@@ -214,8 +223,13 @@ namespace Project_SS
             else birthday_Datetime.Value = DateTime.Parse(userInfo.Split('\n')[2]);
             address_Text.Text = userInfo.Split('\n')[3];
             phone_Text.Text = userInfo.Split('\n')[4];
-            salary_Text.Text = (userInfo.Split('\n')[5]);
-            allowance_Text.Text = (userInfo.Split('\n')[6]);
+
+            if(DataProvider.Instance.getUsername().IndexOf("TC") >= 0) salary_Text.Text = decrypt(userInfo.Split('\n')[5]);
+            else salary_Text.Text = (userInfo.Split('\n')[5]);
+
+            if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0) allowance_Text.Text = decrypt(userInfo.Split('\n')[6]);
+            else allowance_Text.Text = (userInfo.Split('\n')[6]);
+
             role_ComboBox.Text = userInfo.Split('\n')[7];
             manager_ComboBox.Text = userInfo.Split('\n')[8];
             room_ComboBox.Text = userInfo.Split('\n')[9];
@@ -245,9 +259,6 @@ namespace Project_SS
                     newValue = Convert.ToBase64String(rs, 0, rs.Length);
                 }
             }
-            MessageBox.Show(newValue);
-            MessageBox.Show(newValue.Length.ToString());
-
             return newValue;
         }
         string decrypt(string value)
@@ -266,23 +277,41 @@ namespace Project_SS
             }
             return newValue;
         }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            if (salary_Text.Text != "") salary_Text.Text = encrypt(salary_Text.Text);
-            if (allowance_Text.Text != "") allowance_Text.Text = encrypt(allowance_Text.Text);
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            if (salary_Text.Text != "") salary_Text.Text = decrypt(salary_Text.Text);
-            if (allowance_Text.Text != "") allowance_Text.Text = decrypt(allowance_Text.Text);
-        }
-
         private void Demo_Click(object sender, EventArgs e)
         {
             Encrypt_Form encryptF = new Encrypt_Form();
             encryptF.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.USP_UPDATEYOURSELF";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.Add("IDEMP", OracleDbType.Char).Value = string.IsNullOrEmpty(selectedID) ? (object)null : selectedID;
+                        command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
+                        command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
+                        command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
+
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                setData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't update");
+                // Handle or display the exception message
+            }
         }
     }
 }
