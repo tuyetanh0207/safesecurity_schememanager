@@ -13,8 +13,13 @@ using System.Xml.Linq;
 
 namespace Project_SS.UserControls
 {
-    public partial class UC_User : UserControl
+    public partial class selectedUser_ComboBox : UserControl
     {
+<<<<<<< Updated upstream
+        public UC_User()
+        {
+            InitializeComponent();
+=======
         // NOTE: USER = ROLE, ROLE = USER
         DataTable dt_role = new DataTable();
         DataTable dt_notRole;
@@ -65,7 +70,7 @@ namespace Project_SS.UserControls
         OracleCommand cmd;
         OracleDataReader dr;
 
-        public UC_User()
+        public selectedUser_ComboBox()
         {
             InitializeComponent();
 
@@ -755,7 +760,7 @@ namespace Project_SS.UserControls
         {
             dtgvUsersOfRole.Columns.Remove("Revoke");
             selectedRole = dtgvRoleList.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txbSelectedRoleLeft.Text = selectedRole;
+            selectedUser_ComboBox.Text = selectedRole;
             txbSelectedRoleRight.Text = selectedRole;
 
 
@@ -856,48 +861,87 @@ namespace Project_SS.UserControls
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //int res1 = 0;
-            //string new_User = text_User.Text;
-            //string new_pass = text_Pass.Text;
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.CREATE_USER";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
 
-            //paraTitles = new string[2] { "USER_NAME", "PASS" };
-            //paraValues = new string[2] { new_User, new_pass };
-
-            //res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("CREATE_USER", 2, paraTitles, paraValues);
-            //if (res1 == -1)
-            //{
-            //    MessageBox.Show("Create user successfully!");
-            //    Load_RoleOfUser();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Create user failed. Please try again!");
-            //}
-
-            dt = new DataTable();
-            con.Open();
-            cmd = new OracleCommand("CREATE_USER", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
-            cmd.Parameters.Add("PASS", OracleDbType.Varchar2).Value = text_Pass.Text;
-
-            adpt = new OracleDataAdapter(cmd);
-
-            ////adpt.Fill(dt);
-            //dgv_User_Grant_Revoke.DataSource = dt;
-            //con.Close();
-            MessageBox.Show("Revoke Success!");
-            //display_Users();
+                        cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
+                        cmd.Parameters.Add("PASS", OracleDbType.Varchar2).Value = text_Pass.Text;
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show(index.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't add");
+                // Handle or display the exception message
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btn_UpdateUser_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.CHANGE_PASS_USER";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
 
+                        cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = text_User.Text;
+                        cmd.Parameters.Add("NEWPASS", OracleDbType.Varchar2).Value = text_Pass.Text;
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show(index.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't update");
+                // Handle or display the exception message
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btn_DeleteUser_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int index;
+                string procName = "QLCONGTY.DROP_USER";
+                string connectionString = DataProvider.Instance.getconnecStr();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    connection.Open();
+                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("USER_NAME", OracleDbType.Varchar2).Value = selectedUser_ComboBox.Text;
+                        index = command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show(index.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't delete");
+                // Handle or display the exception message
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnGrantRole_Click(object sender, EventArgs e)
@@ -916,6 +960,7 @@ namespace Project_SS.UserControls
             {
                 MessageBox.Show("Grant role failed. Please try again!");
             }
+>>>>>>> Stashed changes
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Project_SS.Forms
         {
             InitializeComponent();
 
-            UC_User uC = new UC_User();
+            selectedUser_ComboBox uC = new selectedUser_ComboBox();
             addControls(uC);
         }
 
@@ -40,10 +40,12 @@ namespace Project_SS.Forms
         {
             Application.Exit();
         }
+<<<<<<< Updated upstream
+=======
 
         private void btn_User_Click(object sender, EventArgs e)
         {
-            UC_User uc = new UC_User();
+            selectedUser_ComboBox uc = new selectedUser_ComboBox();
             addControls(uc);
         }
 
@@ -52,5 +54,6 @@ namespace Project_SS.Forms
             UC_Role uc = new UC_Role();
             addControls(uc);
         }
+>>>>>>> Stashed changes
     }
 }

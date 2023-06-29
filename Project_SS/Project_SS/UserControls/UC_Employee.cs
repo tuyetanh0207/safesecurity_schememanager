@@ -1,4 +1,4 @@
-﻿using DAO_HotelManagement;
+using DAO_HotelManagement;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ namespace Project_SS
                             //MessageBox.Show(i + "Luong " + NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length.ToString());
                             //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString()));
                             NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["Luong"].Value.ToString());
-                        }
+        }
 
                         if (NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length != 0)
                         {
@@ -58,6 +58,102 @@ namespace Project_SS
             {
                 string procName = "QLCONGTY.SELECT_NHANVIEN";
                 NHANVIEN_DataGrid.DataSource = DataProvider.Instance.ExecuteProc(procName);
+                //get QL trực tiếp ID
+                string queryID = "SELECT MANV FROM QLCONGTY.NHANVIEN WHERE VAITRO = N'QL trực tiếp'";
+                DataTable dtID = DataProvider.Instance.ExecuteQuery(queryID);
+                List<string> idList = new List<string>();
+                idList.Add("<None>");
+                foreach (DataRow row in dtID.Rows)
+                {
+                    string idQL = row["MANV"].ToString();
+                    idList.Add(idQL);
+                }
+                manager_ComboBox.DataSource = idList;
+
+                //get PHONGBAN
+                string queryPHG = "SELECT MAPB FROM QLCONGTY.PHONGBAN";
+                DataTable dtPHG = DataProvider.Instance.ExecuteQuery(queryPHG);
+
+                List<string> idPHG = new List<string>();
+                idPHG.Add("<None>");
+                foreach (DataRow row in dtPHG.Rows)
+                {
+                    string idPHGBAN = row["MAPB"].ToString();
+                    idPHG.Add(idPHGBAN);
+                }
+                room_ComboBox.DataSource = idPHG;
+
+namespace Project_SS
+{
+    public partial class UC_Employee : UserControl
+    {
+        string selectedID;
+        public UC_Employee()
+        {
+            InitializeComponent();
+            setData();
+            try
+            {
+                if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0)
+                {
+                    for (int i = 0; i < NHANVIEN_DataGrid.Rows.Count; i++)
+                    {
+                        if (NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length != 0)
+                        {
+                            //MessageBox.Show(i + "Luong " + NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString().Length.ToString());
+                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value.ToString()));
+                            NHANVIEN_DataGrid.Rows[i].Cells["LUONG"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["Luong"].Value.ToString());
+                        }
+
+                        if (NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value != null && NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length != 0)
+                        {
+                            //MessageBox.Show(i + "Phu cap " + NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString().Length.ToString());
+                            //MessageBox.Show(decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()));
+
+                            NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value = decrypt(NHANVIEN_DataGrid.Rows[i].Cells["PHUCAP"].Value.ToString()); ;
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't get data.");
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+        void setData()
+        {
+            try
+            {
+                string procName = "QLCONGTY.SELECT_NHANVIEN";
+                NHANVIEN_DataGrid.DataSource = DataProvider.Instance.ExecuteProc(procName);
+                //get QL trực tiếp ID
+                string queryID = "SELECT MANV FROM QLCONGTY.NHANVIEN WHERE VAITRO = N'QL trực tiếp'";
+                DataTable dtID = DataProvider.Instance.ExecuteQuery(queryID);
+
+                List<string> idList = new List<string>();
+                idList.Add("<None>");
+                foreach (DataRow row in dtID.Rows)
+                {
+                    string idQL = row["MANV"].ToString();
+                    idList.Add(idQL);
+                    }
+                manager_ComboBox.DataSource = idList;
+
+                //get PHONGBAN
+                string queryPHG = "SELECT MAPB FROM QLCONGTY.PHONGBAN";
+                DataTable dtPHG = DataProvider.Instance.ExecuteQuery(queryPHG);
+
+                List<string> idPHG = new List<string>();
+                idPHG.Add("<None>");
+                foreach (DataRow row in dtPHG.Rows)
+                {
+                    string idPHGBAN = row["MAPB"].ToString();
+                    idPHG.Add(idPHGBAN);
+                }           
+                room_ComboBox.DataSource = idPHG;
             }
             catch (Exception ex)
             {
@@ -70,7 +166,7 @@ namespace Project_SS
             try
             {
                 int index;
-                
+
                 string procName = "QLCONGTY.USP_ADDEMPLOYEE";
                 string connectionString = DataProvider.Instance.getconnecStr();
                 using (OracleConnection connection = new OracleConnection(connectionString))
@@ -81,18 +177,25 @@ namespace Project_SS
                         command.CommandType = CommandType.StoredProcedure;
 
                         command.Parameters.Add("NAMEEMP", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(Name_Text.Text) ? (object)null : Name_Text.Text;
-                        command.Parameters.Add("GENDER", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(gender_Text.Text) ? (object)null : gender_Text.Text;
+                        command.Parameters.Add("GENDER", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(gender_ComboBox.Text) ? (object)null : gender_ComboBox.Text;
                         command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
                         command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
                         command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
                         command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : encrypt(salary_Text.Text);
                         command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : encrypt(allowance_Text.Text);
-                        command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_Text.Text) ? (object)null : role_Text.Text;
-                        command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = string.IsNullOrEmpty(manager_Text.Text) ? (object)null : manager_Text.Text;
-                        command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = string.IsNullOrEmpty(department_Text.Text) ? (object)null : Int32.Parse(department_Text.Text);
+                        command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
+
+                        if (manager_ComboBox.Text == "<None>") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = null;
+                        else command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = manager_ComboBox.Text;
+
+                        if (room_ComboBox.Text == "<None>") command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = null;
+                        else command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = int.Parse(room_ComboBox.Text);
+
                         index = command.ExecuteNonQuery();
                     }
                 }
+                setData();
+            }
                 setData();            }
             catch (Exception ex)
             {
@@ -109,43 +212,71 @@ namespace Project_SS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (DataProvider.Instance.getUsername().IndexOf("NS") >= 0)
             {
-                int index;
-                MessageBox.Show(null);
-
-                string procName = "QLCONGTY.USP_UPDATEEMPLOYEE";
-                string connectionString = DataProvider.Instance.getconnecStr();
-                using (OracleConnection connection = new OracleConnection(connectionString))
+                try
                 {
-                    connection.Open();
-                    using (OracleCommand command = new OracleCommand(procName, connection))
+                    int index;
+                    MessageBox.Show(null);
+
+                    string procName = "QLCONGTY.USP_UPDATEEMPLOYEE";
+                    string connectionString = DataProvider.Instance.getconnecStr();
+                    using (OracleConnection connection = new OracleConnection(connectionString))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
+                        connection.Open();
+                        using (OracleCommand command = new OracleCommand(procName, connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.Add("IDEMP", OracleDbType.Char).Value = string.IsNullOrEmpty(selectedID) ? (object)null : selectedID;
-                        command.Parameters.Add("NAMEEMP", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(Name_Text.Text) ? (object)null : Name_Text.Text;
-                        command.Parameters.Add("GENDER", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(gender_Text.Text) ? (object)null : gender_Text.Text;
-                        command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
-                        command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
-                        command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
-                        command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : encrypt(salary_Text.Text);
-                        command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : encrypt(allowance_Text.Text);
-                        command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_Text.Text) ? (object)null : role_Text.Text;
-                        command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = string.IsNullOrEmpty(manager_Text.Text) ? (object)null : manager_Text.Text;
-                        command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = string.IsNullOrEmpty(department_Text.Text) ? (object)null : int.Parse(department_Text.Text);
+                            command.Parameters.Add("IDEMP", OracleDbType.Char).Value = string.IsNullOrEmpty(selectedID) ? (object)null : selectedID;
+                            command.Parameters.Add("NAMEEMP", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(Name_Text.Text) ? (object)null : Name_Text.Text;
+                            command.Parameters.Add("GENDER", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(gender_ComboBox.Text) ? (object)null : gender_ComboBox.Text;
+                            command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
+                            command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
+                            command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
+                            command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : (salary_Text.Text);
+                            command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : (allowance_Text.Text);
+                            command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
+                            if (manager_ComboBox.Text == "<None>") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = null;
+                            else command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = manager_ComboBox.Text;
 
-                        index = command.ExecuteNonQuery();
+                            if (room_ComboBox.Text == "<None>") command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = null;
+                            else command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = int.Parse(room_ComboBox.Text);
+                            //command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = string.IsNullOrEmpty(manager_ComboBox.Text) ? (object)null : manager_ComboBox.Text;
+                            //command.Parameters.Add("PHGBAN", OracleDbType.Int32).Value = string.IsNullOrEmpty(room_ComboBox.Text) ? (object)null : int.Parse(room_ComboBox.Text);
+
+                            index = command.ExecuteNonQuery();
+                        }
                     }
+                    setData();
                 }
-                setData();
-                MessageBox.Show(index.ToString());
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Can't update");
+                    // Handle or display the exception message
+                }
             }
-            catch (Exception ex)
+            else if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0)
             {
-                MessageBox.Show("Can't update");
-                // Handle or display the exception message
-                MessageBox.Show(ex.ToString());
+                string salary = string.IsNullOrEmpty(salary_Text.Text) ? null : (salary_Text.Text);
+                string allowance = string.IsNullOrEmpty(allowance_Text.Text) ? null : (allowance_Text.Text);
+                string procName = "UPDATE QLCONGTY.NHANVIEN \n" +
+                                  "SET LUONG = N'" + encrypt(salary) + "', PHUCAP = N'" + encrypt(allowance) + "' \n" +
+                                  "WHERE MANV = N'" + selectedID + "'";
+                int index = DataProvider.Instance.ExecuteNonQuery(procName);
+                if (index > 0) MessageBox.Show("Update complete!");
+                else MessageBox.Show("Can't update!");
+                setData();
+            }
+            else
+            {
+                string procName = "UPDATE QLCONGTY.NHANVIEN \n" +
+                                  "SET NGAYSINH = N'" + birthday_Datetime.Value + "', DIACHI = N'" + address_Text + "', SODT = '"+ phone_Text +"' \n" +
+                                  "WHERE MANV = N'" + selectedID + "'";
+                int index = DataProvider.Instance.ExecuteNonQuery(procName);
+                if (index > 0) MessageBox.Show("Update complete!");
+                else MessageBox.Show("Can't update!");
+                setData();
             }
         }
         void showDataEmp(string selectedID)
@@ -162,16 +293,16 @@ namespace Project_SS
                            dr["MANQL"].ToString() + "\n" + dr["PHG"].ToString() + "\n"; 
             }
             Name_Text.Text = userInfo.Split('\n')[0];
-            gender_Text.Text = userInfo.Split('\n')[1];
+            gender_ComboBox.Text = userInfo.Split('\n')[1];
             if (userInfo.Split('\n')[2] == "") birthday_Datetime.Value = DateTime.Today;
             else birthday_Datetime.Value = DateTime.Parse(userInfo.Split('\n')[2]);
             address_Text.Text = userInfo.Split('\n')[3];
             phone_Text.Text = userInfo.Split('\n')[4];
             salary_Text.Text = (userInfo.Split('\n')[5]);
             allowance_Text.Text = (userInfo.Split('\n')[6]);
-            role_Text.Text = userInfo.Split('\n')[7];
-            manager_Text.Text = userInfo.Split('\n')[8];
-            department_Text.Text = userInfo.Split('\n')[9];
+            role_ComboBox.Text = userInfo.Split('\n')[7];
+            manager_ComboBox.Text = userInfo.Split('\n')[8];
+            room_ComboBox.Text = userInfo.Split('\n')[9];
         }
         private void NHANVIEN_DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -186,6 +317,14 @@ namespace Project_SS
         string hash = "f0xle@rn";
         string encrypt(string value)
         {
+            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string hash = "";
+            foreach (DataRow dr in dt.Rows)
+            {
+                hash = dr["KEY"].ToString();
+                break;
+            }
             string newValue = "";
             byte[] data = UTF8Encoding.UTF8.GetBytes(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
@@ -205,6 +344,14 @@ namespace Project_SS
         }
         string decrypt(string value)
         {
+            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string hash = "";
+            foreach (DataRow dr in dt.Rows)
+            {
+                hash = dr["KEY"].ToString();
+                break;
+            }
             string newValue = "";
             byte[] data = Convert.FromBase64String(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
@@ -239,3 +386,5 @@ namespace Project_SS
         }
     }
 }
+>>>>>>> Stashed changes:Project_SS/Project_SS/UserControls/UC_Employee.cs
+>>>>>>>> origin/PhucNgo:safesecurity_schememanager/Project_SS/Project_SS/UC_Employee.cs

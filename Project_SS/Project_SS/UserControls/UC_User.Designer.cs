@@ -1,6 +1,6 @@
 ﻿namespace Project_SS.UserControls
 {
-    partial class UC_User
+    partial class selectedUser_ComboBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_User));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(selectedUser_ComboBox));
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
+=======
             this.cbxSchemaList = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -47,8 +49,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_UpdateUser = new System.Windows.Forms.Button();
             this.btn_DeleteUser = new System.Windows.Forms.Button();
-            this.txbSelectedRoleLeft = new System.Windows.Forms.TextBox();
+            this.selectedUser_ComboBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvUsersOfRole = new System.Windows.Forms.DataGridView();
@@ -86,11 +89,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
+            this.panel1.Controls.Add(this.textBox4);
+=======
             this.panel1.Controls.Add(this.cbxSchemaList);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnUpdatePriv);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.dtgvTableList);
+            this.panel1.Controls.Add(this.txbSelectedRoleRight);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.btn_UpdateUser);
+<<<<<<< Updated upstream
+            this.panel1.Controls.Add(this.txbSelectedRoleLeft);
+>>>>>>> Stashed changes
+=======
+            this.panel1.Controls.Add(this.btn_DeleteUser);
+            this.panel1.Controls.Add(this.selectedUser_ComboBox);
+>>>>>>> Stashed changes
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.dtgvTableList);
             this.panel1.Controls.Add(this.txbSelectedRoleRight);
@@ -112,13 +131,15 @@
             this.panel1.Size = new System.Drawing.Size(1170, 570);
             this.panel1.TabIndex = 0;
             // 
+<<<<<<< Updated upstream
+=======
             // cbxSchemaList
             // 
             this.cbxSchemaList.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSchemaList.FormattingEnabled = true;
             this.cbxSchemaList.Location = new System.Drawing.Point(744, 179);
             this.cbxSchemaList.Name = "cbxSchemaList";
-            this.cbxSchemaList.Size = new System.Drawing.Size(398, 29);
+            this.cbxSchemaList.Size = new System.Drawing.Size(398, 36);
             this.cbxSchemaList.TabIndex = 141;
             this.cbxSchemaList.SelectedIndexChanged += new System.EventHandler(this.cbxSchemaList_SelectedIndexChanged);
             // 
@@ -130,7 +151,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label11.Location = new System.Drawing.Point(616, 182);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 21);
+            this.label11.Size = new System.Drawing.Size(148, 28);
             this.label11.TabIndex = 132;
             this.label11.Text = "Select Schema:";
             // 
@@ -171,7 +192,7 @@
             this.cbxWithGrantOptionRole.Font = new System.Drawing.Font("Malgun Gothic", 9F);
             this.cbxWithGrantOptionRole.Location = new System.Drawing.Point(113, 62);
             this.cbxWithGrantOptionRole.Name = "cbxWithGrantOptionRole";
-            this.cbxWithGrantOptionRole.Size = new System.Drawing.Size(122, 19);
+            this.cbxWithGrantOptionRole.Size = new System.Drawing.Size(154, 24);
             this.cbxWithGrantOptionRole.TabIndex = 121;
             this.cbxWithGrantOptionRole.Text = "With grant option";
             this.cbxWithGrantOptionRole.UseVisualStyleBackColor = true;
@@ -183,7 +204,7 @@
             this.NotRoleDropdown.FormattingEnabled = true;
             this.NotRoleDropdown.Location = new System.Drawing.Point(113, 26);
             this.NotRoleDropdown.Name = "NotRoleDropdown";
-            this.NotRoleDropdown.Size = new System.Drawing.Size(382, 21);
+            this.NotRoleDropdown.Size = new System.Drawing.Size(382, 25);
             this.NotRoleDropdown.TabIndex = 100;
             this.NotRoleDropdown.SelectedIndexChanged += new System.EventHandler(this.NotRoleDropdown_SelectedIndexChanged);
             // 
@@ -196,7 +217,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label10.Location = new System.Drawing.Point(17, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 19);
+            this.label10.Size = new System.Drawing.Size(110, 23);
             this.label10.TabIndex = 95;
             this.label10.Text = "Choose Role:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -210,7 +231,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label8.Location = new System.Drawing.Point(212, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 21);
+            this.label8.Size = new System.Drawing.Size(113, 28);
             this.label8.TabIndex = 93;
             this.label8.Text = "Grant Role";
             // 
@@ -264,7 +285,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label7.Location = new System.Drawing.Point(613, 226);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 21);
+            this.label7.Size = new System.Drawing.Size(191, 28);
             this.label7.TabIndex = 112;
             this.label7.Text = "Table of Database:";
             // 
@@ -292,7 +313,7 @@
             this.txbSelectedRoleRight.Location = new System.Drawing.Point(761, 20);
             this.txbSelectedRoleRight.Name = "txbSelectedRoleRight";
             this.txbSelectedRoleRight.ReadOnly = true;
-            this.txbSelectedRoleRight.Size = new System.Drawing.Size(381, 26);
+            this.txbSelectedRoleRight.Size = new System.Drawing.Size(381, 32);
             this.txbSelectedRoleRight.TabIndex = 108;
             // 
             // label5
@@ -303,7 +324,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label5.Location = new System.Drawing.Point(613, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 21);
+            this.label5.Size = new System.Drawing.Size(141, 28);
             this.label5.TabIndex = 107;
             this.label5.Text = "Selected User:";
             // 
@@ -316,7 +337,7 @@
             this.btn_UpdateUser.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btn_UpdateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
             this.btn_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_UpdateUser.Location = new System.Drawing.Point(394, 512);
+            this.btn_UpdateUser.Location = new System.Drawing.Point(405, 493);
             this.btn_UpdateUser.Name = "btn_UpdateUser";
             this.btn_UpdateUser.Size = new System.Drawing.Size(146, 34);
             this.btn_UpdateUser.TabIndex = 105;
@@ -334,7 +355,7 @@
             this.btn_DeleteUser.ForeColor = System.Drawing.Color.Red;
             this.btn_DeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteUser.Image")));
             this.btn_DeleteUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DeleteUser.Location = new System.Drawing.Point(152, 512);
+            this.btn_DeleteUser.Location = new System.Drawing.Point(375, 96);
             this.btn_DeleteUser.Name = "btn_DeleteUser";
             this.btn_DeleteUser.Size = new System.Drawing.Size(135, 34);
             this.btn_DeleteUser.TabIndex = 104;
@@ -342,19 +363,31 @@
             this.btn_DeleteUser.UseVisualStyleBackColor = false;
             this.btn_DeleteUser.Click += new System.EventHandler(this.btn_DeleteUser_Click);
             // 
-            // txbSelectedRoleLeft
+            // selectedUser_ComboBox
             // 
-            this.txbSelectedRoleLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.selectedUser_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+<<<<<<< Updated upstream
             this.txbSelectedRoleLeft.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txbSelectedRoleLeft.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSelectedRoleLeft.Cursor = System.Windows.Forms.Cursors.No;
             this.txbSelectedRoleLeft.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSelectedRoleLeft.Location = new System.Drawing.Point(153, 469);
+            this.txbSelectedRoleLeft.Location = new System.Drawing.Point(160, 493);
             this.txbSelectedRoleLeft.Name = "txbSelectedRoleLeft";
             this.txbSelectedRoleLeft.ReadOnly = true;
-            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(387, 26);
+            this.txbSelectedRoleLeft.Size = new System.Drawing.Size(228, 32);
             this.txbSelectedRoleLeft.TabIndex = 102;
+=======
+            this.selectedUser_ComboBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.selectedUser_ComboBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.selectedUser_ComboBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.selectedUser_ComboBox.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedUser_ComboBox.Location = new System.Drawing.Point(153, 469);
+            this.selectedUser_ComboBox.Name = "selectedUser_ComboBox";
+            this.selectedUser_ComboBox.ReadOnly = true;
+            this.selectedUser_ComboBox.Size = new System.Drawing.Size(387, 32);
+            this.selectedUser_ComboBox.TabIndex = 102;
+>>>>>>> Stashed changes
             // 
             // label6
             // 
@@ -362,12 +395,13 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(30, 474);
+            this.label6.Location = new System.Drawing.Point(3, 493);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 21);
+            this.label6.Size = new System.Drawing.Size(141, 28);
             this.label6.TabIndex = 101;
             this.label6.Text = "Selected User:";
             // 
+>>>>>>> Stashed changes
             // label2
             // 
             this.label2.AutoSize = true;
@@ -375,7 +409,15 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label2.Location = new System.Drawing.Point(292, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 21);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+            this.label2.Size = new System.Drawing.Size(144, 21);
+=======
+            this.label2.Size = new System.Drawing.Size(143, 28);
+>>>>>>> Stashed changes
+=======
+            this.label2.Size = new System.Drawing.Size(143, 28);
+>>>>>>> Stashed changes
             this.label2.TabIndex = 18;
             this.label2.Text = "Roles of User:";
             // 
@@ -386,7 +428,15 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(30, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 21);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+            this.label1.Size = new System.Drawing.Size(104, 21);
+=======
+            this.label1.Size = new System.Drawing.Size(134, 28);
+>>>>>>> Stashed changes
+=======
+            this.label1.Size = new System.Drawing.Size(134, 28);
+>>>>>>> Stashed changes
             this.label1.TabIndex = 17;
             this.label1.Text = "List of Users:";
             // 
@@ -432,6 +482,44 @@
             // 
             // label3
             // 
+<<<<<<< Updated upstream
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 306);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(555, 255);
+            this.dataGridView1.TabIndex = 15;
+=======
+            this.dtgvRoleList.AllowUserToAddRows = false;
+            this.dtgvRoleList.AllowUserToDeleteRows = false;
+            this.dtgvRoleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvRoleList.Location = new System.Drawing.Point(34, 234);
+            this.dtgvRoleList.Name = "dtgvRoleList";
+            this.dtgvRoleList.ReadOnly = true;
+            this.dtgvRoleList.RowHeadersWidth = 51;
+            this.dtgvRoleList.Size = new System.Drawing.Size(226, 208);
+            this.dtgvRoleList.TabIndex = 15;
+            this.dtgvRoleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvRoleList_CellContentClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.text_User);
+            this.panel2.Controls.Add(this.text_Pass);
+            this.panel2.Controls.Add(this.btn_DeleteUser);
+            this.panel2.Location = new System.Drawing.Point(30, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(510, 145);
+            this.panel2.TabIndex = 103;
+            // 
+            // label3
+            // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
@@ -439,9 +527,10 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label3.Location = new System.Drawing.Point(21, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 21);
+            this.label3.Size = new System.Drawing.Size(101, 28);
             this.label3.TabIndex = 97;
             this.label3.Text = "Password:";
+>>>>>>> Stashed changes
             // 
             // label4
             // 
@@ -452,7 +541,15 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label4.Location = new System.Drawing.Point(21, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+            this.label4.Size = new System.Drawing.Size(91, 21);
+=======
+            this.label4.Size = new System.Drawing.Size(108, 28);
+>>>>>>> Stashed changes
+=======
+            this.label4.Size = new System.Drawing.Size(108, 28);
+>>>>>>> Stashed changes
             this.label4.TabIndex = 95;
             this.label4.Text = "Username:";
             // 
@@ -465,7 +562,15 @@
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.lblTime.Location = new System.Drawing.Point(189, 10);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(115, 25);
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+            this.lblTime.Size = new System.Drawing.Size(143, 25);
+=======
+            this.lblTime.Size = new System.Drawing.Size(145, 32);
+>>>>>>> Stashed changes
+=======
+            this.lblTime.Size = new System.Drawing.Size(145, 32);
+>>>>>>> Stashed changes
             this.lblTime.TabIndex = 93;
             this.lblTime.Text = "Create User";
             // 
@@ -480,7 +585,11 @@
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(193)))), ((int)(((byte)(138)))));
             this.button5.Image = global::Project_SS.Properties.Resources.plus__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(395, 59);
+<<<<<<< Updated upstream
+            this.button5.Location = new System.Drawing.Point(259, 174);
+=======
+            this.button5.Location = new System.Drawing.Point(399, 21);
+>>>>>>> Stashed changes
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(89, 46);
@@ -504,15 +613,60 @@
             // 
             this.text_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+<<<<<<< Updated upstream
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.textBox4.Location = new System.Drawing.Point(812, 76);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(189, 32);
+            this.textBox4.TabIndex = 102;
+=======
+            this.text_User.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_User.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.text_User.Location = new System.Drawing.Point(122, 48);
+            this.text_User.Name = "text_User";
+            this.text_User.Size = new System.Drawing.Size(246, 34);
+            this.text_User.TabIndex = 96;
+>>>>>>> Stashed changes
+            // 
+            // clbColumnUpdate
+            // 
+<<<<<<< Updated upstream
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.label6.Location = new System.Drawing.Point(717, 84);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 21);
+            this.label6.TabIndex = 101;
+            this.label6.Text = "Username:";
+=======
+            this.text_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.text_Pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.text_Pass.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.text_Pass.Location = new System.Drawing.Point(122, 88);
             this.text_Pass.Name = "text_Pass";
-            this.text_Pass.Size = new System.Drawing.Size(246, 29);
+            this.text_Pass.Size = new System.Drawing.Size(246, 34);
             this.text_Pass.TabIndex = 98;
+>>>>>>> Stashed changes
             // 
-            // panel5
+            // clbColumnSelect
             // 
+<<<<<<< Updated upstream
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.label7.Location = new System.Drawing.Point(807, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 25);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "Selected User";
+=======
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(246)))), ((int)(((byte)(252)))));
             this.panel5.Controls.Add(this.btnCancelEdit);
             this.panel5.Controls.Add(this.btnEditPriv);
@@ -568,7 +722,7 @@
             this.cbxGrantable4.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGrantable4.Location = new System.Drawing.Point(172, 107);
             this.cbxGrantable4.Name = "cbxGrantable4";
-            this.cbxGrantable4.Size = new System.Drawing.Size(66, 20);
+            this.cbxGrantable4.Size = new System.Drawing.Size(82, 24);
             this.cbxGrantable4.TabIndex = 134;
             this.cbxGrantable4.Text = "grantable";
             this.cbxGrantable4.UseVisualStyleBackColor = true;
@@ -580,7 +734,7 @@
             this.cbxGrantable3.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGrantable3.Location = new System.Drawing.Point(48, 107);
             this.cbxGrantable3.Name = "cbxGrantable3";
-            this.cbxGrantable3.Size = new System.Drawing.Size(66, 20);
+            this.cbxGrantable3.Size = new System.Drawing.Size(82, 24);
             this.cbxGrantable3.TabIndex = 133;
             this.cbxGrantable3.Text = "grantable";
             this.cbxGrantable3.UseVisualStyleBackColor = true;
@@ -592,7 +746,7 @@
             this.cbxGrantable2.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGrantable2.Location = new System.Drawing.Point(172, 62);
             this.cbxGrantable2.Name = "cbxGrantable2";
-            this.cbxGrantable2.Size = new System.Drawing.Size(66, 20);
+            this.cbxGrantable2.Size = new System.Drawing.Size(82, 24);
             this.cbxGrantable2.TabIndex = 132;
             this.cbxGrantable2.Text = "grantable";
             this.cbxGrantable2.UseVisualStyleBackColor = true;
@@ -604,7 +758,7 @@
             this.cbxGrantable1.Font = new System.Drawing.Font("Microsoft Himalaya", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGrantable1.Location = new System.Drawing.Point(48, 62);
             this.cbxGrantable1.Name = "cbxGrantable1";
-            this.cbxGrantable1.Size = new System.Drawing.Size(66, 20);
+            this.cbxGrantable1.Size = new System.Drawing.Size(82, 24);
             this.cbxGrantable1.TabIndex = 131;
             this.cbxGrantable1.Text = "grantable";
             this.cbxGrantable1.UseVisualStyleBackColor = true;
@@ -616,7 +770,7 @@
             this.cbxInsert.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cbxInsert.Location = new System.Drawing.Point(23, 40);
             this.cbxInsert.Name = "cbxInsert";
-            this.cbxInsert.Size = new System.Drawing.Size(70, 25);
+            this.cbxInsert.Size = new System.Drawing.Size(85, 32);
             this.cbxInsert.TabIndex = 127;
             this.cbxInsert.Text = "Insert";
             this.cbxInsert.UseVisualStyleBackColor = true;
@@ -628,7 +782,7 @@
             this.cbxSelect.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cbxSelect.Location = new System.Drawing.Point(23, 85);
             this.cbxSelect.Name = "cbxSelect";
-            this.cbxSelect.Size = new System.Drawing.Size(74, 25);
+            this.cbxSelect.Size = new System.Drawing.Size(88, 32);
             this.cbxSelect.TabIndex = 129;
             this.cbxSelect.Text = "Select";
             this.cbxSelect.UseVisualStyleBackColor = true;
@@ -640,7 +794,7 @@
             this.cbxUpdate.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cbxUpdate.Location = new System.Drawing.Point(148, 85);
             this.cbxUpdate.Name = "cbxUpdate";
-            this.cbxUpdate.Size = new System.Drawing.Size(83, 25);
+            this.cbxUpdate.Size = new System.Drawing.Size(100, 32);
             this.cbxUpdate.TabIndex = 130;
             this.cbxUpdate.Text = "Update";
             this.cbxUpdate.UseVisualStyleBackColor = true;
@@ -652,7 +806,7 @@
             this.cbxDelete.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cbxDelete.Location = new System.Drawing.Point(148, 40);
             this.cbxDelete.Name = "cbxDelete";
-            this.cbxDelete.Size = new System.Drawing.Size(77, 25);
+            this.cbxDelete.Size = new System.Drawing.Size(93, 32);
             this.cbxDelete.TabIndex = 128;
             this.cbxDelete.Text = "Delete";
             this.cbxDelete.UseVisualStyleBackColor = true;
@@ -667,7 +821,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
             this.label9.Location = new System.Drawing.Point(60, 6);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 21);
+            this.label9.Size = new System.Drawing.Size(186, 28);
             this.label9.TabIndex = 101;
             this.label9.Text = "Granted Privileges";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -683,7 +837,7 @@
             "Phan cong"});
             this.clbColumnUpdate.Location = new System.Drawing.Point(148, 134);
             this.clbColumnUpdate.Name = "clbColumnUpdate";
-            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 85);
+            this.clbColumnUpdate.Size = new System.Drawing.Size(108, 80);
             this.clbColumnUpdate.TabIndex = 120;
             this.clbColumnUpdate.SelectedIndexChanged += new System.EventHandler(this.clbColumnUpdate_SelectedIndexChanged);
             // 
@@ -698,21 +852,28 @@
             "Phan cong"});
             this.clbColumnSelect.Location = new System.Drawing.Point(17, 134);
             this.clbColumnSelect.Name = "clbColumnSelect";
-            this.clbColumnSelect.Size = new System.Drawing.Size(106, 85);
+            this.clbColumnSelect.Size = new System.Drawing.Size(106, 80);
             this.clbColumnSelect.Sorted = true;
             this.clbColumnSelect.TabIndex = 119;
             this.clbColumnSelect.SelectedIndexChanged += new System.EventHandler(this.clbColumnSelect_SelectedIndexChanged);
+>>>>>>> Stashed changes
             // 
-            // UC_User
+            // selectedUser_ComboBox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(121)))), ((int)(((byte)(195)))));
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.Margin = new System.Windows.Forms.Padding(15);
+<<<<<<< Updated upstream
+            this.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.Name = "UC_User";
+            this.Padding = new System.Windows.Forms.Padding(10);
+=======
+            this.Margin = new System.Windows.Forms.Padding(15);
+            this.Name = "selectedUser_ComboBox";
             this.Padding = new System.Windows.Forms.Padding(15);
+>>>>>>> Stashed changes
             this.Size = new System.Drawing.Size(1200, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -742,7 +903,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox text_Pass;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbSelectedRoleLeft;
+<<<<<<< Updated upstream
+        private System.Windows.Forms.TextBox textBox4;
+=======
+        private System.Windows.Forms.TextBox selectedUser_ComboBox;
+>>>>>>> Stashed changes
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_DeleteUser;
