@@ -31,6 +31,7 @@
             this.NHANVIEN_DataGrid = new System.Windows.Forms.DataGridView();
             this.Phancong = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.room_ComboBox = new System.Windows.Forms.ComboBox();
             this.manager_ComboBox = new System.Windows.Forms.ComboBox();
             this.role_ComboBox = new System.Windows.Forms.ComboBox();
@@ -55,7 +56,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NHANVIEN_DataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +120,22 @@
             this.panel1.Size = new System.Drawing.Size(939, 271);
             this.panel1.TabIndex = 7;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
+            this.button3.Location = new System.Drawing.Point(754, 141);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 49);
+            this.button3.TabIndex = 43;
+            this.button3.Text = "Update Yourself";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // room_ComboBox
             // 
             this.room_ComboBox.FormattingEnabled = true;
@@ -141,7 +157,7 @@
             this.role_ComboBox.FormattingEnabled = true;
             this.role_ComboBox.Items.AddRange(new object[] {
             "Nhân viên",
-            "Quản lý trực tiếp",
+            "QLTT",
             "Trưởng phòng",
             "Tài chính",
             "Nhân sự",
@@ -358,22 +374,6 @@
             this.label1.Size = new System.Drawing.Size(231, 28);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add/Update Employee";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(107)))));
-            this.button3.Location = new System.Drawing.Point(754, 141);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 49);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Update Yourself";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // UC_Employee
             // 

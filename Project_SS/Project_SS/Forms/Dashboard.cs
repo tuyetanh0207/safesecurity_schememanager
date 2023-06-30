@@ -1,4 +1,5 @@
-﻿using Project_SS.UserControls;
+﻿using DAO_HotelManagement;
+using Project_SS.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -99,7 +100,7 @@ namespace Project_SS
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
-        {
+        {  
             text_Title.Text = "EMPLOYEE";
             slidePanel(btnEmployee);
             UC_Employee uC = new UC_Employee();
