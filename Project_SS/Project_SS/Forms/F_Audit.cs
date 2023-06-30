@@ -285,5 +285,10 @@ namespace Project_SS.Forms
                 }
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace Project_SS
                                   username.IndexOf("TP") >= 0 ||
                                   username.IndexOf("TA") >= 0 ||
                                   username.IndexOf("TC") >= 0 ||
+                                  username.IndexOf("NV") >= 0 ||
                                   username.IndexOf("GD") >= 0)
                 {
                     // set username pass vào dataprovider nè. cái instance có thể xem như là một bản sao của dataprovider, nên là nó sẽ giữ giá trị và sử dụng được cho mọi class

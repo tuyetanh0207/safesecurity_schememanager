@@ -26,7 +26,7 @@ namespace Project_SS
             panelWidth = panel_Left.Width;
             isCollapse = false;
 
-            UC_Dashboard uC = new UC_Dashboard();
+            UC_Employee uC = new UC_Employee();
             addControls(uC);
         }
 
@@ -85,13 +85,6 @@ namespace Project_SS
             uc.BringToFront();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            text_Title.Text = "DASHBOARD";
-            slidePanel(btnDashboard);
-            UC_Dashboard uC = new UC_Dashboard();
-            addControls(uC);
-        }
         private void slidePanel(Button btn)
         {
             panelSide.Height = btn.Height;
@@ -125,7 +118,7 @@ namespace Project_SS
         private void btnWorks_Click(object sender, EventArgs e)
         {
             text_Title.Text = "DEPARTMENT";
-            slidePanel(btnJobs);
+            slidePanel(btnWorks);
             UC_Department uC = new UC_Department();
             addControls(uC);
         }
