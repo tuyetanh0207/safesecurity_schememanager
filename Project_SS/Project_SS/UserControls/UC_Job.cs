@@ -28,6 +28,7 @@ namespace Project_SS.UserControls
         string newEmpid;
         string newSchemaid;
         string newTime;
+        string username = DataProvider.Instance.getUsername();
 
         int isAdding = 0;
 
@@ -55,59 +56,67 @@ namespace Project_SS.UserControls
         }
         private void getAssignment()
         {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                string query = "select pc.MAda as \"SchemaID\", da.TENDA as \"Schema\", nv.manv as EmpID, nv.tennv as Emp, pc.thoigian as Time from QLCONGTY.phancong pc join QLCONGTY.dean da on pc.mada = da.mada join QLCONGTY.nhanvien nv on pc.manv=nv.manv";
+                //string query = "SELECT * FROM QLCONGTY.NHANVIEN";
+                dtgvDSPHANCONG.DataSource = DataProvider.Instance.ExecuteQuery(query);
+                for (int i = 0; i < dtgvDSPHANCONG.Rows.Count; i++)
+                {
+                    dtgvDSPHANCONG.Rows[i].HeaderCell.Value = (i + 1).ToString();
+                }
+                /* for (int i = 0; i < dtgvDSPHANCONG.Columns.Count - 1; i++)
+                 {
+                     dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                 }
+                 dtgvDSPHANCONG.Columns[dtgvDSPHANCONG.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+     */
+                dtgvDSPHANCONG.Columns[0].Width = 70;
+                dtgvDSPHANCONG.Columns[2].Width = 70;
+                dtgvDSPHANCONG.Columns[1].Width = 150;
+                dtgvDSPHANCONG.Columns[4].Width = 100;
+
+
+                doWork.HeaderText = "Delete";
+                doWork.Name = "Delete";
+                doWork.Text = "x";
+                doWork.DefaultCellStyle.BackColor = Color.Red;
+                doWork.Width = 60;
+                doWork.UseColumnTextForButtonValue = true;
+
+
+                doWork1.HeaderText = "Update";
+                doWork1.Name = "Update";
+                doWork1.Text = "+";
+                doWork1.Width = 60;
+                doWork1.DefaultCellStyle.BackColor = Color.Green;
+                doWork1.UseColumnTextForButtonValue = true;
+
+                dtgvDSPHANCONG.ReadOnly = true;
+                for (int i = 0; i < dtgvDSPHANCONG.Columns.Count; i++)
+                {
+                    int colw = dtgvDSPHANCONG.Columns[i].Width;
+                    dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                    dtgvDSPHANCONG.Columns[i].Width = colw;
+                    //dtgvDSPHANCONG.Columns[i].ReadOnly = true;
+
+                }
+                for (int i = 0; i < dtgvDSPHANCONG.Rows.Count; i++)
+                {
+                    dtgvDSPHANCONG.Rows[i].HeaderCell.Value = (i + i).ToString();
+                }
+
+
+
+                //MessageBox.Show("hihi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Have some error, please try again!");
+
+            }
             
-            DataTable dataTable = new DataTable();
-            string query = "select pc.MAda as \"SchemaID\", da.TENDA as \"Schema\", nv.manv as EmpID, nv.tennv as Emp, pc.thoigian as Time from QLCONGTY.phancong pc join QLCONGTY.dean da on pc.mada = da.mada join QLCONGTY.nhanvien nv on pc.manv=nv.manv";
-            //string query = "SELECT * FROM QLCONGTY.NHANVIEN";
-            dtgvDSPHANCONG.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            for (int i = 0; i < dtgvDSPHANCONG.Rows.Count; i++)
-            {
-                dtgvDSPHANCONG.Rows[i].HeaderCell.Value = (i + 1).ToString();
-            }
-            /* for (int i = 0; i < dtgvDSPHANCONG.Columns.Count - 1; i++)
-             {
-                 dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-             }
-             dtgvDSPHANCONG.Columns[dtgvDSPHANCONG.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
- */
-            dtgvDSPHANCONG.Columns[0].Width = 70;
-            dtgvDSPHANCONG.Columns[2].Width = 70;
-            dtgvDSPHANCONG.Columns[1].Width = 150;
-            dtgvDSPHANCONG.Columns[4].Width = 100;
-
-
-            doWork.HeaderText = "Delete";
-            doWork.Name = "Delete";
-            doWork.Text = "x";
-            doWork.DefaultCellStyle.BackColor = Color.Red;
-            doWork.Width = 60;
-            doWork.UseColumnTextForButtonValue = true;
-            
-    
-            doWork1.HeaderText = "Update";
-            doWork1.Name = "Update";
-            doWork1.Text = "+";
-            doWork1.Width = 60;
-            doWork1.DefaultCellStyle.BackColor = Color.Green;
-            doWork1.UseColumnTextForButtonValue = true;
-
-            dtgvDSPHANCONG.ReadOnly = true;
-            for (int i = 0; i < dtgvDSPHANCONG.Columns.Count; i++)
-            {
-                int colw = dtgvDSPHANCONG.Columns[i].Width;
-                dtgvDSPHANCONG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dtgvDSPHANCONG.Columns[i].Width = colw;
-                //dtgvDSPHANCONG.Columns[i].ReadOnly = true;
-         
-            }
-            for (int i=0;i< dtgvDSPHANCONG.Rows.Count; i++)
-            {
-                dtgvDSPHANCONG.Rows[i].HeaderCell.Value = (i + i).ToString();
-            }
-           
-
-
-            //MessageBox.Show("hihi");
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,7 +146,7 @@ namespace Project_SS.UserControls
         private void loadEmpListCombobox()
         {
             string nameemp = txbName.Text;
-            string query = "select manv, tennv , concat(manv, concat(' - ', tennv)) as combineName from QLCONGTY.nhanvien where upper(tennv) like concat('%', concat(upper('" + nameemp + "'), '%'))";
+            string query = "select manv, tennv , concat(manv, concat(' - ', tennv)) as combineName from QLCONGTY.nhanvien nv join QLCONGTY.phongban pb on nv.PHG = pb.mapb where pb.trphg = '"+username+"' and upper(tennv) like concat('%', concat(upper('" + nameemp + "'), '%'))";
             cbxName.DataSource = DataProvider.Instance.ExecuteQuery(query);
             cbxName.SelectedIndex = -1;
             cbxSchema.SelectedIndex = -1;
@@ -307,7 +316,7 @@ namespace Project_SS.UserControls
             {
                 newEmpid = txbCurrEmp.Text.Substring(0, 5);
                 newSchemaid = txbCurrSchema.Text.Substring(0, 5);
-                for (int i = 0; i < dtgvDSPHANCONG.RowCount; i++)
+                for (int i = 0; i < dtgvDSPHANCONG.RowCount -1; i++)
                 {
                     if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString()== newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0,5) == newSchemaid)
                     {
@@ -317,7 +326,7 @@ namespace Project_SS.UserControls
                     }
                 }
                 newTime = txbCurrTime.Text;
-                string query1 = "insert into phancong(manv, mada, thoigian)"+
+                string query1 = "insert into QLCONGTY.phancong(manv, mada, thoigian)" +
 "values('"+newEmpid+"', '"+newSchemaid+"', to_date('"+newTime+"', 'mm:dd:yyyy hh:mi:ss AM'))";
 
                 res = DataProvider.Instance.ExecuteNonQuery(query1);
@@ -338,21 +347,22 @@ namespace Project_SS.UserControls
             newEmpid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["EmpID"].Value.ToString();
             newSchemaid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["SchemaID"].Value.ToString().Substring(0,5);
             newTime = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["Time"].Value.ToString();
-            for (int i = 0; i < dtgvDSPHANCONG.RowCount; i++)
+            
+            for (int i = 0; i < dtgvDSPHANCONG.RowCount-1; i++)
             {
-                if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString() == newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0, 5) == newSchemaid)
+                if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString() == newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0, 5) == newSchemaid && i!=idx_updateChoosed)
                 {
                     int num = i + 1;
                     MessageBox.Show("Already this assignment in row " + num + ", please update this row instead.");
                     return;
                 }
             }
-            string query = "update phancong "+ 
+            string query = "update QLCONGTY.phancong " + 
                 "set manv = '"+newEmpid+"', mada = '"+newSchemaid + "',  thoigian = to_date('"+newTime+ "', 'mm/dd/yyyy HH:MI:SS AM')" +
                 " where manv = '"+currEmpId+"' and mada = '"+currSchemaID+"'";
 
             res = DataProvider.Instance.ExecuteNonQuery(query);
-            if (res > 0)
+            if (res != 0)
             {
                 MessageBox.Show("Update successfully!");
                 panel1.Hide();

@@ -71,10 +71,12 @@ namespace Project_SS.UserControls
             dt_colOfUpdate.Columns.Add("COLUMN_NAME");
 
             // disable all checkbox
-          /*  cbxSelect.Enabled = false;
-            cbxUpdate.Enabled = false;
-            cbxInsert.Enabled = false;
-            cbxDelete.Enabled = false;*/
+            /*  cbxSelect.Enabled = false;
+              cbxUpdate.Enabled = false;
+              cbxInsert.Enabled = false;
+              cbxDelete.Enabled = false;*/
+
+           // dtgvUsersOfRole.Columns.Insert(dtgvUsersOfRole.Columns.Count, doWork);
 
         }
 
@@ -707,6 +709,11 @@ namespace Project_SS.UserControls
                         index = command.ExecuteNonQuery();
                     }
                 }
+                dtgvRoleList.AutoGenerateColumns = false;
+                dt_role.Columns.Remove("GRANTED_ROLE");
+                //dtgvRoleList.Columns.Remove("USERNAME");
+                //dtgvRoleList.Columns.Clear();
+                Load_Roles_List();
                 MessageBox.Show(index.ToString());
             }
             catch (Exception ex)
