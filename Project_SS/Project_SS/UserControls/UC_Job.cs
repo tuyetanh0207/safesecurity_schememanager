@@ -311,69 +311,77 @@ namespace Project_SS.UserControls
 
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
-            int res;
-            if (isAdding == 1)
-            {
-                newEmpid = txbCurrEmp.Text.Substring(0, 5);
-                newSchemaid = txbCurrSchema.Text.Substring(0, 5);
-                for (int i = 0; i < dtgvDSPHANCONG.RowCount -1; i++)
+            try {
+                int res;
+                if (isAdding == 1)
                 {
-                    if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString()== newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0,5) == newSchemaid)
+                    newEmpid = txbCurrEmp.Text.Substring(0, 5);
+                    newSchemaid = txbCurrSchema.Text.Substring(0, 5);
+                    for (int i = 0; i < dtgvDSPHANCONG.RowCount - 1; i++)
+                    {
+                        if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString() == newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0, 5) == newSchemaid && i!=idx_updateChoosed)
+                        {
+                            int num = i + 1;
+                            MessageBox.Show("Already this assignment in row " + num + ", please update this row instead.");
+                            return;
+                        }
+                    }
+                    newTime = txbCurrTime.Text;
+                    string query1 = "insert into QLCONGTY.phancong(manv, mada, thoigian)" +
+    "values('" + newEmpid + "', '" + newSchemaid + "', to_date('" + newTime + "', 'mm:dd:yyyy hh:mi:ss AM'))";
+
+                    res = DataProvider.Instance.ExecuteNonQuery(query1);
+                    if (res > 0)
+                    {
+
+                        MessageBox.Show("Add successfully!");
+                        getAssignment();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add fail. Please try again.");
+                        isAdding = 0;
+                    }
+
+                    return;
+                }
+                newEmpid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["EmpID"].Value.ToString();
+                newSchemaid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["SchemaID"].Value.ToString().Substring(0, 5);
+                //newTime = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["Time"].Value.ToString();
+                newTime = txbCurrTime.Text;
+
+                for (int i = 0; i < dtgvDSPHANCONG.RowCount - 1; i++)
+                {
+                    if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString() == newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0, 5) == newSchemaid && i != idx_updateChoosed)
                     {
                         int num = i + 1;
                         MessageBox.Show("Already this assignment in row " + num + ", please update this row instead.");
                         return;
                     }
                 }
-                newTime = txbCurrTime.Text;
-                string query1 = "insert into QLCONGTY.phancong(manv, mada, thoigian)" +
-"values('"+newEmpid+"', '"+newSchemaid+"', to_date('"+newTime+"', 'mm:dd:yyyy hh:mi:ss AM'))";
+                string query = "update QLCONGTY.phancong " +
+                    "set manv = '" + newEmpid + "', mada = '" + newSchemaid + "',  thoigian = to_date('" + newTime + "', 'mm/dd/yyyy HH:MI:SS AM')" +
+                    " where manv = '" + currEmpId + "' and mada = '" + currSchemaID + "'";
 
-                res = DataProvider.Instance.ExecuteNonQuery(query1);
-                if (res > 0)
+                res = DataProvider.Instance.ExecuteNonQuery(query);
+                if (res != 0)
                 {
-                    
-                    MessageBox.Show("Add successfully!");
+                    MessageBox.Show("Update successfully!");
+                    panel1.Hide();
                     getAssignment();
                 }
                 else
                 {
-                    MessageBox.Show("Add fail. Please try again.");
-                    isAdding = 0;
-                }
-                
-                return;
-            }
-            newEmpid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["EmpID"].Value.ToString();
-            newSchemaid = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["SchemaID"].Value.ToString().Substring(0,5);
-            newTime = dtgvDSPHANCONG.Rows[idx_updateChoosed].Cells["Time"].Value.ToString();
-            
-            for (int i = 0; i < dtgvDSPHANCONG.RowCount-1; i++)
-            {
-                if (dtgvDSPHANCONG.Rows[i].Cells["EmpID"].Value.ToString() == newEmpid && dtgvDSPHANCONG.Rows[i].Cells["SchemaID"].Value.ToString().Substring(0, 5) == newSchemaid && i!=idx_updateChoosed)
-                {
-                    int num = i + 1;
-                    MessageBox.Show("Already this assignment in row " + num + ", please update this row instead.");
-                    return;
+                    MessageBox.Show("Update failed!");
+                    panel1.Hide();
+                    getAssignment();
                 }
             }
-            string query = "update QLCONGTY.phancong " + 
-                "set manv = '"+newEmpid+"', mada = '"+newSchemaid + "',  thoigian = to_date('"+newTime+ "', 'mm/dd/yyyy HH:MI:SS AM')" +
-                " where manv = '"+currEmpId+"' and mada = '"+currSchemaID+"'";
-
-            res = DataProvider.Instance.ExecuteNonQuery(query);
-            if (res != 0)
+            catch
             {
-                MessageBox.Show("Update successfully!");
-                panel1.Hide();
-                getAssignment();
+                MessageBox.Show("Cannot Update.");
             }
-            else
-            {
-                MessageBox.Show("Update failed!");
-                panel1.Hide();
-                getAssignment();
-            }
+           
 
         }
 

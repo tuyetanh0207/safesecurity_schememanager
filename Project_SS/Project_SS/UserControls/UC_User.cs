@@ -359,7 +359,7 @@ namespace Project_SS.UserControls
                 {
                     paraTitles = new string[4] { "UORNAME", "TABLENAME", "SCHEMA", "PRIV" };
                     paraValues = new string[4] { selectedRole, selectedTable, selectedSchema, "insert" };
-                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMROLE", 4, paraTitles, paraValues);
+                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMUSER", 4, paraTitles, paraValues);
                     if (res1 == -1)
                     {
                         MessageBox.Show("Revoke insert successfully");
@@ -403,7 +403,7 @@ namespace Project_SS.UserControls
                 {
                     paraTitles = new string[4] { "UORNAME", "TABLENAME", "SCHEMA", "PRIV" };
                     paraValues = new string[4] { selectedRole, selectedTable, selectedSchema, "Delete" };
-                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMROLE", 4, paraTitles, paraValues);
+                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMUSER", 4, paraTitles, paraValues);
                     if (res1 == -1)
                     {
                         MessageBox.Show("Revoke Delete successfully");
@@ -453,7 +453,7 @@ namespace Project_SS.UserControls
                 {
                     paraTitles = new string[4] { "UORNAME", "TABLENAME", "SCHEMA", "PRIV" };
                     paraValues = new string[4] { selectedRole, selectedTable, selectedSchema, "Update" };
-                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMROLE", 4, paraTitles, paraValues);
+                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMUSER", 4, paraTitles, paraValues);
                     if (res1 == -1)
                     {
                         MessageBox.Show("Revoke Update successfully");
@@ -503,7 +503,7 @@ namespace Project_SS.UserControls
                 {
                     paraTitles = new string[4] { "UORNAME", "TABLENAME", "SCHEMA", "PRIV" };
                     paraValues = new string[4] { selectedRole, selectedTable, selectedSchema, "Select" };
-                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMROLE", 4, paraTitles, paraValues);
+                    res1 = DataProvider.Instance.ExecuteProcWithStringParameter_NonQuery("ROVOKEPRIVFROMUSER", 4, paraTitles, paraValues);
                     if (res1 == -1)
                     {
                         MessageBox.Show("Revoke Select successfully");

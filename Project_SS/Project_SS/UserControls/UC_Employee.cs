@@ -123,7 +123,7 @@ namespace Project_SS
                         command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : (salary_Text.Text);
                         command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : (allowance_Text.Text);
                         //command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
-                        if (role_ComboBox.Text == "QLTT") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = "Quản lí trực tiếp";
+                        if (role_ComboBox.Text == "QLTT") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = "QL trực tiếp";
                         else command.Parameters.Add("USERROLE", OracleDbType.Char).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
                         if (manager_ComboBox.Text == "<None>") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = null;
                         else command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = manager_ComboBox.Text;
@@ -170,8 +170,8 @@ namespace Project_SS
                             command.Parameters.Add("BIRTHDAY", OracleDbType.Date).Value = birthday_Datetime.Value;
                             command.Parameters.Add("ADDRESS", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(address_Text.Text) ? (object)null : address_Text.Text;
                             command.Parameters.Add("PHONE", OracleDbType.Char).Value = string.IsNullOrEmpty(phone_Text.Text) ? (object)null : phone_Text.Text;
-                            command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : (salary_Text.Text);
-                            command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : (allowance_Text.Text);
+                            command.Parameters.Add("SALARY", OracleDbType.Char).Value = string.IsNullOrEmpty(salary_Text.Text) ? (object)null : encrypt(salary_Text.Text);
+                            command.Parameters.Add("ALLOWANCE", OracleDbType.Char).Value = string.IsNullOrEmpty(allowance_Text.Text) ? (object)null : encrypt(allowance_Text.Text);
                             //command.Parameters.Add("USERROLE", OracleDbType.NVarchar2).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
                             if (role_ComboBox.Text == "QLTT") command.Parameters.Add("USERMANAGER", OracleDbType.Char).Value = "Quản lí trực tiếp";
                             else command.Parameters.Add("USERROLE", OracleDbType.Char).Value = string.IsNullOrEmpty(role_ComboBox.Text) ? (object)null : role_ComboBox.Text;
@@ -229,10 +229,13 @@ namespace Project_SS
             phone_Text.Text = userInfo.Split('\n')[4];
 
             if(DataProvider.Instance.getUsername().IndexOf("TC") >= 0) salary_Text.Text = decrypt(userInfo.Split('\n')[5]);
+            else if(selectedID == DataProvider.Instance.getUsername()) salary_Text.Text = decrypt(userInfo.Split('\n')[5]);
             else salary_Text.Text = (userInfo.Split('\n')[5]);
 
             if (DataProvider.Instance.getUsername().IndexOf("TC") >= 0) allowance_Text.Text = decrypt(userInfo.Split('\n')[6]);
+            else if (selectedID == DataProvider.Instance.getUsername()) allowance_Text.Text = decrypt(userInfo.Split('\n')[6]);
             else allowance_Text.Text = (userInfo.Split('\n')[6]);
+            //else allowance_Text.Text = (userInfo.Split('\n')[6]);
 
             role_ComboBox.Text = userInfo.Split('\n')[7];
             manager_ComboBox.Text = userInfo.Split('\n')[8];
