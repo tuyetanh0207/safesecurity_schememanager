@@ -249,17 +249,17 @@ namespace Project_SS
             else return;
         }
 
-        //string hash = "f0xle@rn";
+        string hash = "f0xle@rn";
         string encrypt(string value)
         {
-            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            string hash = "";
-            foreach (DataRow dr in dt.Rows)
-            {
-                hash = dr["KEY"].ToString();
-                break;
-            }
+            //string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
+            //DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            //string hash = "";
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    hash = dr["KEY"].ToString();
+            //    break;
+            //}
             string newValue = "";
             byte[] data = UTF8Encoding.UTF8.GetBytes(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
@@ -276,14 +276,14 @@ namespace Project_SS
         }
         string decrypt(string value)
         {
-            string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            string hash = "";
-            foreach (DataRow dr in dt.Rows)
-            {
-                hash = dr["KEY"].ToString();
-                break;
-            }
+            //string query = "SELECT KEY FROM QLCONGTY.KEY_ENCRYPT";
+            //DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            //string hash = "";
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    hash = dr["KEY"].ToString();
+            //    break;
+            //}
             string newValue = "";
             byte[] data = Convert.FromBase64String(value);
             using (MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider())
